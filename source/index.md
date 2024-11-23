@@ -1,20 +1,20 @@
 
-# CIT App Documentation
+# CIT App Community User Manual
 
 
-## User Manuals
+Welcome to the CIT App user manual for **Community** Users. 
+
+See below for a list of sections available in the **Community** version of CIT App's User Manual. 
 
 
-- [CIT Services User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/citservices/)
-- [Community User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/community/)
-- [Entity User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/entity)
+## Sections
 
 
+```{toctree}
+:maxdepth: 1
 
-
-
-
-
+Dashboard/index.md
+```
 
 
 

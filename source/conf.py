@@ -69,7 +69,7 @@ intersphinx_mapping = {
 }
 
 html_theme_options = {
-    "repository_url": "https://github.com/levseyd01/SOLO_Review",
+    "repository_url": "https://github.com/levseyd01/CITApp-Documentation",
     "use_source_button": True,
     "use_edit_page_button": True,
     "path_to_docs": "source",

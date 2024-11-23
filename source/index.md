@@ -2,7 +2,12 @@
 # CIT App Documentation
 
 
-Welcome to the Documentation for the CIT App. This documentation is intended to provide a comprehensive guide to the CIT App and its features.
+## User Manuals
+
+
+- [CIT Services User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/citservices/)
+- [Community User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/citservices/)
+- [Entity User Manaul](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/entity)
 
 
 
@@ -11,25 +16,8 @@ Welcome to the Documentation for the CIT App. This documentation is intended to 
 
 
 
-## Sections
 
-```{toctree}
-:glob:
-:maxdepth: 1
 
-TransferAgent/Index.md
-Login_Certificate/Index.md
-Transfer/Index.md
-Corporate_Actions/Index.md
-Service/Index.md
-Web_Account/Index.md
-Cash_Payout/Index.md
-Communication/Index.md
-Accounts/Index.md
-Reports/Index.md
-Settings/Index.md
-SOLO_Billing/Index.md
-```
 
 
 

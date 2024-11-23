@@ -1,12 +1,8 @@
 
-# CIT App Documentation
+# CIT Services Documentation for CIT App
 
 
-Welcome to the Documentation for the CIT App. This documentation is intended to provide a comprehensive guide to the CIT App and its features.
-
-
-
-
+Welcome to the **User Manual** for the **CIT Services** version of the CIT App. 
 
 
 
@@ -17,18 +13,8 @@ Welcome to the Documentation for the CIT App. This documentation is intended to 
 :glob:
 :maxdepth: 1
 
-TransferAgent/Index.md
-Login_Certificate/Index.md
-Transfer/Index.md
-Corporate_Actions/Index.md
-Service/Index.md
-Web_Account/Index.md
-Cash_Payout/Index.md
-Communication/Index.md
-Accounts/Index.md
-Reports/Index.md
-Settings/Index.md
-SOLO_Billing/Index.md
+Dashboard/Index.md
+
 ```
 
 

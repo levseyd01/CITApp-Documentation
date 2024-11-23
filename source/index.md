@@ -6,8 +6,8 @@
 
 
 - [CIT Services User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/citservices/)
-- [Community User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/citservices/)
-- [Entity User Manaul](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/entity)
+- [Community User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/community/)
+- [Entity User Manual](https://transferonline-citapp-documentation.readthedocs-hosted.com/en/entity)
 
 
 

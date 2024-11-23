@@ -1,10 +1,10 @@
 
-# CIT App Community User Manual
+# CIT App Entity User Manual
 
 
-Welcome to the CIT App user manual for **Community** Users. 
+Welcome to the CIT App user manual for **Entity** Users. 
 
-See below for a list of sections available in the **Community** version of CIT App's User Manual. 
+See below for a list of sections available in the **Entity** version of CIT App's User Manual. 
 
 
 ## Sections

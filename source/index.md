@@ -1,10 +1,12 @@
 
-# CIT Services Documentation for CIT App
+# CIT Services User Manual
 
 
-Welcome to the **User Manual** for the **CIT Services** version of the CIT App. 
+Welcome to the **User Manual** for **CIT Service** Users. 
 
 
+
+See below for a list of available features and sections. 
 
 
 ## Sections

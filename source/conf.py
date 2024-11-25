@@ -46,8 +46,8 @@ tippy_rtd_urls = [
 myst_enable_extensions = [
     "attrs_inline",
     "colon_fence",
-    "tasklist"
-
+    "tasklist",
+    "deflist"
 
 ]
 

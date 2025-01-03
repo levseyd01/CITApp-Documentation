@@ -46,7 +46,7 @@ extensions = [
     'myst_parser',
     'sphinx_design']
 
-todo_include_todos = True
+# todo_include_todos = True
 
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",
@@ -99,13 +99,13 @@ html_last_updated_fmt = "%b %d, %Y"
 
 
 html_js_files = [
-    "_static/js/popper.min.js",
-    "_static/js/tippy-bundle.umd.min.js",
+    "js/popper.min.js",
+    "js/tippy-bundle.umd.min.js",
 ]
 
 tippy_js = [
-    "_static/js/popper.min.js",
-    "_static/js/tippy-bundle.umd.min.js",
+    "js/popper.min.js",
+    "js/tippy-bundle.umd.min.js",
 ]
 
 
@@ -128,7 +128,7 @@ tippy_custom_tips = {
 }
 
 
-tippy_tip_selector = "figure, table, img, p, aside, div.admonition, div.literal-block-wrapper"
+# tippy_tip_selector = "figure, table, img, p, aside, div.admonition, div.literal-block-wrapper"
 
 
 pdf_documents = [

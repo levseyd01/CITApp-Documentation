@@ -50,7 +50,9 @@ todo_include_todos = True
 
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",
-    "https://transferonline.com/"
+    "https://transferonline.com/",
+    "https://docs.readthedocs.io/en/stable/"
+
 ]
 
 myst_enable_extensions = [
@@ -85,7 +87,7 @@ html_theme_options = {
 
 
 # For Furo theme:
-tippy_anchor_parent_selector = "div.content"
+# tippy_anchor_parent_selector = "div.content"
 # For pydata theme:
 tippy_anchor_parent_selector = "article.bd-article"
 

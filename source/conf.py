@@ -86,14 +86,14 @@ html_theme_options = {
 html_last_updated_fmt = "%b %d, %Y"
 
 
-
 html_js_files = [
-    "js/popper.min.js",
-    "js/tippy.js"
+    "https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js",
+    "https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js",
 ]
+
 tippy_js = [
-    "js/popper.min.js",
-    "js/tippy.js"
+    "https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js",
+    "https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js",
 ]
 
 
@@ -101,7 +101,7 @@ tippy_js = [
 tippy_custom_tips = {
     "test-key": "Hello from Tippy!",
     "my-key": "This is my custom tooltip text!",
-    "upload-logo-button": "<img src='_static/solo_app/Universal/buttons/upload-button.png' style='max-width:1000px'>"
+    "upload-logo-button": "<img src='solo_app/Universal/buttons/upload-button.png' style='max-width:1000px'>"
 }
 
 

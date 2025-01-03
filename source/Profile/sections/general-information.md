@@ -123,7 +123,7 @@ You can upload a logo for your company by clicking the [Upload Logo](<tippy=test
 [Hover text](<tippy=test-key>)
 
 
-You can upload a logo for your company by clicking the <tippy=test-key>Upload Logo</tippy> button. tippy_custom_tips["test-key"] The following fields are required and cannot be left blank:
+You can upload a logo for your company by clicking the Upload Logo button. tippy_custom_tips["test-key"] The following fields are required and cannot be left blank:
 
 - **Logo File**
 - **Logo Preview**

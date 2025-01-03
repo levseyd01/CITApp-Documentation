@@ -117,7 +117,7 @@ Similar to the Primary address, you can edit the following information:
 Upload Logo 
 
 ```
-You can upload a logo for your company by clicking the [Upload Logo](<tippy=test-key>) button.
+You can upload a logo for your company by clicking the [Upload Logo](test-key) button.
 
 [Hover text](<tippy=upload-logo-button>)
 

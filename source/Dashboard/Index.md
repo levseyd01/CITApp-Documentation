@@ -12,11 +12,10 @@
 
 
 ```{toctree}
-:caption: 'Contents:'
+:caption: 'Dashboard Contents:'
 :glob:
 :maxdepth: 2
 
-Transfer Agent
 sections/Dashboard.md
 sections/General.md
 sections/Logo.md

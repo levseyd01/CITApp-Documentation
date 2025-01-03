@@ -34,6 +34,7 @@ This section has all proofread content related to the **Service** section of  SO
 :::{admonition} To-Do List (General)
 :class: note, dropdown
 
+This section contains general tasks and notes.
 
 :::
 

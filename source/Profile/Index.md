@@ -42,6 +42,12 @@ There are two sections on the hompage of the **Profile** screen:
    - **Upload Logo**
    
 
+:::{admonition} Note
+
+You can find out more about this section in the [Editing Company Information](sections/general-information.md) section.
+
+:::
+
 
 
 2. The **Information Pane** (Right Column)
@@ -53,34 +59,11 @@ There are two sections on the hompage of the **Profile** screen:
   
  
 
+:::{admonition} Note
 
+You can find out more about this section in the [Editing Company Information](sections/general-information.md) section.
 
-## Main Section
-
-
-There are four primary sections in the **Profile** section:
-
-
-1. Information Section
-2. Primary Address Section
-3. Mailing Address Section
-4. Upload Logo Section
-
-
-
-
-
-### Information Section
-
-You can edit the following in the **Information** section:
-
-1. Company Name
-2. Company Website
-3. Billing Email
-4. Company Email
-5. Phone Number
-
-
+:::
 
 
 
@@ -90,5 +73,5 @@ You can edit the following in the **Information** section:
 :glob:
 :maxdepth: 2
 
-sections/Upload_Logo.md
+sections/general-information.md
 ```

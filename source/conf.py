@@ -22,16 +22,26 @@ sys.path.append(os.path.abspath('_ext'))
 source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
+
+myst_url_schemes = (
+    "http", 
+    "https",
+    "mailto",
+    "ftp",
+    "tippy"
+    )
+
+
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.autosectionlabel',
-    'rst2pdf.pdfbuilder',
-    'sphinx.ext.todo',
-    'sphinx_search.extension',
-    'sphinx_prompt',
-    'sphinx.builders.linkcheck',
-    'sphinx_copybutton',
-    'sphinx_togglebutton',
+  #  'sphinx.ext.intersphinx',
+   # 'sphinx.ext.autosectionlabel',
+   # 'rst2pdf.pdfbuilder',
+  #  'sphinx.ext.todo',
+   # 'sphinx_search.extension',
+ #   'sphinx_prompt',
+    #'sphinx.builders.linkcheck',
+    #'sphinx_copybutton',
+ #   'sphinx_togglebutton',
     'sphinx_tippy',
     'myst_parser',
     'sphinx_design']
@@ -47,10 +57,55 @@ myst_enable_extensions = [
     "attrs_inline",
     "colon_fence",
     "tasklist"
-
-
 ]
 
+# myst_all_links_external = True
+
+tippy_props = {
+    "placement": "auto-start",
+    "maxWidth": 500,
+    "interactive": False,
+    "theme": "material",
+    "duration": [200, 100],
+    "delay": [200, 500]
+}
+
+html_theme_options = {
+    "repository_url": "https://github.com/levseyd01/SOLO_Review",
+    "use_source_button": True,
+    "use_edit_page_button": True,
+    "path_to_docs": "source",
+    "repository_branch": "main",
+    "use_repository_button": True,
+    "use_issues_button": True,
+    "collapse_navbar": False,
+    "use_download_button": True
+}
+
+
+html_last_updated_fmt = "%b %d, %Y"
+
+
+
+html_js_files = [
+    "js/popper.min.js",
+    "js/tippy.js"
+]
+tippy_js = [
+    "js/popper.min.js",
+    "js/tippy.js"
+]
+
+
+# _static\solo_app\Universal\buttons\upload-button.png
+tippy_custom_tips = {
+    "test-key": "Hello from Tippy!",
+    "my-key": "This is my custom tooltip text!",
+    "upload-logo-button": "<img src='_static/solo_app/Universal/buttons/upload-button.png' style='max-width:1000px'>"
+}
+
+
+tippy_tip_selector = "figure, table, img, p, aside, div.admonition, div.literal-block-wrapper"
 
 
 pdf_documents = [
@@ -61,25 +116,10 @@ pdf_documents = [
      'manual'),
 ]
 
-myst_all_links_external = True
-
+# Intersphinx configuration
 intersphinx_mapping = {
-    'tol': ('https://transferonline.com/', None),
+    "python": ("https://docs.python.org/3", None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None)
-}
-
-html_theme_options = {
-    "repository_url": "https://github.com/levseyd01/SOLO_Review",
-    "use_source_button": True,
-    "use_edit_page_button": True,
-    "path_to_docs": "source",
-    "repository_branch": "main",
-    "use_repository_button": True,
-    'language_selector': True,
-    "use_issues_button": True,
-    'logo_only': True,
-    "collapse_navbar": False,
-    "use_download_button": True
 }
 
 html_logo = "_static/CIT-Logo-white-background.jpg"
@@ -87,12 +127,20 @@ html_logo = "_static/CIT-Logo-white-background.jpg"
 html_theme = 'sphinx_book_theme'
 
 templates_path = ['_templates']
-exclude_patterns = ['_sources','_static'
-                    '_build', 'Thumbs.db', '.DS_Store', '**/*.ps1']
+exclude_patterns = [
+    '_sources',
+   # '_static',
+    '_build', 
+    'Thumbs.db',
+    '.DS_Store',
+     '**/*.ps1']
 
 # -- General configuration ---------------------------------------------------
 
-html_css_files = ["tippy.css", "custom.css"]
+html_css_files = [
+   # "tippy.css"
+ #"custom.css"
+ ]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -101,8 +149,17 @@ html_css_files = ["tippy.css", "custom.css"]
 # html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
-
-
+# Suppress warnings
 suppress_warnings = [
-   "undefined"
+    "myst.header",
+    "undefined",
+    "myst.directive_option",
+    "design.grid",
+    "toc.not_readable",
+    "autosectionlabel"
 ]
+
+# Default grid settings
+sd_grid_default = {
+    "gutter": 2
+}

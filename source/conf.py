@@ -90,7 +90,7 @@ html_theme_options = {
 # For Furo theme:
 # tippy_anchor_parent_selector = "div.content"
 # For pydata theme:
-tippy_anchor_parent_selector = "article.bd-article"
+# tippy_anchor_parent_selector = "article.bd-article"
 
 
 html_last_updated_fmt = "%b %d, %Y"

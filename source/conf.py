@@ -93,7 +93,20 @@ tippy_anchor_parent_selector = "article.bd-article"
 html_last_updated_fmt = "%b %d, %Y"
 
 
+
+
 html_js_files = [
+    "_static/js/popper.min.js",
+    "_static/js/tippy-bundle.umd.min.js",
+]
+
+tippy_js = [
+    "_static/js/popper.min.js",
+    "_static/js/tippy-bundle.umd.min.js",
+]
+
+
+'''html_js_files = [
     "https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js",
     "https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js",
 ]
@@ -101,7 +114,7 @@ html_js_files = [
 tippy_js = [
     "https://unpkg.com/@popperjs/core@2.11.6/dist/umd/popper.min.js",
     "https://unpkg.com/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js",
-]
+]'''
 
 
 # _static\solo_app\Universal\buttons\upload-button.png

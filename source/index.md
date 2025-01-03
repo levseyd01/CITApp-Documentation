@@ -1,14 +1,8 @@
 
-# CIT App Documentation
+# CIT App (Super Admin)
 
 
-Welcome to the Documentation for the CIT App. This documentation is intended to provide a comprehensive guide to the CIT App and its features.
-
-
-
-
-
-
+Welcome to the documentation for the **Super Admin** version of the CIT App. See below to get started. 
 
 
 ## Sections
@@ -17,9 +11,8 @@ Welcome to the Documentation for the CIT App. This documentation is intended to 
 :glob:
 :maxdepth: 1
 
-TransferAgent/Index.md
-Login_Certificate/Index.md
-Transfer/Index.md
+Dashboard/Index.md
+Profile/Index.md
 Corporate_Actions/Index.md
 Service/Index.md
 Web_Account/Index.md
@@ -34,3 +27,4 @@ SOLO_Billing/Index.md
 
 
 
+88

@@ -51,7 +51,8 @@ todo_include_todos = True
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",
     "https://transferonline.com/",
-    "https://docs.readthedocs.io/en/stable/"
+    "https://docs.readthedocs.io/en/stable/",
+    "https://transferonline-citapp-documentation.readthedocs-hosted.com/en/cit-superadmin/"
 
 ]
 

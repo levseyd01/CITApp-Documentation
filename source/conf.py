@@ -28,7 +28,7 @@ myst_url_schemes = (
     "https",
     "mailto",
     "ftp",
-    "tippy"
+   # "tippy"
     )
 
 

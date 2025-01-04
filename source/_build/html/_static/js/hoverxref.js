@@ -86,7 +86,7 @@ function getEmbedURL(url) {
         'url': url,
     }
     console.debug('Data: ' + JSON.stringify(params));
-    var url = '/_' + '/api/v3/embed/?' + $.param(params);
+    var url = 'https://readthedocs.org' + '/api/v3/embed/?' + $.param(params);
     console.debug('URL: ' + url);
     return url
 }

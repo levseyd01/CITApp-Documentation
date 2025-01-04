@@ -1,4 +1,4 @@
-selector_to_html = {"a[href=\"#seo-enhancement-terms\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">SEO Enhancement Terms<a class=\"headerlink\" href=\"#seo-enhancement-terms\" title=\"Link to this heading\">#</a></h1><p>For SEC.gov:</p>"}
+selector_to_html = {"a[href=\"#issuer-details\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Issuer Details<a class=\"headerlink\" href=\"#issuer-details\" title=\"Link to this heading\">#</a></h1>"}
 skip_classes = ["headerlink", "sd-stretched-link"]
 
 window.onload = function () {
@@ -13,7 +13,7 @@ window.onload = function () {
                 content: tip_html,
                 allowHTML: true,
                 arrow: true,
-                placement: 'auto-start', maxWidth: 500, interactive: false,
+                placement: 'right', maxWidth: 500, interactive: true, delay: [200, 100], duration: [200, 100],
 
             });
         };

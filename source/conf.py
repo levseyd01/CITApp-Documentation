@@ -120,6 +120,12 @@ hoverxref_tooltip_maxwidth = 450
 hoverxref_tooltip_class = 'rst-content'
 hoverxref_tooltip_theme = ['tooltipster-shadow', 'tooltipster-shadow-custom']
 
+# Read the Docs specific configuration
+hoverxref_api_host = 'https://readthedocs.org'
+hoverxref_api_version = 'latest'
+hoverxref_auto_ref = True
+hoverxref_ignore_refs = ['genindex', 'modindex', 'search']
+
 suppress_warnings = [
    "undefined"
 ]

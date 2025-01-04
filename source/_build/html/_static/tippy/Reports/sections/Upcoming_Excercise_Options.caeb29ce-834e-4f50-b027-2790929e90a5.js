@@ -1,4 +1,4 @@
-selector_to_html = {"a[href=\"#id1\"]": "<figure class=\"align-center\" id=\"id1\">\n<span id=\"upload-logo-tip\"></span><a class=\"reference internal image-reference\" href=\"_images/upload-button.png\"><img alt=\"_images/upload-button.png\" src=\"_images/upload-button.png\" style=\"width: 400px;\"/>\n</a>\n<figcaption>\n<p><span class=\"caption-text\">Upload Logo Button</span><a class=\"headerlink\" href=\"#id1\" title=\"Link to this image\">#</a></p>\n</figcaption>\n</figure>"}
+selector_to_html = {"a[href=\"#upcoming-exercise-options\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Upcoming Exercise Options<a class=\"headerlink\" href=\"#upcoming-exercise-options\" title=\"Link to this heading\">#</a></h1>"}
 skip_classes = ["headerlink", "sd-stretched-link"]
 
 window.onload = function () {
@@ -13,7 +13,7 @@ window.onload = function () {
                 content: tip_html,
                 allowHTML: true,
                 arrow: true,
-                placement: 'auto-start', maxWidth: 500, interactive: false,
+                placement: 'right', maxWidth: 500, interactive: true, delay: [200, 100], duration: [200, 100],
 
             });
         };

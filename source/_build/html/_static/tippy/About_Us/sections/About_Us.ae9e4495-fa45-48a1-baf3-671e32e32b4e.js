@@ -13,7 +13,7 @@ window.onload = function () {
                 content: tip_html,
                 allowHTML: true,
                 arrow: true,
-                placement: 'auto-start', maxWidth: 500, interactive: false,
+                placement: 'right', maxWidth: 500, interactive: true, delay: [200, 100], duration: [200, 100],
 
             });
         };

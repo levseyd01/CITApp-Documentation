@@ -1,4 +1,4 @@
-selector_to_html = {"a[href=\"#resources\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Resources<a class=\"headerlink\" href=\"#resources\" title=\"Link to this heading\">#</a></h1><p><strong>Resources</strong>\nExperienced, dedicated, and customer-oriented stock transfer agent.</p><p>Providing you with the right support when you need it. Here, you can access free resources, including useful documents and forms.</p>"}
+selector_to_html = {"a[href=\"#our-clients\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Our Clients<a class=\"headerlink\" href=\"#our-clients\" title=\"Link to this heading\">#</a></h1><p>Creating recordkeeping models that perfectly meet your company\u2019s needs</p><p>Below is a list of our clients. If you need to contact a specific company, use the search form, or browse the list by clicking on one of the letters.</p>"}
 skip_classes = ["headerlink", "sd-stretched-link"]
 
 window.onload = function () {
@@ -13,7 +13,7 @@ window.onload = function () {
                 content: tip_html,
                 allowHTML: true,
                 arrow: true,
-                placement: 'auto-start', maxWidth: 500, interactive: false,
+                placement: 'right', maxWidth: 500, interactive: true, delay: [200, 100], duration: [200, 100],
 
             });
         };

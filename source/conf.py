@@ -121,8 +121,10 @@ hoverxref_tooltip_class = 'rst-content'
 hoverxref_tooltip_theme = ['tooltipster-shadow', 'tooltipster-shadow-custom']
 
 # Read the Docs specific configuration
-hoverxref_api_host = 'https://readthedocs.org'
-hoverxref_api_version = 'latest'
+hoverxref_api_host = 'https://transferonline-citapp-documentation.readthedocs.io'
+hoverxref_project = 'transferonline-citapp-documentation'
+hoverxref_version = 'cit-superadmin'
+hoverxref_api_version = 'cit-superadmin'
 hoverxref_auto_ref = True
 hoverxref_ignore_refs = ['genindex', 'modindex', 'search']
 

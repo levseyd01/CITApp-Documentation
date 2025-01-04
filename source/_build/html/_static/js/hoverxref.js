@@ -86,7 +86,7 @@ function getEmbedURL(url) {
         'url': url,
     }
     console.debug('Data: ' + JSON.stringify(params));
-    var url = 'https://readthedocs.org' + '/api/v3/embed/?' + $.param(params);
+    var url = 'https://transferonline-citapp-documentation.readthedocs.io' + '/api/v3/embed/?' + $.param(params);
     console.debug('URL: ' + url);
     return url
 }

@@ -32,7 +32,8 @@ extensions = [
     'sphinx.builders.linkcheck',
     'sphinx_copybutton',
     'sphinx_togglebutton',
-    'sphinx_tippy',
+   # 'sphinx_tippy',
+    'hoverxref.extension',
     'myst_parser',
     'sphinx_design']
 
@@ -55,10 +56,6 @@ tippy_custom_tips={
 
   "upload-logo-button": "<img src='_static/solo_app/Universal/buttons/upload-button.png' alt='Upload Button'>"
 }
-
-
-
-
 
 pdf_documents = [
     ('documents/solo/solo_approved/techstackguide/techstackguide_01',
@@ -109,7 +106,19 @@ html_css_files = ["tippy.css", "custom.css"]
 # html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
-
+# Hoverxref configuration
+hoverxref_auto_ref = True
+hoverxref_role_types = {
+    'hoverxref': 'tooltip',
+    'ref': 'tooltip',
+    'doc': 'tooltip',
+    'class': 'tooltip',
+}
+hoverxref_domains = ['py', 'ref']
+hoverxref_roles = ['hoverxref', 'ref', 'doc']
+hoverxref_tooltip_maxwidth = 450
+hoverxref_tooltip_class = 'rst-content'
+hoverxref_tooltip_theme = ['tooltipster-shadow', 'tooltipster-shadow-custom']
 
 suppress_warnings = [
    "undefined"

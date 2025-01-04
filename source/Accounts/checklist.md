@@ -2,15 +2,19 @@
 
 - [] Is Manual updated?
 
-:::{grid} 
-:gutter: 2
+::::::{grid} 
+:gutter: 
 
-:::{grid-item} 
-:columns: 12
+:::::{grid-item}
 
-:::{grid-item-card} Documentation To-Do List
 
-:::{admonition} Documentation Tasks
+::::{grid} 
+:gutter: 
+
+
+:::{grid-item-card} 
+
+:::{admonition} To-Do List (Documentation)
 :class: caution, dropdown
 
 - [] Ensure all sections are proofread and edited for clarity.
@@ -21,7 +25,8 @@
 
 :::
 
-:::{grid-item-card} Software Checklist
+:::{grid-item-card} 
+
 
 :::{admonition} Software Completion Checklist
 :class: seealso, dropdown

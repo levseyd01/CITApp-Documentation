@@ -1,14 +1,16 @@
 ## Editing Company Information
 
-
 The **Profile** screen allows you edit the following information about your company:
 
-
-- Name and Contact **Information**
+- Name and Contact {ref}`Information <info-section-tip>`
 - **Primary Address**
 - **Mailing Address**
 - **Upload Logo**
 
+## Test
+
+
+- - You can upload a logo for your company by clicking [Upload Logo](tippy=upload-logo-button) button.
 
 
 
@@ -20,9 +22,7 @@ The **Profile** screen allows you edit the following information about your comp
 :width: 400px
 :align: center
 
-
 Name and Contact Information
-
 ```
 
 
@@ -100,42 +100,31 @@ Similar to the Primary address, you can edit the following information:
 :::
 
 
-'myst' cross-reference target not found: 'tippy=test-key' 
-
-
-[Hover text](<tippy=my-key>)
-
-
 ### Uploading Logo
 
 
-```{figure}  ../../_static/solo_app/Profile/upload-logo-section/upload-logo.png
+```{figure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.png
 :width: 400px
 :align: center
 
-
-Upload Logo 
-
+Upload Logo Section
 ```
-You can upload a logo for your company by clicking the [Upload Logo](test-key) button.
-
-[Hover text](<tippy=upload-logo-button>)
 
 
-
-[Hover text](tippy=upload-logo-button)
-
-
-
-
-
-[Hover text](<tippy=test-key>)
-
-
-You can upload a logo for your company by clicking the Upload Logo button. tippy_custom_tips["test-key"] The following fields are required and cannot be left blank:
+You can upload a logo for your company by clicking the {ref}`Upload Logo <upload-logo-tip>` button. The following fields are required and cannot be left blank:
 
 - **Logo File**
 - **Logo Preview**
+
+
+
+
+```{toctree}
+:hidden:
+../../_hidden_tooltips.md
+```
+
+
 
 
 

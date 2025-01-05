@@ -117,7 +117,7 @@ You can upload a logo for your company by clicking the {hoverxref}`Upload Logo <
 - **Logo Preview**
 
 
-
+Note: 
 
 ```{toctree}
 :hidden:

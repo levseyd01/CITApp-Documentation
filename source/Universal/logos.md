@@ -80,9 +80,23 @@
 ```
 
 
+
+```{figure} ../../_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.png
+:width: 100%
+:align: center
+:name: navigating-to-user-detail-for-User
+```
+
+
+
+
 ```{toctree}
 :glob:
 :hidden:
 
 ../Index.md
 ```
+
+
+
+

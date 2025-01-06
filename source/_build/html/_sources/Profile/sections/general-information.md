@@ -16,8 +16,6 @@ The **Profile** screen allows you edit the following information about your comp
 :width: 50%
 :align: center
 
-
-
 Mailing Address 
 
 ```

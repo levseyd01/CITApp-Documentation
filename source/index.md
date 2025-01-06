@@ -32,7 +32,7 @@ Welcome to the documentation for the **CIT Services** version of the CIT App. Se
 My_Accounts/Index.md
 Dashboard/Index.md
 Profile/profile.md
-Beneficiaries/Index.md
+Beneficiaries/beneficiaries.md
 Users/users.md
 Account/Index.md
 Document/Index.md

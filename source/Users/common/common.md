@@ -1,0 +1,145 @@
+
+## Common Information 
+
+
+You can find both the **User** and **Staff** section along the left-hand side of the page:
+
+```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.png
+:width: 50%
+:align: center
+:name: manage-staff-location
+```
+
+
+```{include} ../../QuickTips/TogglePrimarySidebar.md
+```
+
+
+:::{admonition} Note
+:class: note
+
+Clicking on either option will take you to the homepage for that respective section.
+:::
+
+
+
+
+## Homepage for User and Staff Accounts
+
+
+
+
+Below is the homepage for **Managing User** accounts:
+
+
+```{figure} ../_static/solo_app/User/Staff/staff-homepage.png
+:width: 100%
+:align: center
+:name: staff-homepage
+```
+
+
+
+#### Available Information
+
+
+Each of the **Managing Users** and **Staff** sections opens with a homepage that presents a table including the following columns:
+
+- Contact Name
+- Contact Email
+- Number of Visits
+- Last Logged In
+- Status
+- Action
+
+
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.png
+:width: 100%
+:align: center
+:name: staff-homepage-columns
+```
+
+
+
+#### Status Column
+
+
+ The **Status** column indicates the current status of the account. The following statuses are available:
+
+- `Active`
+- `Activation Pending`
+
+
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
+:width: 100%
+:align: center
+:name: staff-homepage-columns
+```
+
+:::{admonition} Note
+:class: note
+
+- Both the **User** and **Staff** sections have the same **Status** column.
+- Statuses mean the same thing for both sections.
+
+:::
+
+
+
+
+If the account's status is `Activation Pending`, then the account.
+
+
+:::{note}
+
+- Find out more about **Activation Pending**
+
+:::
+
+
+#### Action Column
+
+
+Both **User** and **Staff** sections have the {ref}`View User Details <view-more-icon>` option in the **Action** column.
+
+
+:::{admonition} Note
+:class: note
+
+- The **Staff** section also has the option to {ref}`Edit Permissions <edit-permissions-icon>` and {ref}`Delete Account <delete-icon>`.
+- See the {ref}`Staff Actions <staff-actions>` section for more information.
+
+:::
+
+
+ 
+
+
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-action-location.png
+:width: 100%
+:align: center
+:name: staff-homepage-columns
+```
+
+:::{admonition} Note
+:class: note
+
+- Both the **User** and **Staff** sections have the same **Status** column.
+- Statuses mean the same thing for both sections.
+
+:::
+
+
+
+
+If the account's status is `Activation Pending`, then the account.
+
+
+:::{note}
+
+- Find out more about **Activation Pending**
+
+:::
+
+
+

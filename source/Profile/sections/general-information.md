@@ -135,9 +135,16 @@ Upload Logo Section
 
 
 
-{ref}`upload button 95 <../../_static/upload-button.png>`
+{ref}`upload button 95 <upload-button.png>`
 
 [upload-button-b64](upload-button-b64)
+
+
+[Upload upload](upload-logo-button)
+
+
+[Upload Upload 2](https://example.com)
+
 
 
 ## Example: Hover Tooltip

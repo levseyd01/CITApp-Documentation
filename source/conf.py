@@ -24,8 +24,8 @@ source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.autosectionlabel',
+   # 'sphinx.ext.intersphinx',
+    #'sphinx.ext.autosectionlabel',
     'rst2pdf.pdfbuilder',
     'sphinx.ext.todo',
     'sphinx_search.extension',
@@ -34,7 +34,7 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_togglebutton',
     'sphinx_tippy',
-    'hoverxref.extension',
+   # 'hoverxref.extension',
     'myst_parser',
     'sphinx_design']
 
@@ -67,27 +67,14 @@ with open("_static/upload-button.png", "rb") as f:
 tippy_custom_tips={
 
   "upload-logo-button": "<img src='upload-button.png' alt='Upload Button'>",
-  
-  "upload-logo-button-static": "<img src='_static/upload-button.png' alt='Upload Button'>",
-   "upload-logo-button-2": (
-        f"<img src='data:image/png;base64,{upload_button_png_encoded}' "
-        "alt='Upload Button' />"
-    ),
-    "upload-button-test-4": f"<img src='data:image/png;base64,{upload_button_b64}' alt='Upload Button'/>",
-
-    "upload-logo-button-5": "<img src='../../_static/upload-button.png' alt='Upload Button'/>",
-
-    "upload-button-direct": "<img src='_static/upload-button.png' alt='Upload Button'/>",
-
-
-
-
-    # Option B: Base64 embedded
-    "upload-button-b64": f"<img src='data:image/png;base64,{upload_button_png_encoded}' alt='Upload Button'/>",
 
 
 
 } 
+
+
+tippy_anchor_parent_selector = "article.bd-article"
+
 
 pdf_documents = [
     ('documents/solo/solo_approved/techstackguide/techstackguide_01',
@@ -98,12 +85,12 @@ pdf_documents = [
 ]
 
 #myst_all_links_external = True
-
-intersphinx_mapping = {
+''
+'''intersphinx_mapping = {
     'tol': ('https://transferonline.com/', None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None)
-}
-
+}'''
+''
 html_theme_options = {
     "repository_url": "https://github.com/levseyd01/SOLO_Review",
     "use_source_button": True,
@@ -118,7 +105,7 @@ html_theme_options = {
     "use_download_button": True
 }
 
-html_js_files = ["js/tippy.js", "js/popper.js"]
+#html_js_files = ["js/tippy.js", "js/popper.js"]
 tippy_js = ["js/popper.min.js", "js/tippy.js"]
 
 

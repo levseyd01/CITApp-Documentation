@@ -70,6 +70,11 @@ The following fields are required and cannot be left blank:
 
 
 
+
+
+
+
+
 ### Mailing Address
 
 
@@ -78,9 +83,15 @@ The following fields are required and cannot be left blank:
 :align: center
 
 
+
+
+
 Mailing Address 
 
 ```
+
+
+
 
 
 Similar to the Primary address, you can edit the following information:
@@ -100,32 +111,67 @@ Similar to the Primary address, you can edit the following information:
 :::
 
 
-### Uploading Logo
+### Uploading A Logo
 
 
 ```{figure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.png
 :width: 400px
 :align: center
+:name: upload-logo-section
 
 Upload Logo Section
 ```
 
-
-You can upload a logo for your company by clicking the {hoverxref}`Upload Logo <upload-logo-tip>` button. The following fields are required and cannot be left blank:
-
-- **Logo File**
-- **Logo Preview**
+[Check PNG](../../_static/upload-button.png)
 
 
+[Upload Button Test 4](upload-button-test-4)
 
 
-```{toctree}
-:hidden:
-../../_hidden_tooltips.md
-```
+{ref}`upload button 5 <upload-logo-button>`
+
+
+{ref}`upload button 65 <upload-button-test-4>`
 
 
 
+{ref}`upload button 95 <../../_static/upload-button.png>`
+
+[upload-button-b64](upload-button-b64)
+
+
+## Example: Hover Tooltip
+
+
+[Hover on me! ](upload-button-direct)
+
+
+[Hover on me!](upload-button-b64)
+
+
+
+**To Upload:**
+
+1. Find the {ref}`Upload Logo Section <upload-logo-section>`
+2. CLick the {ref}`Upload Button <upload-logo-button>` 
+
+You can upload a logo for your company by clicking the {ref}`Upload Button <image-name-2>` button. The following fields are required and cannot be left blank:
+
+2. CLick the {ref}`Upload Button <upload-logo-button>` d
+
+- {ref}`Upload-Test <upload-logo-button-2>`
+
+-  - {ref}`Image reference <image-name>`
+- 
+[**Hover on me!**](upload-logo-button-2)
+
+
+
+[**Hover on me!**](upload-logo-button)
+
+{ref}`Upload Button <upload-logo-button>`
+
+{ref}`Upload Button <upload-logo-button-2>`
 
 
 :::{admonition} Note

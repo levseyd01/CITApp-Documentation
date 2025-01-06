@@ -8,6 +8,7 @@
 import os
 import sys
 
+from pathlib import Path
 
 project = 'CIT Documentation'
 copyright = '2024, Transfer Online.'
@@ -18,13 +19,13 @@ release = '1'
 language = 'en'
 
 sys.path.append(os.path.abspath('_ext'))
-
+import base64
 source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
 extensions = [
     'sphinx.ext.intersphinx',
-  #  'sphinx.ext.autosectionlabel',
+    'sphinx.ext.autosectionlabel',
     'rst2pdf.pdfbuilder',
     'sphinx.ext.todo',
     'sphinx_search.extension',
@@ -32,7 +33,7 @@ extensions = [
     'sphinx.builders.linkcheck',
     'sphinx_copybutton',
     'sphinx_togglebutton',
-   # 'sphinx_tippy',
+    'sphinx_tippy',
     'hoverxref.extension',
     'myst_parser',
     'sphinx_design']
@@ -52,10 +53,41 @@ myst_enable_extensions = [
 
 ]
 
+# Read the binary data
+png_binary_data = Path("_static/upload-button.png").read_bytes()
+# Encode it in Base64 so you can embed it inline
+upload_button_png_encoded = base64.b64encode(png_binary_data).decode('utf-8')
+
+upload_button_b64 = base64.b64encode(png_binary_data).decode("utf-8")
+
+'''
+with open("_static/upload-button.png", "rb") as f:
+    upload_button_b64 = base64.b64encode(f.read()).decode("utf-8")'''
+
 tippy_custom_tips={
 
-  "upload-logo-button": "<img src='_static/solo_app/Universal/buttons/upload-button.png' alt='Upload Button'>"
-}
+  "upload-logo-button": "<img src='upload-button.png' alt='Upload Button'>",
+  
+  "upload-logo-button-static": "<img src='_static/upload-button.png' alt='Upload Button'>",
+   "upload-logo-button-2": (
+        f"<img src='data:image/png;base64,{upload_button_png_encoded}' "
+        "alt='Upload Button' />"
+    ),
+    "upload-button-test-4": f"<img src='data:image/png;base64,{upload_button_b64}' alt='Upload Button'/>",
+
+    "upload-logo-button-5": "<img src='../../_static/upload-button.png' alt='Upload Button'/>",
+
+    "upload-button-direct": "<img src='_static/upload-button.png' alt='Upload Button'/>",
+
+
+
+
+    # Option B: Base64 embedded
+    "upload-button-b64": f"<img src='data:image/png;base64,{upload_button_png_encoded}' alt='Upload Button'/>",
+
+
+
+} 
 
 pdf_documents = [
     ('documents/solo/solo_approved/techstackguide/techstackguide_01',
@@ -86,6 +118,10 @@ html_theme_options = {
     "use_download_button": True
 }
 
+html_js_files = ["js/tippy.js", "js/popper.js"]
+tippy_js = ["js/popper.min.js", "js/tippy.js"]
+
+
 html_logo = "_static/CIT-Logo-white-background.jpg"
 
 html_theme = 'sphinx_book_theme'
@@ -106,6 +142,8 @@ html_css_files = ["tippy.css", "custom.css"]
 # html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
+
+'''
 # Hoverxref configuration
 hoverxref_auto_ref = True
 hoverxref_role_types = {
@@ -127,6 +165,7 @@ hoverxref_version = 'cit-superadmin'
 hoverxref_api_version = 'cit-superadmin'
 hoverxref_auto_ref = True
 hoverxref_ignore_refs = ['genindex', 'modindex', 'search']
+'''
 
 suppress_warnings = [
    "undefined"

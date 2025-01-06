@@ -63,7 +63,7 @@ You can find the **Actions** section just below the {ref}`New Beneficiary<new-be
 ```
 
 
-**Options Include:**
+**Possible Actions:**
 
 
 

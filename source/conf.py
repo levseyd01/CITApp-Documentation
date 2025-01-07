@@ -25,7 +25,7 @@ source_suffix = ['.rst', '.md']
 
 extensions = [
     'sphinx.ext.intersphinx',
-    'sphinx.ext.autosectionlabel',
+   # 'sphinx.ext.autosectionlabel',
     'rst2pdf.pdfbuilder',
     'sphinx.ext.todo',
     'sphinx_search.extension',

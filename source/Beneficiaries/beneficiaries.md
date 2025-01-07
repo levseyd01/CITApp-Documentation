@@ -15,7 +15,7 @@ The list contains each beneficiary's:
 
 
 ```{figure} ../_static/solo_app/Beneficiaries/beneficiary-overview.jpeg
-:width: 100%
+:width: 75%
 :align: center
 ```
 
@@ -28,7 +28,7 @@ To **Add a Beneficiary:**
 1. Click the [New Beneficiary button](#new-beneficiary-button) to add a new beneficiary to the list.
 
 ```{image} ../_static/solo_app/Beneficiaries/new-beneficiary-location.jpeg
-:width: 100%
+:width: 75%
 :align: center
 :name: new-beneficiary-button-location
 ```

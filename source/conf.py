@@ -104,7 +104,7 @@ tippy_custom_tips = {
         "<img src='_static/solo_app/Universal/buttons/new-user.png' "
         "alt='New User Button' style='width:200px;'>"
     ),
-    "#menu-icon": (
+    "https://menu-icon.com": (
         "<img src='_static/solo_app/Universal/icons/menu-icon.png' "
         "alt='Menu Icon' style='width:100%;'>"
     ),

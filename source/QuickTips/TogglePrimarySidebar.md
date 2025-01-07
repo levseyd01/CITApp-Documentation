@@ -8,8 +8,48 @@
 
 
 
-Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sidebar:
+Click the [Menu Icon](https://menu-icon.com) icon in the top-left to toggle the primary sidebar:
 
+
+
+
+[Upload Button](#upload-button)
+
+  
+
+[File Explorer Open](#file-explorer-open)
+
+  
+
+[New Beneficiary Button](#new-beneficiary-button)
+
+  
+
+[Delete Icon](#delete-icon)
+
+  
+
+[View More Icon](#view-more-icon)
+
+  
+
+[Manage Button](#manage-button)
+
+  
+
+[Edit Permissions Icon](#edit-permissions-icon)
+
+  
+
+[New User Button](#new-user-button)
+
+  
+
+[Menu Icon](#menu-icon)
+
+  
+
+[Navigating to User Detail](#navigating-to-user-detail)
 
 
 ```{figure} /_static/solo_app/Tips/PrimarySidebar/PrimarySidebar-Collapsed.png

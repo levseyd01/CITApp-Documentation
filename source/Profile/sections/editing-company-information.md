@@ -1,4 +1,5 @@
 
+(editing-company-information-section)=
 # Editing Company Information
 
 
@@ -155,7 +156,7 @@ File Explorer, File Name Selected
 
 5. Click the [Open](#file-explorer-open) Button to upload the file.
 
+(information-pane-info-main)=
 
-
-```{include} information-pane.md
+```{include} ../../Universal/information-pane.md
 ```

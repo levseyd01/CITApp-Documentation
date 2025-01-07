@@ -70,7 +70,7 @@ The **Status** dropdown can be used to filter the table by these options:
 User, User Homepage, Status Filter Dropdown
 ```
 
-
+(user-user-view-user-details)=
 ## View User Details
 
 
@@ -104,4 +104,11 @@ User, User Homepage, View More Icon Location
 ```{include} view-user-details.md
 ```
 
+(user-user-view-user-details-information-pane)=
+
+```{include} ../../Universal/information-pane.md
+```
+
+```{include} view-user-details-accounts-tab.md
+```
 

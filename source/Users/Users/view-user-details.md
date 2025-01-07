@@ -69,6 +69,3 @@ You can find the actions at the bottom-right of the page:
 User Actions Location, Bottom Right
 ```
 
-
-#### User Details Homepage Infopanel
-

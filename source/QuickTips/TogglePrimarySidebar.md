@@ -8,9 +8,9 @@
 
 
 
-Click the [Menu Icon](https://menu-icon.com) icon in the top-left to toggle the primary sidebar:
+Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sidebar:
 
-
+Click the [Menu Icon again](../_static/solo_app/Universal/icons/menu-icon.png)
 
 
 [Upload Button](#upload-button)

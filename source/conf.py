@@ -127,7 +127,7 @@ pdf_documents = [
 
 ]
 
-#myst_all_links_external = True
+myst_all_links_external = True
 ''
 '''intersphinx_mapping = {
     'tol': ('https://transferonline.com/', None),

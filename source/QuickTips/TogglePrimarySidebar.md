@@ -78,3 +78,10 @@ Sidebar Expanded
 
 :::
 :::::
+
+```{toctree}
+:maxdepth: 2
+:caption: Contents
+
+../Index.md
+```

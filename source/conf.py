@@ -16,7 +16,7 @@ html_title = ''
 author = ''
 release = '1'
 
-language = 'en'`
+language = 'en'
 
 sys.path.append(os.path.abspath('_ext'))
 import base64

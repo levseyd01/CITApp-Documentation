@@ -24,13 +24,13 @@ source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    'sphinx.ext.intersphinx',
-   'sphinx.ext.autosectionlabel',
-    'rst2pdf.pdfbuilder',
-    'sphinx.ext.todo',
-    'sphinx_search.extension',
+  #  'sphinx.ext.intersphinx',
+  # 'sphinx.ext.autosectionlabel',
+ #   'rst2pdf.pdfbuilder',
+ #   'sphinx.ext.todo',
+   # 'sphinx_search.extension',
     'sphinx_prompt',
-    'sphinx.builders.linkcheck',
+  #  'sphinx.builders.linkcheck',
     'sphinx_copybutton',
     'sphinx_togglebutton',
     'sphinx_tippy',

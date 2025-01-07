@@ -24,13 +24,13 @@ source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
 extensions = [
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.autosectionlabel',
-    'rst2pdf.pdfbuilder',
-    'sphinx.ext.todo',
-    'sphinx_search.extension',
+     'sphinx.ext.intersphinx',
+     'sphinx.ext.autosectionlabel',
+ #   'rst2pdf.pdfbuilder',
+ #   'sphinx.ext.todo',
+# 'sphinx_search.extension',
     'sphinx_prompt',
-    'sphinx.builders.linkcheck',
+  #  'sphinx.builders.linkcheck',
     'sphinx_copybutton',
     'sphinx_togglebutton',
     'sphinx_tippy',
@@ -38,11 +38,9 @@ extensions = [
     'myst_parser',
     'sphinx_design']
 
-todo_include_todos = True
-
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",
-    "https://transferonline.com/"
+    "https://transferonline.com/",
 ]
 
 myst_enable_extensions = [
@@ -50,65 +48,171 @@ myst_enable_extensions = [
     "colon_fence",
     "tasklist"
 
-
 ]
 
+'''
 # Read the binary data
-png_binary_data = Path("_static/upload-button.png").read_bytes()
+png_binary_data = Path("_static/upload-button.jpeg").read_bytes()
 # Encode it in Base64 so you can embed it inline
 upload_button_png_encoded = base64.b64encode(png_binary_data).decode('utf-8')
 
 upload_button_b64 = base64.b64encode(png_binary_data).decode("utf-8")
+'''
 
 '''
-with open("_static/upload-button.png", "rb") as f:
+with open("_static/upload-button.jpeg", "rb") as f:
     upload_button_b64 = base64.b64encode(f.read()).decode("utf-8")'''
+tippy_custom_tips = {
+    "#upload-button": (
+        "<img src='/_static/solo_app/Universal/buttons/upload-button.jpeg' "
+        "alt='Upload Button' style='width:200px;'>"
+    ),
+    "#deactivate-button": (
+        "<img src='/_static/solo_app/Universal/buttons/deactivate-button.jpeg' "
+        "alt='Deactivate Button' style='width:200px;'>"
+    ),
+    "#file-explorer-open": (
+        "<img src='/_static/solo_app/Universal/file-explorer-open.jpeg' "
+        "alt='File Explorer Open' style='width:200px;'>"
+    ),
+    "#new-beneficiary-button": (
+        "<img src='/_static/solo_app/Beneficiaries/new-beneficiary.jpeg' "
+        "alt='New Beneficiary Button' style='width:200px;'>"
+    ),
+    "#delete-icon": (
+        "<img src='/_static/solo_app/Universal/icons/delete-icon.jpeg' "
+        "alt='Delete Icon' style='width:200px;'>"
+    ),
+    "#upload-logo-button": (
+        "<img src='/_static/solo_app/Profile/upload-logo-section/upload-logo-button.jpeg' "
+        "alt='Upload Logo Button' style='width:200px;'>"
+    ),
+    "#view-more-icon": (
+        "<img src='/_static/solo_app/Universal/icons/view-more-icon.jpeg' "
+        "alt='View More Icon' style='width:200px;'>"
+    ),
+    "#manage-button": (
+        "<img src='/_static/solo_app/Universal/buttons/manage-button.jpeg' "
+        "alt='Manage Button' style='width:200px;'>"
+    ),
+     "#save-changes": (
+        "<img src='/_static/solo_app/Universal/Universal/buttons/save-changes.jpeg' "
+        "alt='Save Changes' style='width:200px;'>"
+    ),
+    "#edit-permissions-icon": (
+        "<img src='/_static/solo_app/Universal/actions/edit-permissions.jpeg' "
+        "alt='Edit Permissions Icon' style='width:200px;'>"
+    ),
+    "#new-user-button": (
+        "<img src='/_static/solo_app/Universal/buttons/new-user.jpeg' "
+        "alt='New User Button' style='width:200px;'>"
+    ),
+    "#menu-icon": (
+        "<img src='/_static/solo_app/Universal/icons/menu-icon.jpeg' "
+        "alt='Menu Icon' style='width:100%;'>"
+    ),
+    "#navigating-to-user-detail": (
+        "<img src='/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.jpeg' "
+        "alt='Navigating to User Detail screenshot' style='width:100%;'>"
+    ),
+     "#reset-password": (
+        "<img src='/_static/solo_app/User/User-Detail/reset-password.jpeg' "
+        "alt='Reset Password' style='width:200px;'>"
+    ),
+}
 
-tippy_custom_tips={
+'''tippy_custom_tips = {
+    "#upload-button": (
+        "<img src='/_static/solo_app/Universal/buttons/upload-button.jpeg' "
+        "alt='Upload Button' style='width:200px;'>"
+    ),
+    "#file-explorer-open": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/file-explorer-open.jpeg' "
+        "alt='File Explorer Open' style='width:200px;'>"
+    ),
+    "#new-beneficiary-button": (
+        "<img src='/en/stable-edit/_static/solo_app/Beneficiaries/new-beneficiary.jpeg' "
+        "alt='New Beneficiary Button' style='width:200px;'>"
+    ),
+    "#delete-icon": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/delete-icon.jpeg' "
+        "alt='Delete Icon' style='width:200px;'>"
+    ),
+    "#upload-logo-button": (
+        "<img src='/en/stable-edit/_static/solo_app/Profile/upload-logo-section/upload-logo-button.jpeg' "
+        "alt='Upload Logo Button' style='width:200px;'>"
+    ),
+    "#view-more-icon": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/view-more-icon.jpeg' "
+        "alt='View More Icon' style='width:200px;'>"
+    ),
+    "#manage-button": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/manage-button.jpeg' "
+        "alt='Manage Button' style='width:200px;'>"
+    ),
+    "#edit-permissions-icon": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/actions/edit-permissions.jpeg' "
+        "alt='Edit Permissions Icon' style='width:200px;'>"
+    ),
+    "#new-user-button": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/new-user.jpeg' "
+        "alt='New User Button' style='width:200px;'>"
+    ),
+    "#menu-icon": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/menu-icon.jpeg' "
+        "alt='Menu Icon' style='width:100%;'>"
+    ),
+    "#navigating-to-user-detail": (
+        "<img src='/en/stable-edit/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.jpeg' "
+        "alt='Navigating to User Detail screenshot' style='width:100%;'>"
+    ),
+}
+'''
 
-  "upload-logo-button": "<img src='upload-button.png' alt='Upload Button'>",
-
-
-
-} 
-
+# Optionally, tweak tippy settings:
+#tippy_inline = True  # enable inline tips
+#tippy_enable_mathjax = True
 
 tippy_anchor_parent_selector = "article.bd-article"
 
-
+'''
 pdf_documents = [
-    ('documents/solo/solo_approved/techstackguide/techstackguide_01',
-     'techstackguide_01',
-     'Tech Stack Guide',
-     'TransferOnline',
-     'manual'),
-]
 
-#myst_all_links_external = True
+]'''
+
+
+myst_all_links_external = False
+
 ''
 '''intersphinx_mapping = {
     'tol': ('https://transferonline.com/', None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None)
 }'''
 ''
+myst_cache_enabled = True
 html_theme_options = {
-    "repository_url": "https://github.com/levseyd01/SOLO_Review",
-    "use_source_button": True,
-    "use_edit_page_button": True,
+    "repository_url": "",
+    "use_source_button": False,
+    "use_edit_page_button": False,
     "path_to_docs": "source",
-    "show_nav_level": 0,
-    "repository_branch": "main",
-    "use_repository_button": True,
-    'language_selector': True,
-    "use_issues_button": True,
-    'logo_only': True,
+    "show_nav_level": 2,
+    "repository_branch": "stable",
+    "use_repository_button": False,
+    #'language_selector': True,
+    "use_issues_button": False,
+    #'logo_only': True,
     "collapse_navbar": False,
     "collapse_navigation": True,
-    "use_download_button": True
+    "use_download_button": False
 }
 
 #html_js_files = ["js/tippy.js", "js/popper.js"]
-tippy_js = ["js/popper.min.js", "js/tippy.js"]
+'''tippy_js = [
+    "js/popper.min.js",
+    "js/tippy.js"
+]'''
+
+tippy_js = ("https://unpkg.com/@popperjs/core@2", "https://unpkg.com/tippy.js@6")
 
 
 html_logo = "_static/CIT-Logo-white-background.jpg"
@@ -122,7 +226,7 @@ exclude_patterns = ['_sources',
 
 # -- General configuration ---------------------------------------------------
 
-html_css_files = ["tippy.css", "custom.css"]
+html_css_files = ["tippy.css", "my_custom.css"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

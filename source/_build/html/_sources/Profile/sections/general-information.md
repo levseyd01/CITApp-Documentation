@@ -1,4 +1,8 @@
-## Editing Company Information
+```{eval-rst}
+:orphan:
+```
+
+# Editing Company Information
 
 
 
@@ -21,7 +25,7 @@ Mailing Address
 ```
 
 
-###  Name and Contact Information
+##  Name and Contact Information
 
 
 ```{figure} ../../_static/solo_app/Profile/information-section/info-zoomed-in.png
@@ -49,7 +53,7 @@ The ``Name`` field is required and cannot be left blank.
 :::
 
 
-### Primary Address
+## Primary Address
 
 
 ```{figure} ../../_static/solo_app/Profile/information-section/primary-address-zoomed-in.png
@@ -74,7 +78,7 @@ The following fields are required and cannot be left blank:
 
 
 
-### Mailing Address
+## Mailing Address
 
 
 ```{figure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.png
@@ -108,7 +112,7 @@ Similar to the Primary address, you can edit the following information:
 :::
 
 
-### Uploading A Logo
+## Uploading A Logo
 
 
 ```{figure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.png

@@ -1,21 +1,17 @@
 
-```{eval-rst}
-:orphan:
-```
-
-## Managing Staff Accounts
+# Staff 
 
 
 You can find the **Manage Staff** section along the left-hand side of the page:
 
-```{figure} ../_static/solo_app/User/Staff/manage-staff-location.png
+```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.png
 :width: 50%
 :align: center
 :name: manage-staff-location
 ```
 
 
-```{include} ../QuickTips/TogglePrimarySidebar.md
+```{include} ../../QuickTips/TogglePrimarySidebar.md
 ```
 
 
@@ -23,7 +19,7 @@ You can find the **Manage Staff** section along the left-hand side of the page:
 You should see the homepage for **Managing Staff** accounts:
 
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage.png
 :width: 100%
 :align: center
 :name: staff-homepage
@@ -31,7 +27,7 @@ You should see the homepage for **Managing Staff** accounts:
 
 
 
-#### Available Information
+## Available Information for Staff
 
 
 The homepage for **Managing Staff** accounts includes a table of accounts with the following columns:
@@ -43,7 +39,8 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 - Status
 - Action
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage-columns.png
+
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.png
 :width: 100%
 :align: center
 :name: staff-homepage-columns
@@ -51,7 +48,7 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 
 
 
-#### Status Column
+## Status Column
 
 
 The **Status** column indicates the current status of the account. The following statuses are available:
@@ -60,10 +57,10 @@ The **Status** column indicates the current status of the account. The following
 - `Activation Pending`
 
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
 :width: 100%
 :align: center
-:name: staff-homepage-columns
+:name: staff-homepage-statuscolumns
 ```
 
 

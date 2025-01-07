@@ -3,7 +3,7 @@
 ```
 
 
-## Common Information 
+# Common Information 
 
 
 
@@ -19,12 +19,12 @@ Below is the homepage for **Managing User** accounts:
 ```{figure} ../../_static/solo_app/User/Staff/staff-homepage.png
 :width: 100%
 :align: center
-:name: staff-homepage
+:name: staff-homepage-5
 ```
 
 
 
-#### Available Information
+### Available Information
 
 
 Each of the **Managing Users** and **Staff** sections opens with a homepage that presents a table including the following columns:
@@ -40,12 +40,12 @@ Each of the **Managing Users** and **Staff** sections opens with a homepage that
 ```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.png
 :width: 100%
 :align: center
-:name: staff-homepage-columns
+:name: staff-homepage-columns-3
 ```
 
 
 
-#### Status Column
+### (General) Status Column
 
 
  The **Status** column indicates the current status of the account. The following statuses are available:
@@ -57,7 +57,7 @@ Each of the **Managing Users** and **Staff** sections opens with a homepage that
 ```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
 :width: 100%
 :align: center
-:name: staff-homepage-columns
+:name: staff-homepage-columns-4
 ```
 
 :::{admonition} Note
@@ -81,17 +81,17 @@ If the account's status is `Activation Pending`, then the account.
 :::
 
 
-#### Action Column
+### Action Column
 
 
-Both **User** and **Staff** sections have the {ref}`View User Details <view-more-icon>` option in the **Action** column.
+Both **User** and **Staff** sections have the [View User Details](#view-more-icon) option in the **Action** column.
 
 
 :::{admonition} Note
 :class: note
 
-- The **Staff** section also has the option to {ref}`Edit Permissions <edit-permissions-icon>` and {ref}`Delete Account <delete-icon>`.
-- See the {ref}`Staff Actions <staff-actions>` section for more information.
+- The **Staff** section also has the option to [Edit Permissions](#edit-permissions-icon) and [Delete Action](#delete-icon).
+- See the
 
 :::
 

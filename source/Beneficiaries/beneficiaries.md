@@ -1,7 +1,7 @@
 
 
 
-## Beneficiaries List
+# Beneficiaries
 
 
 The **Beneficiaries List** section displays an overview of the company's beneficiaries.
@@ -25,13 +25,12 @@ The list contains each beneficiary's:
 
 To **Add a Beneficiary:**
 
-1. Click the {ref}`New Beneficiary<new-beneficiary-button>` button to add a new beneficiary to the list.
+1. Click the [New Beneficiary button](#new-beneficiary-button) to add a new beneficiary to the list.
 
 ```{image} ../_static/solo_app/Beneficiaries/new-beneficiary-location.png
 :width: 100%
 :align: center
 :name: new-beneficiary-button-location
-:caption: New Beneficiary Button Location
 ```
 
 
@@ -53,7 +52,7 @@ To **Add a Beneficiary:**
 
 ## Other Actions
 
-You can find the **Actions** section just below the {ref}`New Beneficiary<new-beneficiary-button>` button:
+You can find the **Actions** section just below the [New Beneficiary](#new-beneficiary-button):
 
 
 ```{image} ../_static/solo_app/Beneficiaries/action-section-location.png
@@ -67,6 +66,6 @@ You can find the **Actions** section just below the {ref}`New Beneficiary<new-be
 
 
 
-- Click the {ref}`Delete Beneficiary<delete-icon>` to remove a beneficiary from the list.
-- Click the {ref}`View Beneficary<view-more-icon>` to view a beneficiary's details.
+- Click the [Delete Beneficiary](#delete-icon) to remove a beneficiary from the list.
+- Click the [View Beneficiary](#view-more-icon) to view a beneficiary's details.
 

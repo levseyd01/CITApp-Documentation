@@ -1,39 +1,38 @@
-```{eval-rst}
-:orphan:
-```
 
-# Managing User Accounts
+# Users
 
+## Navigating to User Accounts
 
 You can find the **Manage User** section along the left-hand side of the page:
 
-```{figure} ../_static/solo_app/User/Staff/manage-staff-location.png
+```{figure} ../../_static/solo_app/User/User-Detail/user-actions-location.png
 :width: 50%
 :align: center
-:name: manage-staff-location
+:name: manage-users-location
 ```
-
 
 ```{include} ../QuickTips/TogglePrimarySidebar.md
 ```
 
 
 
-You should see the homepage for **Managing Staff** accounts:
+## User Management Homepage
+
+You should see the homepage for **Managing User Accounts**:
 
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage.png
+```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.png
 :width: 100%
 :align: center
-:name: staff-homepage
+:name: user-homepage
 ```
 
 
 
-### Available Information
+### Available Information for User Accounts
 
 
-The homepage for **Managing Staff** accounts includes a table of accounts with the following columns:
+The homepage for **Managing User Accounts** includes a table of accounts with the following columns:
 
 - Contact Name
 - Contact Email
@@ -42,15 +41,11 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 - Status
 - Action
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage-columns.png
-:width: 100%
-:align: center
-:name: staff-homepage-columns
-```
 
 
 
-### Status Column
+
+### (User) Status Column 
 
 
 The **Status** column indicates the current status of the account. The following statuses are available:
@@ -59,11 +54,6 @@ The **Status** column indicates the current status of the account. The following
 - `Activation Pending`
 
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
-:width: 100%
-:align: center
-:name: staff-homepage-columns
-```
 
 
 If the account's status is `Activation Pending`, then the account.
@@ -73,4 +63,4 @@ If the account's status is `Activation Pending`, then the account.
 
 - Find out more about **Activation Pending**
 
-:::
+::: 

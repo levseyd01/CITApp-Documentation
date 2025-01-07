@@ -9,3 +9,12 @@ div.margin {
     padding: 10px;
     border: 1px solid #ccc;
 }
+
+
+a[href^="https://upload-"],
+a[href^="https://example-"],
+a[href^="https://fake-"] {
+  pointer-events: none;
+  text-decoration: none; /* optional if you want to remove underline */
+  color: inherit;        /* optional if you want to keep normal text color */
+}

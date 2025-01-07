@@ -1,6 +1,6 @@
 
 
-## My Accounts
+# My Accounts
 
 
 The **My Accounts** sections displays an overview of the various accounts that you can manage.
@@ -37,7 +37,7 @@ To **Manage an Account**:
 
 
 
-#### Identifying the Current Account
+### Identifying the Current Account
 
 
 Identify the current account you are using by looking for the account name next to your profile picture. 

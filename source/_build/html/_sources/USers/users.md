@@ -1,8 +1,6 @@
-```{eval-rst}
-:orphan:
-```
 
-## User
+
+# User
 
 The **User** section allows you to do the following for both **Staff** and **User** accounts:
 
@@ -10,21 +8,26 @@ The **User** section allows you to do the following for both **Staff** and **Use
 - Edit a specific permissions for a staff or user.
 - Delete either a staff or user.
 
+Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sidebar:
 
 
-### Navigating to Each Section
+
+
+
+## Navigating to Each Section
+
 
 You can find both the **User** and **Staff** section along the left-hand side of the page:
 
 
-```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.png
+```{figure} ../_static/solo_app/User/Staff/manage-staff-location.png
 :width: 50%
 :align: center
-:name: manage-staff-location
+:name: manage-staff-location-9
 ```
 
 
-```{include} ../../QuickTips/TogglePrimarySidebar.md
+```{include} ../QuickTips/TogglePrimarySidebar.md
 ```
 
 
@@ -35,16 +38,10 @@ Clicking on either option will take you to the homepage for that respective sect
 :::
 
 
-
-
-
 ```{toctree}
-:caption: Users
-:hidden:
+:maxdepth: 2
 
-common/common.md
-common/view-user-detail.md
-common/view-user-details-breakdown.md
 Staff/managing-staff-accounts.md
 Users/managing-user-accounts.md
 ```
+

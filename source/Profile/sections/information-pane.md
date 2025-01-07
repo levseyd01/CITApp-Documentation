@@ -1,6 +1,8 @@
+```{eval-rst}
+:orphan:
+```
 
-
-## Information Pane
+# Information Pane
 
 
 
@@ -8,7 +10,7 @@ The **Information Pane** (Right Column) provides both an **Activity Log** and a 
 
 
 
-### Created & Modified Section
+## Created & Modified Section
 
 
 
@@ -27,7 +29,7 @@ The **Created & Modified** section contains the following:
 
 
 
-### Activity Log Section
+## Activity Log Section
 
 
 The **Activity Logs** section contains a list of changes made to the company's profile. 

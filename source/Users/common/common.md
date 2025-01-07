@@ -1,25 +1,9 @@
+```{eval-rst}
+:orphan:
+```
+
 
 ## Common Information 
-
-
-You can find both the **User** and **Staff** section along the left-hand side of the page:
-
-```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.png
-:width: 50%
-:align: center
-:name: manage-staff-location
-```
-
-
-```{include} ../../QuickTips/TogglePrimarySidebar.md
-```
-
-
-:::{admonition} Note
-:class: note
-
-Clicking on either option will take you to the homepage for that respective section.
-:::
 
 
 
@@ -32,7 +16,7 @@ Clicking on either option will take you to the homepage for that respective sect
 Below is the homepage for **Managing User** accounts:
 
 
-```{figure} ../_static/solo_app/User/Staff/staff-homepage.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage.png
 :width: 100%
 :align: center
 :name: staff-homepage

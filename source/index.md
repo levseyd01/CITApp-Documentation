@@ -1,3 +1,4 @@
+:orphan:
 
 # CIT App (CIT Services)
 
@@ -26,8 +27,7 @@ Welcome to the documentation for the **CIT Services** version of the CIT App. Se
 ## Sections
 
 ```{toctree}
-:glob:
-:maxdepth: 1
+:hidden:
 
 My_Accounts/Index.md
 Dashboard/Index.md

@@ -96,12 +96,14 @@ html_theme_options = {
     "use_source_button": True,
     "use_edit_page_button": True,
     "path_to_docs": "source",
+    "show_nav_level": 0,
     "repository_branch": "main",
     "use_repository_button": True,
     'language_selector': True,
     "use_issues_button": True,
     'logo_only': True,
     "collapse_navbar": False,
+    "collapse_navigation": True,
     "use_download_button": True
 }
 

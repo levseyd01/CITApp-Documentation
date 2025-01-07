@@ -1,5 +1,8 @@
+```{eval-rst}
+:orphan:
+```
 
-## Managing User Accounts
+# Managing User Accounts
 
 
 You can find the **Manage User** section along the left-hand side of the page:
@@ -27,7 +30,7 @@ You should see the homepage for **Managing Staff** accounts:
 
 
 
-#### Available Information
+### Available Information
 
 
 The homepage for **Managing Staff** accounts includes a table of accounts with the following columns:
@@ -47,7 +50,7 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 
 
 
-#### Status Column
+### Status Column
 
 
 The **Status** column indicates the current status of the account. The following statuses are available:

@@ -7,6 +7,10 @@
 
 Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sidebar:
 
+:::::{admonition} Toggle Primary Sidebar
+:class: tip, dropdown
+
+:::{card}
 
 ```{figure} /_static/solo_app/Tips/PrimarySidebar/PrimarySidebar-Collapsed.jpeg
 :width: 300px
@@ -31,5 +35,10 @@ Toggle Primary Sidebar button.
 Sidebar Expanded
 
 ```
+
+
+
+:::
+:::::
 
 

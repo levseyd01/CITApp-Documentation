@@ -133,7 +133,7 @@ myst_all_links_external = False
 ''
 myst_cache_enabled = True
 html_theme_options = {
-    "repository_url": "https://github.com/levseyd01/SOLO_Review",
+    "repository_url": "",
     "use_source_button": False,
     "use_edit_page_button": False,
     "path_to_docs": "source",
@@ -144,7 +144,7 @@ html_theme_options = {
     "use_issues_button": False,
     #'logo_only': True,
     "collapse_navbar": False,
-    "collapse_navigation": False,
+    "collapse_navigation": True,
     "use_download_button": False
 }
 

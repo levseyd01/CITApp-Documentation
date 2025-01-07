@@ -69,19 +69,19 @@ with open("_static/upload-button.png", "rb") as f:
 
 tippy_custom_tips = {
     "#upload-button": (
-        "<img src='/_static/solo_app/Universal/buttons/upload-button.png' "
+        "<img src='../_static/solo_app/Universal/buttons/upload-button.png' "
         "alt='Upload Button' style='width:200px;'>"
     ),
     "#file-explorer-open": (
-        "<img src='_static/solo_app/Universal/file-explorer-open.png' "
+        "<img src='../_static/solo_app/Universal/file-explorer-open.png' "
         "alt='File Explorer Open' style='width:200px;'>"
     ),
     "#new-beneficiary-button": (
-        "<img src='/_static/solo_app/Beneficiaries/new-beneficiary.png' "
+        "<img src='../_static/solo_app/Beneficiaries/new-beneficiary.png' "
         "alt='New Beneficiary Button' style='width:200px;'>"
     ),
     "#delete-icon": (
-        "<img src='./_static/solo_app/Universal/icons/delete-icon.png' "
+        "<img src='.../_static/solo_app/Universal/icons/delete-icon.png' "
         "alt='Delete Icon' style='width:200px;'>"
     ),
     "#upload-logo-button": (
@@ -89,19 +89,19 @@ tippy_custom_tips = {
         "alt='Upload Logo Button' style='width:200px;'>"
     ),
     "#view-more-icon": (
-        "<img src='../../_static/solo_app/Universal/icons/view-more-icon.png' "
+        "<img src='../_static/solo_app/Universal/icons/view-more-icon.png' "
         "alt='View More Icon' style='width:200px;'>"
     ),
     "#manage-button": (
-        "<img src='_static/solo_app/Universal/buttons/manage-button.png' "
+        "<img src='../_static/solo_app/Universal/buttons/manage-button.png' "
         "alt='Manage Button' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (
-        "<img src='_static/solo_app/Universal/actions/edit-permissions.png' "
+        "<img src='../_static/solo_app/Universal/actions/edit-permissions.png' "
         "alt='Edit Permissions Icon' style='width:200px;'>"
     ),
     "#new-user-button": (
-        "<img src='_static/solo_app/Universal/buttons/new-user.png' "
+        "<img src='../_static/solo_app/Universal/buttons/new-user.png' "
         "alt='New User Button' style='width:200px;'>"
     ),
     "#menu-icon": (

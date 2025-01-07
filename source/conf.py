@@ -69,7 +69,7 @@ with open("_static/upload-button.png", "rb") as f:
 
 tippy_custom_tips = {
     "#upload-button": (
-        "<img src='../_static/solo_app/Universal/buttons/upload-button.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/upload-button.png' "
         "alt='Upload Button' style='width:200px;'>"
     ),
     "#file-explorer-open": (

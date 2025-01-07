@@ -38,19 +38,15 @@ extensions = [
     'myst_parser',
     'sphinx_design']
 
-todo_include_todos = True
-
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",
     "https://transferonline.com/",
-    "http://127.0.0.1:8000/"
 ]
 
 myst_enable_extensions = [
     "attrs_inline",
     "colon_fence",
     "tasklist"
-
 
 ]
 
@@ -116,31 +112,33 @@ tippy_custom_tips = {
 
 
 # Optionally, tweak tippy settings:
-tippy_inline = True  # enable inline tips
-tippy_enable_mathjax = True
-
+#tippy_inline = True  # enable inline tips
+#tippy_enable_mathjax = True
 
 tippy_anchor_parent_selector = "article.bd-article"
 
-
+'''
 pdf_documents = [
 
-]
+]'''
+
 
 myst_all_links_external = True
+
 ''
 '''intersphinx_mapping = {
     'tol': ('https://transferonline.com/', None),
     "sphinx": ("https://www.sphinx-doc.org/en/master", None)
 }'''
 ''
+
 html_theme_options = {
     "repository_url": "https://github.com/levseyd01/SOLO_Review",
     "use_source_button": True,
     "use_edit_page_button": True,
     "path_to_docs": "source",
     "show_nav_level": 2,
-    "repository_branch": "main",
+    "repository_branch": "stable",
     "use_repository_button": True,
     #'language_selector': True,
     "use_issues_button": True,
@@ -170,7 +168,7 @@ exclude_patterns = ['_sources',
 
 # -- General configuration ---------------------------------------------------
 
-html_css_files = ["tippy.css", "custom.css"]
+html_css_files = ["tippy.css", "my_custom.css"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

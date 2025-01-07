@@ -12,8 +12,6 @@ Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sid
 
 
 
-
-
 ## Navigating to Each Section
 
 
@@ -26,9 +24,16 @@ You can find both the **User** and **Staff** section along the left-hand side of
 :name: manage-staff-location-9
 ```
 
+:::::{admonition} Toggle Primary Sidebar
+:class: tip, dropdown
+
+:::{card}
 
 ```{include} ../QuickTips/TogglePrimarySidebar.md
 ```
+
+:::
+:::::
 
 
 :::{admonition} Note

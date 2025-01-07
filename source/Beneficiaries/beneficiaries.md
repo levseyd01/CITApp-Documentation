@@ -15,8 +15,10 @@ The list contains each beneficiary's:
 
 
 ```{figure} ../_static/solo_app/Beneficiaries/beneficiary-overview.jpeg
-:width: 75%
+:width: 100%
 :align: center
+
+Beneficiaries List, Overview
 ```
 
 
@@ -25,25 +27,28 @@ The list contains each beneficiary's:
 
 To **Add a Beneficiary:**
 
-1. Click the [New Beneficiary button](#new-beneficiary-button) to add a new beneficiary to the list.
+1. Click the [Add New Beneficiary button](#new-beneficiary-button) to add a new beneficiary to the list.
 
-```{image} ../_static/solo_app/Beneficiaries/new-beneficiary-location.jpeg
-:width: 75%
+
+```{figure} ../_static/solo_app/Beneficiaries/new-beneficiary-location.jpeg
+:width: 100%
 :align: center
 :name: new-beneficiary-button-location
+
+Beneficiaries List, New Beneficiary Button Location
 ```
 
 
 2. Enter the beneficiary's **First Name**, **Last Name** and **Beneficiary Percentage** into their respective input fields.
 
 
-
-```{image} ../_static/solo_app/Beneficiaries/add-beneficiary-info.jpeg
-:width: 50%
+```{figure} ../_static/solo_app/Beneficiaries/add-beneficiary-info.jpeg
+:width: 80%
 :align: center
-:name: add-beneficiary-info
-```
+:name: add-beneficiary-info-popup
 
+Beneficiaries List, Add Beneficiary Info Popup
+```
 
 :::{admonition} Note
 - All fields are required to add a beneficiary.
@@ -52,20 +57,47 @@ To **Add a Beneficiary:**
 
 ## Other Actions
 
-You can find the **Actions** section just below the [New Beneficiary](#new-beneficiary-button):
+
+To **Perform Other Actions:** 
+
+1. Find the **Action** column. 
 
 
-```{image} ../_static/solo_app/Beneficiaries/action-section-location.jpeg
-:width: 50%
+```{figure} ../_static/solo_app/Beneficiaries/action-section-location.jpeg
+:width: 100%
 :align: center
 :name: action-section-location
+
+Beneficiaries List, Action Location
+```
+
+- See [View or Edit a Beneficiary's Details](#view-or-edit-a-beneficiary-s-details) below for how to view or edit a beneficiary's details.
+
+- See [Delete a Beneficiary](#to-delete-a-beneficiary) below for how to delete a beneficiary.
+
+
+## View or Edit a Beneficiary's Details
+
+1. Click the [View Beneficiary](#view-more-icon) to view a beneficiary's details.
+
+
+```{figure} ../_static/solo_app/Beneficiaries/view-edit-beneficiary-details.jpg
+:width: 80%
+:align: center
+:name: view-beneficiary-info-popup
+
+Beneficiaries List, View Beneficiary Info Popup
 ```
 
 
-**Possible Actions:**
+:::{admonition} Note 
+:class: Note
+
+Follow the steps listed in the [Other Actions](other-actions) section to find the [View Beneficiary Button](#view-more-icon).
+
+:::
 
 
+**To Delete a Beneficiary:**
 
-- Click the [Delete Beneficiary](#delete-icon) to remove a beneficiary from the list.
-- Click the [View Beneficiary](#view-more-icon) to view a beneficiary's details.
-
+1. Click the [Delete Beneficiary](#delete-icon) to remove a beneficiary from the list.

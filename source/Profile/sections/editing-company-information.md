@@ -1,6 +1,4 @@
 
-(editing-company-information-2)=
-
 # Editing Company Information
 
 
@@ -27,15 +25,19 @@ Profile Screen, Information Section
 ##  Name and Contact Information
 
 
+
+The **Info** section of the **Profile** screen allows you to edit various details about your company.
+
+
 ```{figure} ../../_static/solo_app/Profile/information-section/info-zoomed-in.jpeg
 :width: 400px
 :align: center
+:name: profile-screen-info
 
 Profile Screen, Name and Contact Information
 ```
 
-
-The **Info** section of the **Profile** screen allows you to edit the following information about your company:
+The following fields can be edited:
 
 - **Name** 
 
@@ -53,18 +55,17 @@ The ``Name`` field is required and cannot be left blank.
 
 ## Primary Address
 
+The **Primary Address** section is where you can change the primary location of your company.
 
 ```{figure} ../../_static/solo_app/Profile/information-section/primary-address-zoomed-in.jpeg
 :width: 400px
 :align: center
-
+:name: profile-screen-primary-address
 
 Profile Screen, Primary Address 
 
 ```
 
-
-You can edit any of the information in this section by simply clicking into the field. 
 
 The following fields are required and cannot be left blank:
 
@@ -79,9 +80,19 @@ The following fields are required and cannot be left blank:
 ## Mailing Address
 
 
+The **Mailing Address** section is where you can change the mailing address of your company (if different from the primary address).
+
+:::{admonition} Note
+:class: Note
+
+Leave the``Street Name`` field empty if the Mailing address is the same as the Primary address.
+:::
+
+
 ```{figure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.jpeg
 :width: 400px
 :align: center
+:name: profile-screen-mailing-address
 
 Profile Screen, Mailing Address 
 ```
@@ -101,7 +112,6 @@ Similar to the Primary address, you can edit the following information:
 :::{admonition} Note
 
 - No field is required for the Mailing address.
-- Leaving the ``Street Name`` field empty will result in the Mailing address being the same as the Primary address.
 :::
 
 
@@ -147,3 +157,5 @@ File Explorer, File Name Selected
 
 
 
+```{include} information-pane.md
+```

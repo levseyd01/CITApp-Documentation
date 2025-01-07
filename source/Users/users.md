@@ -8,8 +8,10 @@ The **User** section allows you to do the following for both **Staff** and **Use
 - Edit a specific permissions for a staff or user.
 - Delete either a staff or user.
 
-Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sidebar:
+You can found out more about each section below:
 
+- [Managing User Accounts](Users/managing-user-accounts.md)
+- [Managing Staff Accounts](Staff/managing-staff-accounts.md)
 
 
 ## Navigating to Each Section
@@ -49,7 +51,7 @@ Clicking on either option will take you to the homepage for that respective sect
 :::
 
 
-```{toctree}
+```{toctree} Table of Contents
 :maxdepth: 2
 
 Staff/managing-staff-accounts.md

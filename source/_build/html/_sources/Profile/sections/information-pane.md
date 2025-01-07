@@ -1,14 +1,18 @@
-```{eval-rst}
-:orphan:
-```
 
+(general-information-pane)=
 # Information Pane
 
 
 
 The **Information Pane** (Right Column) provides both an **Activity Log** and a **Created & Modified** Section. 
 
+```{figure} ../../_static/solo_app/Universal/infopane/created-modified-activity-log.jpg
+:width: 50%
+:align: center
+:name: information-pane
 
+Information Pane
+```
 
 ## Created & Modified Section
 

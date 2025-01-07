@@ -1,66 +1,107 @@
 
 # Users
 
-## Navigating to User Accounts
-
-You can find the **Manage User** section along the left-hand side of the page:
-
-```{figure} ../../_static/solo_app/User/User-Detail/user-actions-location.jpeg
-:width: 50%
-:align: center
-:name: manage-users-location
-```
-
-```{include} ../QuickTips/TogglePrimarySidebar.md
-```
+The **User** section allows you to manage and view **User** accounts. 
 
 
-
-## User Management Homepage
-
-You should see the homepage for **Managing User Accounts**:
-
-
-```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.jpeg
+```{figure} ../../_static/solo_app/User/Users/user-user-homepage.jpeg
 :width: 100%
 :align: center
 :name: user-homepage
+
+User, User Homepage
 ```
 
 
+## Navigating the User Table
 
-### Available Information for User Accounts
 
-
-The homepage for **Managing User Accounts** includes a table of accounts with the following columns:
+The homepage displays a table of users with the following columns:
 
 - Contact Name
 - Contact Email
 - Number of Visits
 - Last Logged In
-- Status
+- Status (Active or Inactive)
 - Action
 
 
+```{figure} ../../_static/solo_app/User/Users/user-user-column-options.jpeg
+:width: 100%
+:align: center
+:name: user-homepage
+
+User, User, Column Options
+```
+
+### Filtering the User Table
+
+The **User** table can be filtered by either of the following options:
+
+- Searching for a specific user on the page using the search bar, or 
+- Changing the filter options using the [Status dropdown](using-the-status-dropdown) at the top-left of the page.
 
 
+```{figure} ../../_static/solo_app/User/Users/user-user-hompage-filter-options.jpeg
+:width: 100%
+:align: center
+:name: user-user-hompage-filter-options
 
-### (User) Status Column 
-
-
-The **Status** column indicates the current status of the account. The following statuses are available:
-
-- `Active`
-- `Activation Pending`
-
+User, User Homepage, Filter Options
+```
 
 
+#### Using the Status Dropdown
 
-If the account's status is `Activation Pending`, then the account.
+The **Status** dropdown can be used to filter the table by these options:
+
+- All
+- Active
+- Inactive
+- Pending Activation (needs precise definition)
+- Locked Out (needs precise definition)
 
 
-:::{note}
+```{figure} ../../_static/solo_app/User/Users/user-user-status-filter.jpeg
+:width: 100%
+:align: center
+:name: user-user-status-filter
 
-- Find out more about **Activation Pending**
+User, User Homepage, Status Filter Dropdown
+```
 
-::: 
+
+## View User Details
+
+
+To view a user's details:
+
+
+1. Find the **Action** column.
+
+
+```{figure} ../../_static/solo_app/User/Users/user-user-action-column.jpeg
+:width: 100%
+:align: center
+:name: user-user-action-column
+
+User, User Homepage, Action Column
+```
+
+2. Find the row of the User you want to view.
+3. Click the [View More Icon](#view-more-icon).
+
+
+```{figure} ../../_static/solo_app/User/Users/user-user-view-more-location.jpg
+:width: 100%
+:align: center
+:name: user-user-view-more-location
+
+User, User Homepage, View More Icon Location
+```
+
+
+```{include} view-user-details.md
+```
+
+

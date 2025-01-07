@@ -1,6 +1,3 @@
-```{eval-rst}
-:orphan:
-```
 
 (detailed-guide-2)=
 

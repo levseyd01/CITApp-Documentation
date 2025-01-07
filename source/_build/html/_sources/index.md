@@ -1,12 +1,10 @@
-```{eval-rst}
-:orphan:
-```
 
 # CIT App (CIT Services)
 
 Welcome to the documentation for the **CIT Services** version of the CIT App. See below to get started. 
 
 ## Getting Started
+
 
 ### Navigating the App
 

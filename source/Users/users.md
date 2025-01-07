@@ -18,7 +18,7 @@ Click the [Menu Icon](#menu-icon) icon in the top-left to toggle the primary sid
 You can find both the **User** and **Staff** section along the left-hand side of the page:
 
 
-```{figure} ../_static/solo_app/User/Staff/manage-staff-location.png
+```{figure} ../_static/solo_app/User/Staff/manage-staff-location.jpeg
 :width: 50%
 :align: center
 :name: manage-staff-location-9

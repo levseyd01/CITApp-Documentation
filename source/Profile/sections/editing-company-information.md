@@ -15,7 +15,7 @@ The **Profile** screen allows you edit the following information about your comp
 - [Upload Logo](upload-logo)
 
 
-```{figure}  ../../_static/solo_app/Profile/information-section/main-screen.png
+```{figure}  ../../_static/solo_app/Profile/information-section/main-screen.jpeg
 :width: 50%
 :align: center
 :name: profile-screen-information-section
@@ -27,7 +27,7 @@ Profile Screen, Information Section
 ##  Name and Contact Information
 
 
-```{figure} ../../_static/solo_app/Profile/information-section/info-zoomed-in.png
+```{figure} ../../_static/solo_app/Profile/information-section/info-zoomed-in.jpeg
 :width: 400px
 :align: center
 
@@ -54,7 +54,7 @@ The ``Name`` field is required and cannot be left blank.
 ## Primary Address
 
 
-```{figure} ../../_static/solo_app/Profile/information-section/primary-address-zoomed-in.png
+```{figure} ../../_static/solo_app/Profile/information-section/primary-address-zoomed-in.jpeg
 :width: 400px
 :align: center
 
@@ -79,7 +79,7 @@ The following fields are required and cannot be left blank:
 ## Mailing Address
 
 
-```{figure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.png
+```{figure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.jpeg
 :width: 400px
 :align: center
 
@@ -108,7 +108,7 @@ Similar to the Primary address, you can edit the following information:
 ## Upload Logo
 
 
-```{figure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.png
+```{figure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.jpeg
 :width: 400px
 :align: center
 :name: upload-logo-section
@@ -135,7 +135,7 @@ Profile Screen, Upload Logo Section
 
 
 
-```{figure} ../../_static/solo_app/Universal/file-explorer-filename-png.png
+```{figure} ../../_static/solo_app/Universal/file-explorer-filename-png.jpeg
 :width: 400px
 :align: center
 :name: file-explorer-filename-png

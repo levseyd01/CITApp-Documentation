@@ -14,7 +14,7 @@ The list contains each beneficiary's:
 
 
 
-```{figure} ../_static/solo_app/Beneficiaries/beneficiary-overview.png
+```{figure} ../_static/solo_app/Beneficiaries/beneficiary-overview.jpeg
 :width: 100%
 :align: center
 ```
@@ -27,7 +27,7 @@ To **Add a Beneficiary:**
 
 1. Click the [New Beneficiary button](#new-beneficiary-button) to add a new beneficiary to the list.
 
-```{image} ../_static/solo_app/Beneficiaries/new-beneficiary-location.png
+```{image} ../_static/solo_app/Beneficiaries/new-beneficiary-location.jpeg
 :width: 100%
 :align: center
 :name: new-beneficiary-button-location
@@ -38,7 +38,7 @@ To **Add a Beneficiary:**
 
 
 
-```{image} ../_static/solo_app/Beneficiaries/add-beneficiary-info.png
+```{image} ../_static/solo_app/Beneficiaries/add-beneficiary-info.jpeg
 :width: 50%
 :align: center
 :name: add-beneficiary-info
@@ -55,7 +55,7 @@ To **Add a Beneficiary:**
 You can find the **Actions** section just below the [New Beneficiary](#new-beneficiary-button):
 
 
-```{image} ../_static/solo_app/Beneficiaries/action-section-location.png
+```{image} ../_static/solo_app/Beneficiaries/action-section-location.jpeg
 :width: 50%
 :align: center
 :name: action-section-location

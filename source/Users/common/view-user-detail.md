@@ -13,7 +13,7 @@ The View User Details section allows you to both edit and view details of a spec
 1. Go to the {ref}`homepage <staff-homepage>` for either the {ref}`User <navigating-to-user-detail-for-User>` or {ref}`Staff <manage-staff-location>` section. 
 2. Click the  {ref}`View Icon <view-more-icon>` next to the user you want to view:
 
-```{figure} ../../_static/solo_app/User/User-Detail/navigating-to-view-user-details.png
+```{figure} ../../_static/solo_app/User/User-Detail/navigating-to-view-user-details.jpeg
 :width: 75%
 :align: center
 :name: navigating-to-view-user-details
@@ -23,7 +23,7 @@ The View User Details section allows you to both edit and view details of a spec
 
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.png
+```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.jpeg
 :width: 75%
 :align: center
 :name: user-detail-homepage

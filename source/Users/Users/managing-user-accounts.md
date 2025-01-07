@@ -5,7 +5,7 @@
 
 You can find the **Manage User** section along the left-hand side of the page:
 
-```{figure} ../../_static/solo_app/User/User-Detail/user-actions-location.png
+```{figure} ../../_static/solo_app/User/User-Detail/user-actions-location.jpeg
 :width: 50%
 :align: center
 :name: manage-users-location
@@ -21,7 +21,7 @@ You can find the **Manage User** section along the left-hand side of the page:
 You should see the homepage for **Managing User Accounts**:
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.png
+```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.jpeg
 :width: 100%
 :align: center
 :name: user-homepage

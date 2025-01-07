@@ -16,7 +16,7 @@
 Below is the homepage for **Managing User** accounts:
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage-5
@@ -37,7 +37,7 @@ Each of the **Managing Users** and **Staff** sections opens with a homepage that
 - Action
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage-columns-3
@@ -54,7 +54,7 @@ Each of the **Managing Users** and **Staff** sections opens with a homepage that
 - `Activation Pending`
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage-columns-4
@@ -99,7 +99,7 @@ Both **User** and **Staff** sections have the [View User Details](#view-more-ico
  
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-action-location.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-action-location.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage-columns

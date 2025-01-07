@@ -5,6 +5,6 @@
 This is the Dashboard section. 
 
 
-![img.png](img.png)
+![img.jpeg](img.jpeg)
 
 

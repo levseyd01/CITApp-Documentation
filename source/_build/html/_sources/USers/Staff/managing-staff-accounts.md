@@ -4,7 +4,7 @@
 
 You can find the **Manage Staff** section along the left-hand side of the page:
 
-```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.png
+```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.jpeg
 :width: 50%
 :align: center
 :name: manage-staff-location
@@ -19,7 +19,7 @@ You can find the **Manage Staff** section along the left-hand side of the page:
 You should see the homepage for **Managing Staff** accounts:
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage
@@ -40,7 +40,7 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 - Action
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage-columns
@@ -57,7 +57,7 @@ The **Status** column indicates the current status of the account. The following
 - `Activation Pending`
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.png
+```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.jpeg
 :width: 100%
 :align: center
 :name: staff-homepage-statuscolumns

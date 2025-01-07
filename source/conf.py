@@ -52,7 +52,7 @@ myst_enable_extensions = [
 
 '''
 # Read the binary data
-png_binary_data = Path("_static/upload-button.png").read_bytes()
+png_binary_data = Path("_static/upload-button.jpeg").read_bytes()
 # Encode it in Base64 so you can embed it inline
 upload_button_png_encoded = base64.b64encode(png_binary_data).decode('utf-8')
 
@@ -60,52 +60,52 @@ upload_button_b64 = base64.b64encode(png_binary_data).decode("utf-8")
 '''
 
 '''
-with open("_static/upload-button.png", "rb") as f:
+with open("_static/upload-button.jpeg", "rb") as f:
     upload_button_b64 = base64.b64encode(f.read()).decode("utf-8")'''
 
 tippy_custom_tips = {
     "#upload-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/upload-button.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/upload-button.jpeg' "
         "alt='Upload Button' style='width:200px;'>"
     ),
     "#file-explorer-open": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/file-explorer-open.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/file-explorer-open.jpeg' "
         "alt='File Explorer Open' style='width:200px;'>"
     ),
     "#new-beneficiary-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Beneficiaries/new-beneficiary.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Beneficiaries/new-beneficiary.jpeg' "
         "alt='New Beneficiary Button' style='width:200px;'>"
     ),
     "#delete-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/delete-icon.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/delete-icon.jpeg' "
         "alt='Delete Icon' style='width:200px;'>"
     ),
     "#upload-logo-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Profile/upload-logo-section/upload-logo-button.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Profile/upload-logo-section/upload-logo-button.jpeg' "
         "alt='Upload Logo Button' style='width:200px;'>"
     ),
     "#view-more-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/view-more-icon.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/view-more-icon.jpeg' "
         "alt='View More Icon' style='width:200px;'>"
     ),
     "#manage-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/manage-button.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/manage-button.jpeg' "
         "alt='Manage Button' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/actions/edit-permissions.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/actions/edit-permissions.jpeg' "
         "alt='Edit Permissions Icon' style='width:200px;'>"
     ),
     "#new-user-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/new-user.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/new-user.jpeg' "
         "alt='New User Button' style='width:200px;'>"
     ),
     "#menu-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/menu-icon.png' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/menu-icon.jpeg' "
         "alt='Menu Icon' style='width:100%;'>"
     ),
     "#navigating-to-user-detail": (
-        "<img src='/en/stable-edit/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.png' "
+        "<img src='/en/stable-edit/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.jpeg' "
         "alt='Navigating to User Detail screenshot' style='width:100%;'>"
     ),
 }

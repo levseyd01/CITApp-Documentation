@@ -89,7 +89,7 @@ tippy_custom_tips = {
         "alt='Upload Logo Button' style='width:200px;'>"
     ),
     "#view-more-icon": (
-        "<img src='_static/Universal/icons/view-more-icon.png' "
+        "<img src='_static/solo_app/Universal/icons/view-more-icon.png' "
         "alt='View More Icon' style='width:200px;'>"
     ),
     "#manage-button": (

@@ -151,12 +151,12 @@ html_theme_options = {
 }
 
 #html_js_files = ["js/tippy.js", "js/popper.js"]
-'''tippy_js = [
+tippy_js = [
     "js/popper.min.js",
     "js/tippy.js"
-]'''
+]
 
-tippy_js = ("https://unpkg.com/@popperjs/core@2", "https://unpkg.com/tippy.js@6")
+# tippy_js = ("https://unpkg.com/@popperjs/core@2", "https://unpkg.com/tippy.js@6")
 
 
 html_logo = "_static/CIT-Logo-white-background.jpg"

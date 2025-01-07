@@ -123,7 +123,7 @@ pdf_documents = [
 ]'''
 
 
-myst_all_links_external = True
+myst_all_links_external = False
 
 ''
 '''intersphinx_mapping = {
@@ -131,21 +131,21 @@ myst_all_links_external = True
     "sphinx": ("https://www.sphinx-doc.org/en/master", None)
 }'''
 ''
-
+myst_cache_enabled = True
 html_theme_options = {
     "repository_url": "https://github.com/levseyd01/SOLO_Review",
-    "use_source_button": True,
-    "use_edit_page_button": True,
+    "use_source_button": False,
+    "use_edit_page_button": False,
     "path_to_docs": "source",
     "show_nav_level": 2,
     "repository_branch": "stable",
-    "use_repository_button": True,
+    "use_repository_button": False,
     #'language_selector': True,
-    "use_issues_button": True,
+    "use_issues_button": False,
     #'logo_only': True,
     "collapse_navbar": False,
     "collapse_navigation": False,
-    "use_download_button": True
+    "use_download_button": False
 }
 
 #html_js_files = ["js/tippy.js", "js/popper.js"]

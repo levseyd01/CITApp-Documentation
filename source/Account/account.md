@@ -17,7 +17,7 @@ The **Account** section allows you to edit the following:
 :caption: Account Sections
 
 sponsorship-organization/sponsorship-organizations.md
-cit-corporations/CIT-Corporations.md
+cit-corporations/cit-corporations.md
 investors/Investors.md
 ```
 

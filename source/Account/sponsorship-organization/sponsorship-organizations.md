@@ -46,4 +46,10 @@ Sponsorship Organization, Homepage
 ``` 
 
 
-```{include} view-sponsorship-account.md
+```{include} sponsorship-account-sections/view-sponsorship-account.md
+```
+
+
+
+```{include} sponsorship-account-sections/subsections/tabs-explained.md
+```

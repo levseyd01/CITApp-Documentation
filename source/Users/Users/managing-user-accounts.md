@@ -55,11 +55,11 @@ User, User Homepage, Filter Options
 
 The **Status** dropdown can be used to filter the table by these options:
 
-- All
-- Active
-- Inactive
-- Pending Activation (needs precise definition)
-- Locked Out (needs precise definition)
+- `All`
+- `Active`
+- `Inactive`
+- `Pending Activation (needs precise definition)`
+- `Locked Out (needs precise definition)`
 
 
 ```{figure} ../../_static/solo_app/User/Users/user-user-status-filter.jpeg
@@ -74,7 +74,7 @@ User, User Homepage, Status Filter Dropdown
 ## View User Details
 
 
-To view a user's details:
+To view a **User's** details:
 
 
 1. Find the **Action** column.
@@ -101,7 +101,7 @@ User, User Homepage, View More Icon Location
 ```
 
 
-```{include} view-user-details.md
+```{include} ../../Universal/UserDetails/user-details-page.md
 ```
 
 (user-user-view-user-details-information-pane)=
@@ -109,6 +109,6 @@ User, User Homepage, View More Icon Location
 ```{include} ../../Universal/information-pane.md
 ```
 
-```{include} view-user-details-accounts-tab.md
+```{include} ../../Universal/UserDetails/view-user-details-accounts-tab.md
 ```
 

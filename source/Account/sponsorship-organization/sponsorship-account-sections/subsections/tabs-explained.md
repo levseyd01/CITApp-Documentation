@@ -100,8 +100,49 @@ All three fields are required:
 
 Sponsorship Organization, Users Tab, Add New User Popup
 ```
+
+```{admonition} Permissions Options
+:class: tip, dropdown
+
+- **Assessment Test**
+    - View Assessment Test Results
+- **Billing**
+  - View Invoice
+  - View Payment
+- **Cashout**
+  - Add/Edit Cashout Questions
+  - Approve/Deny Cashout Requests
+  - Edit Cashout Price Per Share
+  - View Cashout
+- **Community**
+  - Edit Community Profile
+- **Demographic**
+  - Add/Edit Demographic Questions
+  - Add/Edit Renew Demographic Questions
+- **Document**
+  - Upload Entity Offering Document
+  - Upload Entity Onboarding Document
+  - View Entity Offering Document
+  - View Entity Onboarding Document
+- **Entity**
+  - Add/Edit Entity
+- **Investor/Shareholder**
+  -  Add/Edit Investor
+  - View Investor
+- **Offering**
+  - Add/Edit Offering
+- **Report**
+  -  Run Shareholder List Report
+- **User**
+  - Edit/Add Community Staff
+  - Edit/Add User
+  - View Users
+```
+
+
 3. Select desired permissions for the new user. 
-3. Click **Save** to add the new user.
+
+4. Click [Save](#save-icon) to add the new user.
 
 
 

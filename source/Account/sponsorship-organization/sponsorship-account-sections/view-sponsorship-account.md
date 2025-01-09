@@ -41,8 +41,3 @@ User, User Homepage, Accounts Tab, View Account Icon
 
 
 
-
-
-
-```{include} sponsorship-account-sections/tabs-explained.md
-```

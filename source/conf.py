@@ -133,6 +133,10 @@ tippy_custom_tips = {
         "<img src='/en/stable-edit/_static/solo_app/Universal/file-explorer-open.jpeg' "
         "alt='File Explorer Open' style='width:200px;'>"
     ),
+    "#save-icon":(
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/save-icon.jpeg' "
+        "alt='Save Icon' style='width:200px;'>"
+    ),
     "#new-beneficiary-button": (
         "<img src='/en/stable-edit/_static/solo_app/Beneficiaries/new-beneficiary.jpeg' "
         "alt='New Beneficiary Button' style='width:200px;'>"
@@ -154,7 +158,7 @@ tippy_custom_tips = {
         "alt='Manage Button' style='width:200px;'>"
     ),
      "#save-changes": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/Universal/buttons/save-changes.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/save-changes.jpeg' "
         "alt='Save Changes' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (
@@ -233,6 +237,8 @@ html_theme = 'sphinx_book_theme'
 
 templates_path = ['_templates']
 exclude_patterns = ['_sources',
+
+
 #'_static'
                     '_build', 'Thumbs.db', '.DS_Store', '**/*.ps1']
 

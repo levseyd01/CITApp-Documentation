@@ -74,7 +74,6 @@ latex_elements = {
 }
 
 
-
 extensions = [
      'lazyfigure',
      'lazy_figure',
@@ -82,7 +81,7 @@ extensions = [
      'sphinx.ext.autosectionlabel',
      'rst2pdf.pdfbuilder',
 # 'sphinx_search.extension',
-    'sphinx_prompt',
+    #'sphinx_prompt',
   #  'sphinx.builders.linkcheck',
     'sphinx_copybutton',
     'sphinx_togglebutton',

@@ -252,9 +252,9 @@ tippy_custom_tips = {
 
 tippy_selector = "a.tippyAnchor"
 
-tippy_anchor_parent_selector =".tippy-section"
- 
-# tippy_anchor_parent_selector = "article.bd-article"
+#tippy_anchor_parent_selector =".tippy-section"
+
+tippy_anchor_parent_selector = "article.bd-article"
 
 '''
 pdf_documents = [

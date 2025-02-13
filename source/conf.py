@@ -74,6 +74,7 @@ latex_elements = {
 
 
 extensions = [
+     'lazy_figure',
      'sphinx.ext.intersphinx',
      'sphinx.ext.autosectionlabel',
      'rst2pdf.pdfbuilder',

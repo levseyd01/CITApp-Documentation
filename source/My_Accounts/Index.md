@@ -23,7 +23,7 @@ To **Manage an Account**:
 
 
 1. Find the account you want to manage. 
-2. Click the {ref}`Manage <manage-button>`{: .tippyAnchor} button next to the account name.
+2. Click the {ref}`Manage <manage-button>` button next to the account name.
 
 
 ```{lazyfigure} ../_static/solo_app/My_Accounts/my-accounts-manage-location.webp
@@ -32,7 +32,7 @@ To **Manage an Account**:
 :align: center
 ```
 
-3. Ensure that the {ref}`Account Being Managed <account-being-managed>`{: .tippyAnchor} matches the account that you selected. 
+3. Ensure that the {ref}`Account Being Managed <account-being-managed>` matches the account that you selected. 
 
 
 

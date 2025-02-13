@@ -104,7 +104,7 @@ User, Staff Homepage, Action Column
 ```
 
 2. Find the row of the User you want to view.
-3. Click the [View More Icon](#view-more-icon){: .tippyAnchor}.
+3. Click the [View More Icon](#view-more-icon)
 
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns-view-user-details-location.webp

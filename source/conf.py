@@ -10,9 +10,9 @@ import sys
 
 from pathlib import Path
 
-project = 'CIT Documentation'
+project = 'CIT Services User Manual'
 copyright = '2024, Transfer Online.'
-html_title = ''
+html_title = 'CIT Services User Manual'
 author = ''
 release = '1'
 
@@ -23,10 +23,60 @@ import base64
 source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
+latex_elements = {
+    'preamble': r'''
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{adjustbox}
+\usepackage{titlesec}
+\usepackage{titling}
+
+\definecolor{ConfidentialRed}{RGB}{255,0,0}
+\graphicspath{{../../source/_static/}}
+\setlength{\headheight}{32.1pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1cm]{solo_light.png}}
+\fancyfoot[C]{\color{ConfidentialRed}\textbf{Transfer Online Confidential}}
+
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[height=1cm]{solo_light.png}}
+    \fancyfoot[C]{\color{ConfidentialRed}\textbf{Transfer Online Confidential}}
+}
+
+\adjustboxset{max size={\textwidth}{\textheight}}
+
+\title{test}
+\author{test}
+\date{\today}
+
+\pagestyle{fancy}
+''',
+    'maketitle': r'''
+\begin{titlepage}
+\centering
+\vspace*{\fill}
+\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{solo_cover_page.png}
+\vspace*{\fill}
+\end{titlepage}
+\clearpage
+    ''',
+}
+
+
+
 extensions = [
      'sphinx.ext.intersphinx',
      'sphinx.ext.autosectionlabel',
- #   'rst2pdf.pdfbuilder',
+     'rst2pdf.pdfbuilder',
 # 'sphinx_search.extension',
     'sphinx_prompt',
   #  'sphinx.builders.linkcheck',

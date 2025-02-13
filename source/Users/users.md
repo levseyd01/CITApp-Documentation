@@ -29,6 +29,7 @@ You can find both the **User** and **Staff** section along the left-hand side of
 
 :::::{admonition} Toggle Primary Sidebar
 :class: tip, dropdown
+:collapsible: closed
 
 :::{card}
 

@@ -17,7 +17,6 @@ python:
   install:
     - requirements: source/requirements.txt
 
-  system_packages: false
 
 
 commands:

@@ -289,6 +289,9 @@ html_theme_options = {
     "use_download_button": False
 }
 
+html_js_files = [
+    'close_dropdowns.js',  # must match the filename in _static/
+]
 #html_js_files = ["js/tippy.js", "js/popper.js"]
 '''tippy_js = [
     "js/popper.min.js",

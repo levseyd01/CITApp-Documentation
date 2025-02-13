@@ -250,8 +250,12 @@ tippy_custom_tips = {
 #tippy_inline = True  # enable inline tips
 #tippy_enable_mathjax = True
 
-tippy_selector = "a.tippyAnchor"
+tippy_tip_selector = "figure, table, img, p, aside, div.admonition, div.literal-block-wrapper"
 
+tippy_skip_anchor_classes = (
+    "headerlink",
+    "sd-stretched-link",
+)
 #tippy_anchor_parent_selector =".tippy-section"
 
 tippy_anchor_parent_selector = "article.bd-article"

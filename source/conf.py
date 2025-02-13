@@ -240,7 +240,10 @@ tippy_custom_tips = {
 #tippy_inline = True  # enable inline tips
 #tippy_enable_mathjax = True
 
-tippy_anchor_parent_selector = "article.bd-article"
+
+tippy_anchor_parent_selector =".tippy-section",
+ 
+# tippy_anchor_parent_selector = "article.bd-article"
 
 '''
 pdf_documents = [

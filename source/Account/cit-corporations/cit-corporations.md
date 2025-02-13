@@ -13,7 +13,7 @@ The **CIT Corporations** section allows you to to:
 The **CIT Corporations** section is located under the **Account** section, and opens up to the following table:
 
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/Main/sponsorship-organization-homepage.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/Main/sponsorship-organization-homepage.webp
 :width: 100%
 :align: center
 :name: account-cit-corporations-homepage
@@ -37,7 +37,7 @@ The **CIT Corporations** section has a table with the following columns:
 - Action
 
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/Main/sponsorship-organization-homepage-table-columns.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/Main/sponsorship-organization-homepage-table-columns.webp
 :width: 100%
 :align: center
 :name: account-cit-corporations-homepage-table-columns

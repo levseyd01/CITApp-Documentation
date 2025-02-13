@@ -11,7 +11,7 @@
 The **User** section allows you to manage and view **User** accounts. 
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-homepage.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-homepage.webp
 :width: 100%
 :align: center
 :name: user-homepage
@@ -33,7 +33,7 @@ The homepage displays a table of users with the following columns:
 - Action
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-column-options.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-column-options.webp
 :width: 100%
 :align: center
 :name: user-homepage
@@ -49,7 +49,7 @@ The **User** table can be filtered by either of the following options:
 - Changing the filter options using the [Status dropdown](using-the-status-dropdown) at the top-left of the page.
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-hompage-filter-options.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-hompage-filter-options.webp
 :width: 100%
 :align: center
 :name: user-user-hompage-filter-options
@@ -69,7 +69,7 @@ The **Status** dropdown can be used to filter the table by these options:
 - `Locked Out (needs precise definition)`
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-status-filter.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-status-filter.webp
 :width: 100%
 :align: center
 :name: user-user-status-filter
@@ -87,7 +87,7 @@ To view a **User's** details:
 1. Find the **Action** column.
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-action-column.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-action-column.webp
 :width: 100%
 :align: center
 :name: user-user-action-column
@@ -99,7 +99,7 @@ User, User Homepage, Action Column
 3. Click the [View More Icon](#view-more-icon).
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-view-more-location.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-view-more-location.webp
 :width: 100%
 :align: center
 :name: user-user-view-more-location

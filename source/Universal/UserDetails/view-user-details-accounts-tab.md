@@ -6,7 +6,7 @@
 The **User Details** screen also has an **Accounts** tab that allows you to view the accounts associated with the user.
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/accounts-tab.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/accounts-tab.webp
 :width: 100%
 :align: center
 :name: user-user-accounts-tab
@@ -24,7 +24,7 @@ The **Accounts** tab displays the following columns:
 - Phone
 - Action (View Account, Edit Permissions, Delete)
 
-```{figure} ../../_static/solo_app/User/User-Detail/accounts-tab-column-names.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/accounts-tab-column-names.webp
 :width: 100%
 :align: center
 :name: user-user-accounts-tab-column-names
@@ -42,7 +42,7 @@ The **Action** column has three actions available:
 - Delete
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/accounts-tab-action-section.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/accounts-tab-action-section.webp
 :width: 100%
 :align: center
 :name: user-user-accounts-tab-action-column
@@ -56,7 +56,7 @@ User, User Homepage, Accounts Tab, Action Column
 
 - Select the **View Account** button for the account you want to view. 
 
-```{figure} ../../_static/solo_app/User/User-Detail/user-user-details-accounts-tab-view-icon.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/user-user-details-accounts-tab-view-icon.webp
 :width: 100%
 :align: center
 :name: user-user-details-accounts-tab-view-icon

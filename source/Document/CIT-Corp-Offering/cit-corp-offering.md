@@ -12,7 +12,7 @@ The **CIT Corporation Offering** section helps users manage and track all docume
 The Offering section opens up to the CIT Corporation Offering Documents Table on the Homepage:
 
 
-```{figure} ../_static/solo_app/Profile/profile-location.webp
+```{lazyfigure} ../_static/solo_app/Profile/profile-location.webp
 :width: 400px
 :align: center
 ```
@@ -24,7 +24,7 @@ The Offering section opens up to the CIT Corporation Offering Documents Table on
 - **Upload/Approval History** (who uploaded or approved and when)
 - **Quick Actions** to open, download, comment, or approve documents
 
-```{figure} /path/to/overall-status-screenshot.webp
+```{lazyfigure} /path/to/overall-status-screenshot.webp
 :alt: CIT Overall Status screenshot
 :width: 80%
 A high-level overview of all documents and their statuses.

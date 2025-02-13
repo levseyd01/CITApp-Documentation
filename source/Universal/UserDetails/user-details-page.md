@@ -7,7 +7,7 @@ The **User Details** page allows you to view and edit a specific User's details.
 
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/user-detail-homepage.webp
 :width: 100%
 :align: center
 :name: user-detail-homepage
@@ -39,7 +39,7 @@ This section does not require you to click the **Edit** button.
 3. Click the **Save** button at the bottom-right of the page. 
 
 
-```{figure} ../../_static/solo_app/User/Users/user-user-save-changes.webp
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-save-changes.webp
 :width: 100%
 :align: center
 :name: user-user-save-changes
@@ -61,7 +61,7 @@ The **User Details** page has various actions available at the bottom-right of t
 You can find the actions at the bottom-right of the page:
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/user-actions-location.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/user-actions-location.webp
 :width: 100%
 :align: center
 :name: user-actions-location

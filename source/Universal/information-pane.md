@@ -6,7 +6,7 @@
 
 The **Information Pane** (Right Column) provides both an **Activity Log** and a **Created & Modified** Section. 
 
-```{figure} ../../_static/solo_app/Universal/infopane/created-modified-activity-log.webp
+```{lazyfigure} ../../_static/solo_app/Universal/infopane/created-modified-activity-log.webp
 :width: 50%
 :align: center
 :name: information-pane
@@ -25,7 +25,7 @@ The **Created & Modified** section contains the following:
 - The most recent date and time the company's profile was edited. 
 
 
-```{figure} ../../_static/solo_app/Profile/information-pane/created-modified-section.webp
+```{lazyfigure} ../../_static/solo_app/Profile/information-pane/created-modified-section.webp
 :width: 400px
 :align: center
 :name: created-modified-section
@@ -46,7 +46,7 @@ Each **Activity Log entry** contains the following:
 - The date and time the change was made.
 
 
-```{figure} ../../_static/solo_app/Profile/information-pane/activity-logs-section.webp
+```{lazyfigure} ../../_static/solo_app/Profile/information-pane/activity-logs-section.webp
 :width: 400px
 :align: center
 :name: activity-log-section

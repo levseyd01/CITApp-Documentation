@@ -7,7 +7,7 @@ The **My Accounts** sections displays an overview of the various accounts that y
 
 
 
-```{figure} ../_static/solo_app/My_Accounts/overview-screen.webp
+```{lazyfigure} ../_static/solo_app/My_Accounts/overview-screen.webp
 :width: 100%
 :align: center
 ```
@@ -26,7 +26,7 @@ To **Manage an Account**:
 2. Click the {ref}`Manage <manage-button>` button next to the account name.
 
 
-```{figure} ../_static/solo_app/My_Accounts/my-accounts-manage-location.webp
+```{lazyfigure} ../_static/solo_app/My_Accounts/my-accounts-manage-location.webp
 :width: 50%
 :name: my-accounts-manage-location
 :align: center
@@ -45,7 +45,7 @@ Identify the current account you are using by looking for the account name next 
 
 
 
-```{figure} ../_static/solo_app/My_Accounts/account-being-managed-location.webp
+```{lazyfigure} ../_static/solo_app/My_Accounts/account-being-managed-location.webp
 :width: 50%
 :name: account-being-managed
 :align: center

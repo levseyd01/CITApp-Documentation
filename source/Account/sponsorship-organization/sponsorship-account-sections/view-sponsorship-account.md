@@ -7,7 +7,7 @@
 
 1. Select the **View Account** button for the account you want to view. 
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/view-sponsorship-organization-main-section-location.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/view-sponsorship-organization-main-section-location.webp
 :width: 100%
 :align: center
 :name: view-sponsorship-organization-main-section-location
@@ -18,7 +18,7 @@ Sponsorship Organization, View Account Icon
 Selecting the **View Account** button will take you to the **Sponsorship Organization Information** screen.
 
 
-```{figure} ../../_static/solo_app/User/User-Detail/account-details-sponsor/sponsor-organization-view-details-screen.webp
+```{lazyfigure} ../../_static/solo_app/User/User-Detail/account-details-sponsor/sponsor-organization-view-details-screen.webp
 :width: 100%
 :align: center
 :name: user-user-details-accounts-tab-view-icon

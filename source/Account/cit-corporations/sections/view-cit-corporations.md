@@ -8,7 +8,7 @@
 
 1. Select the **View Account** button for the account you want to view.
 
-```{figure} ../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-view-more-location.webp
+```{lazyfigure} ../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-view-more-location.webp
 :width: 100%
 :align: center
 :name: cit-corporations-homepage-view-more-location
@@ -31,7 +31,7 @@ The **CIT Corporation Information** tab  allows you to view and edit the followi
 - CIT Corporation's Logo 
 
 
-```{figure} ../../_static/solo_app/CIT_Corporation/cit-corporations-view-corp-section.webp
+```{lazyfigure} ../../_static/solo_app/CIT_Corporation/cit-corporations-view-corp-section.webp
 :width: 100%
 :align: center
 :name: cit-corporations-view-corp-section

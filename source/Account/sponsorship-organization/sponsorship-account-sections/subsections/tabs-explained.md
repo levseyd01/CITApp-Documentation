@@ -6,7 +6,7 @@
 
 The **Entity List** tab is a list of all entities associated with the **Sponsor Organization**. 
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/entity-list-tab/sponsorship-entity-list-tab-location-of-tab.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/entity-list-tab/sponsorship-entity-list-tab-location-of-tab.webp
 :width: 100%
 :align: center
 :name: sponsorship-entity-list-tab
@@ -22,7 +22,7 @@ You can filter the Entity List Table by status, or you can search for a specific
 
 1. Find the **Status** column.
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/entity-list-tab/sponsorship-entity-list-tab-status-filter.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/entity-list-tab/sponsorship-entity-list-tab-status-filter.webp
 :width: 100%
 :align: center
 :name: sponsorship-entity-list-tab-status-filter
@@ -49,7 +49,7 @@ The table should upate as you select a new status. No other action is required.
 
 The **Users** tab is a list of all users associated with the **Sponsor Organization**.
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-location-of-tab.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-location-of-tab.webp
 :width: 100%
 :align: center
 :name: sponsor-organization-users-tab-location-of-tab
@@ -73,7 +73,7 @@ The **Actions** column for the **Users** tab has the following actions available
 
 1. Click the **New User** button at the top right of the screen. 
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-new-user-location.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-new-user-location.webp
 :width: 100%
 :align: center
 :name: sponsor-organization-users-tab-new-user-location
@@ -93,7 +93,7 @@ All three fields are required:
 
 ```
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-add-new-user-popup.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-add-new-user-popup.webp
 :width: 75%
 :align: center
 :name: sponsor-organization-users-tab-add-new-user-popup

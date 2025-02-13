@@ -14,7 +14,7 @@ The **Profile** screen allows you edit the following information about your comp
 - [Upload Logo](upload-logo)
 
 
-```{figure}  ../../_static/solo_app/Profile/information-section/main-screen.webp
+```{lazyfigure}  ../../_static/solo_app/Profile/information-section/main-screen.webp
 :width: 50%
 :align: center
 :name: profile-screen-information-section
@@ -30,7 +30,7 @@ Profile Screen, Information Section
 The **Info** section of the **Profile** screen allows you to edit various details about your company.
 
 
-```{figure} ../../_static/solo_app/Profile/information-section/info-zoomed-in.webp
+```{lazyfigure} ../../_static/solo_app/Profile/information-section/info-zoomed-in.webp
 :width: 400px
 :align: center
 :name: profile-screen-info
@@ -58,7 +58,7 @@ The ``Name`` field is required and cannot be left blank.
 
 The **Primary Address** section is where you can change the primary location of your company.
 
-```{figure} ../../_static/solo_app/Profile/information-section/primary-address-zoomed-in.webp
+```{lazyfigure} ../../_static/solo_app/Profile/information-section/primary-address-zoomed-in.webp
 :width: 400px
 :align: center
 :name: profile-screen-primary-address
@@ -90,7 +90,7 @@ Leave the``Street Name`` field empty if the Mailing address is the same as the P
 :::
 
 
-```{figure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.webp
+```{lazyfigure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.webp
 :width: 400px
 :align: center
 :name: profile-screen-mailing-address
@@ -119,7 +119,7 @@ Similar to the Primary address, you can edit the following information:
 ## Upload Logo
 
 
-```{figure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.webp
+```{lazyfigure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo.webp
 :width: 400px
 :align: center
 :name: upload-logo-section
@@ -146,7 +146,7 @@ Profile Screen, Upload Logo Section
 
 
 
-```{figure} ../../_static/solo_app/Universal/file-explorer-filename-png.webp
+```{lazyfigure} ../../_static/solo_app/Universal/file-explorer-filename-png.webp
 :width: 400px
 :align: center
 :name: file-explorer-filename-png

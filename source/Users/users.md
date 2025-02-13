@@ -19,7 +19,7 @@ You can found out more about each section below:
 You can find both the **User** and **Staff** section along the left-hand side of the page:
 
 
-```{figure} ../_static/solo_app/User/Staff/manage-staff-location.webp
+```{lazyfigure} ../_static/solo_app/User/Staff/manage-staff-location.webp
 :width: 50%
 :align: center
 :name: manage-staff-location-9

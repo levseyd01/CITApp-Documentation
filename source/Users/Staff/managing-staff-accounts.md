@@ -4,7 +4,7 @@
 
 You can find the **Manage Staff** section along the left-hand side of the page:
 
-```{figure} ../../_static/solo_app/User/Staff/manage-staff-location.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/manage-staff-location.webp
 :width: 50%
 :align: center
 :name: manage-staff-location
@@ -27,7 +27,7 @@ You can find the **Manage Staff** section along the left-hand side of the page:
 > You should see the homepage for **Managing Staff** accounts:
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage.webp
 :width: 100%
 :align: center
 :name: staff-homepage
@@ -48,7 +48,7 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 - Action
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns.webp
 :width: 100%
 :align: center
 :name: staff-homepage-columns
@@ -68,7 +68,7 @@ The **Status** column indicates the current status of the account. The following
 - `Locked Out (needs precise definition)`
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.webp
 :width: 100%
 :align: center
 :name: staff-homepage-statuscolumns
@@ -94,7 +94,7 @@ To view a **Staff User's** details:
 1. Find the **Action** column.
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-action-location.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns-action-location.webp
 :width: 100%
 :align: center
 :name: staff-user-action-column
@@ -106,7 +106,7 @@ User, Staff Homepage, Action Column
 3. Click the [View More Icon](#view-more-icon).
 
 
-```{figure} ../../_static/solo_app/User/Staff/staff-homepage-columns-view-user-details-location.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns-view-user-details-location.webp
 :width: 100%
 :align: center
 :name: user-staff-view-more-location

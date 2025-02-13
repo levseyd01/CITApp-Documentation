@@ -17,7 +17,7 @@ The **Profile** screen allows you to view and edit your company's profile inform
 You can find the **Profile** section along the left-hand side of the page:
 
 
-```{figure} ../_static/solo_app/Profile/profile-location.webp
+```{lazyfigure} ../_static/solo_app/Profile/profile-location.webp
 :width: 400px
 :align: center
 ```

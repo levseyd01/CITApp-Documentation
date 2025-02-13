@@ -6,7 +6,7 @@
 
 The **Legal Information** tab contains information about the **CIT Corporation**. 
 
-```{figure} ../../_static/solo_app/CIT_Corporation/legal-information-tab/legal-information-tab.webp
+```{lazyfigure} ../../_static/solo_app/CIT_Corporation/legal-information-tab/legal-information-tab.webp
 :width: 100%
 :align: center
 :name: cit-corporation-legal-information-tab
@@ -28,7 +28,7 @@ The **Legal Information** tab  allows you to view the following information:
 
 1. Find the **Status** column.
 
-```{figure} ../../_static/solo_app/Universal/view-sponsorship-organization/entity-list-tab/sponsorship-entity-list-tab-status-filter.webp
+```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/entity-list-tab/sponsorship-entity-list-tab-status-filter.webp
 :width: 100%
 :align: center
 :name: sponsorship-entity-list-tab-status-filter

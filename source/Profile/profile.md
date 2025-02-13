@@ -24,6 +24,7 @@ You can find the **Profile** section along the left-hand side of the page:
 
 :::::{admonition} Toggle Primary Sidebar
 :class: tip, dropdown
+:collapsible: closed
 
 :::{card}
 

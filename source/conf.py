@@ -23,6 +23,13 @@ import base64
 source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
+
+if os.environ.get('READTHEDOCS') == 'True':
+    try:
+        extensions.remove('readthedocs_ext.readthedocs')
+    except ValueError:
+        pass
+
 latex_elements = {
     'preamble': r'''
 \usepackage{graphicx}

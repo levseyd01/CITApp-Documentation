@@ -1,5 +1,5 @@
 sphinx==7.4.7
-myst-parser==3.01
+myst-parser
 rst2pdf==0.102
 # git+https://github.com/executablebooks/sphinx-book-theme
 sphinx-book-theme==1.1.3

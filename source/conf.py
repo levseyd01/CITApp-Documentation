@@ -24,11 +24,6 @@ source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
 
-if os.environ.get('READTHEDOCS') == 'True':
-    try:
-        extensions.remove('readthedocs_ext.readthedocs')
-    except ValueError:
-        pass
 
 latex_elements = {
     'preamble': r'''
@@ -95,7 +90,14 @@ extensions = [
    # 'hoverxref.extension',
     'myst_parser',
     'sphinx_design',
-    'post_process_refs']
+    'post_process_refs',]
+
+if os.environ.get('READTHEDOCS') == 'True':
+    try:
+        extensions.remove('readthedocs_ext.readthedocs')
+    except ValueError:
+        pass
+
 
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",

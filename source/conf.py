@@ -87,7 +87,8 @@ extensions = [
     'sphinx_tippy',
    # 'hoverxref.extension',
     'myst_parser',
-    'sphinx_design']
+    'sphinx_design',
+    'post_process_refs']
 
 tippy_rtd_urls = [
     "https://www.sphinx-doc.org/en/master/",
@@ -243,7 +244,7 @@ tippy_custom_tips = {
 
 tippy_selector = "a.tippyAnchor"
 
-tippy_anchor_parent_selector =".tippy-section",
+tippy_anchor_parent_selector =".tippy-section"
  
 # tippy_anchor_parent_selector = "article.bd-article"
 

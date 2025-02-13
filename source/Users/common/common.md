@@ -82,13 +82,13 @@ If the account's status is `Activation Pending`, then the account.
 ### Action Column
 
 
-Both **User** and **Staff** sections have the [View User Details](#view-more-icon) option in the **Action** column.
+Both **User** and **Staff** sections have the [View User Details](#view-more-icon){: .tippyAnchor} option in the **Action** column.
 
 
 :::{admonition} Note
 :class: note
 
-- The **Staff** section also has the option to [Edit Permissions](#edit-permissions-icon) and [Delete Action](#delete-icon).
+- The **Staff** section also has the option to [Edit Permissions](#edit-permissions-icon){: .tippyAnchor} and [Delete Action](#delete-icon){: .tippyAnchor}.
 - See the
 
 :::

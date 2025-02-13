@@ -46,7 +46,7 @@ User, User, Column Options
 The **User** table can be filtered by either of the following options:
 
 - Searching for a specific user on the page using the search bar, or 
-- Changing the filter options using the [Status dropdown](using-the-status-dropdown) at the top-left of the page.
+- Changing the filter options using the [Status dropdown](using-the-status-dropdown){: .tippyAnchor} at the top-left of the page.
 
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-hompage-filter-options.webp

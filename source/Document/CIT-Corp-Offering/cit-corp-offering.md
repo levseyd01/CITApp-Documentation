@@ -28,3 +28,4 @@ The Offering section opens up to the CIT Corporation Offering Documents Table on
 :alt: CIT Overall Status screenshot
 :width: 80%
 A high-level overview of all documents and their statuses.
+```

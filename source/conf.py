@@ -253,6 +253,8 @@ pdf_documents = [
 ]'''
 
 
+
+
 myst_all_links_external = False
 
 ''
@@ -297,6 +299,11 @@ exclude_patterns = ['_sources',
 
 #'_static'
                     '_build', 'Thumbs.db', '.DS_Store', '**/*.ps1']
+
+
+sphinx_design_use_inserted_localstorage = False
+
+
 
 # -- General configuration ---------------------------------------------------
 

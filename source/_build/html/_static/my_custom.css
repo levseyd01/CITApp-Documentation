@@ -1,0 +1,29 @@
+.parameter-bottom-bar {
+    border-top: 2px solid #ccc;
+    padding-bottom:1rem;
+}
+
+
+div.margin {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+
+a[href^="https://upload-"],
+a[href^="https://example-"],
+a[href^="https://fake-"] {
+  pointer-events: none;
+  text-decoration: none; /* optional if you want to remove underline */
+  color: inherit;        /* optional if you want to keep normal text color */
+}
+
+/* Immediately hide .dropdown content until JS finishes */
+.sd-toggle-dropdown > .sd-card {
+    display: none;
+  }
+
+.sd-toggle-dropdown.sd-toggle-open > .sd-card {
+    display: block;
+}

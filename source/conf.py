@@ -7,7 +7,6 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os
 import sys
-
 from pathlib import Path
 
 project = 'CIT Services User Manual'
@@ -79,6 +78,7 @@ extensions = [
      'lazy_figure',
      'sphinx.ext.intersphinx',
      'sphinx.ext.autosectionlabel',
+     "sphinx.ext.autosummary",
      'rst2pdf.pdfbuilder',
 # 'sphinx_search.extension',
     #'sphinx_prompt',
@@ -106,7 +106,18 @@ tippy_rtd_urls = [
 myst_enable_extensions = [
     "attrs_inline",
     "colon_fence",
-    "tasklist"
+    "tasklist",
+    "dollarmath",
+    "amsmath",
+    "deflist",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "smartquotes",
+    "replacements",
+    "strikethrough",
+    "substitution",
+    "attrs_block",
 
 ]
 
@@ -230,6 +241,10 @@ tippy_custom_tips = {
         "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/new-user.jpeg' "
         "alt='New User Button' style='width:200px;'>"
     ),
+    "#add-new-staff-button": (
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/add-new-staff-button.jpeg' "
+        "alt='Add New Staff Button' style='width:200px;'>"
+    ),
     "#menu-icon": (
         "<img src='/en/stable-edit/_static/solo_app/Universal/icons/menu-icon.jpeg' "
         "alt='Menu Icon' style='width:100%;'>"
@@ -278,9 +293,9 @@ myst_all_links_external = False
 ''
 myst_cache_enabled = True
 html_theme_options = {
-    "repository_url": "",
-    "use_source_button": False,
-    "use_edit_page_button": False,
+    "repository_url": "https://github.com/levseyd01/CITApp-Documentation",
+    "use_source_button": True,
+    "use_edit_page_button": True,
     "path_to_docs": "source",
     "show_nav_level": 2,
     "repository_branch": "stable",

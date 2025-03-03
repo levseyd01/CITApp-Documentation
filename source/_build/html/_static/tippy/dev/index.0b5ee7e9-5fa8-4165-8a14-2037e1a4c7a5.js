@@ -1,0 +1,22 @@
+selector_to_html = {"a[href=\"components/forms.html#name-and-information-form\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Name and Information Form<a class=\"headerlink\" href=\"#name-and-information-form\" title=\"Link to this heading\">#</a></h1>", "a[href=\"components/name-information-form.html\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Name and Information Forms<a class=\"headerlink\" href=\"#name-and-information-forms\" title=\"Link to this heading\">#</a></h1><p>This section contains information about how to access the various parts of the <code class=\"docutils literal notranslate\"><span class=\"pre\">Name</span> <span class=\"pre\">and</span> <span class=\"pre\">Information</span></code> form that can be found throughout the app.</p>", "a[href=\"#field-checkers\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Field Checkers<a class=\"headerlink\" href=\"#field-checkers\" title=\"Link to this heading\">#</a></h2>", "a[href=\"components/UserDetails/resendActivationLink.html\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">resendActivationLink()<a class=\"headerlink\" href=\"#resendactivationlink\" title=\"Link to this heading\">#</a></h1><p>This function can be used whenever a <code class=\"docutils literal notranslate\"><span class=\"pre\">Resend</span> <span class=\"pre\">Acitvation</span> <span class=\"pre\">Link</span></code> button is needed.</p><p><img alt=\"alt text\" loading=\"lazy\" src=\"../_images/resendActivationLink.png\"/></p>", "a[href=\"#dropdowns\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Dropdowns<a class=\"headerlink\" href=\"#dropdowns\" title=\"Link to this heading\">#</a></h2>", "a[href=\"components/UserDetails/checkUserFields.html\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">checkUserFields.ts<a class=\"headerlink\" href=\"#checkuserfields-ts\" title=\"Link to this heading\">#</a></h1><p>This function can be used anytime there is a <code class=\"docutils literal notranslate\"><span class=\"pre\">User</span> <span class=\"pre\">Detail</span></code> type of page, like the following:</p><p><img alt=\"alt text\" loading=\"lazy\" src=\"../_images/userDetails.png\"/></p>", "a[href=\"components/forms.html\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Forms<a class=\"headerlink\" href=\"#forms\" title=\"Link to this heading\">#</a></h1><p>This section information about the various ways you can access the forms with the Playwright Automation Test Suite.</p>", "a[href=\"components/Navigation/setItemsPerPage.html\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">setItemsPerPage<a class=\"headerlink\" href=\"#setitemsperpage\" title=\"Link to this heading\">#</a></h1><p>This function allows you to toggle the dropdowns at the bottom of the pages.</p><p><img alt=\"Items Per Page Dropdown\" loading=\"lazy\" src=\"../_images/items-per-page-dropdown.jpg\"/></p>", "a[href=\"#not-sure\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Not Sure<a class=\"headerlink\" href=\"#not-sure\" title=\"Link to this heading\">#</a></h2>", "a[href=\"#buttons\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Buttons<a class=\"headerlink\" href=\"#buttons\" title=\"Link to this heading\">#</a></h2>", "a[href=\"#dev\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Dev<a class=\"headerlink\" href=\"#dev\" title=\"Link to this heading\">#</a></h1><p>This portion of the documentation was created to provide developers and QA with information as to how to use the automation test suite for the CIT App.</p>", "a[href=\"#forms\"]": "<h2 class=\"tippy-header\" style=\"margin-top: 0;\">Forms<a class=\"headerlink\" href=\"#forms\" title=\"Link to this heading\">#</a></h2>"}
+skip_classes = ["headerlink", "sd-stretched-link"]
+
+window.onload = function () {
+    for (const [select, tip_html] of Object.entries(selector_to_html)) {
+        const links = document.querySelectorAll(`article.bd-article ${select}`);
+        for (const link of links) {
+            if (skip_classes.some(c => link.classList.contains(c))) {
+                continue;
+            }
+
+            tippy(link, {
+                content: tip_html,
+                allowHTML: true,
+                arrow: true,
+                placement: 'auto-start', maxWidth: 500, interactive: false,
+
+            });
+        };
+    };
+    console.log("tippy tips loaded!");
+};

@@ -10,6 +10,11 @@ div.margin {
     border: 1px solid #ccc;
 }
 
+.custom-dropdown {
+  background-color: light-green; /* light blue background */
+  border: 1px solid #ccc;   /* a subtle border */
+  padding: 1em;
+}
 
 a[href^="https://upload-"],
 a[href^="https://example-"],

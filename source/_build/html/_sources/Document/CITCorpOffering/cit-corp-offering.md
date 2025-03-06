@@ -49,7 +49,7 @@ This **ID** can be used for {insert significance o **ID**}
 - **Due Less than 30 Days** - This shows how many Offering Documents are due in less than 30 days.
 - **Document Complete** - Will show the number of new messages regarding the Offering process.
 - **New Message** - Status of where the corporation is at on the Offering process
-- **Status** - ``View More Details`` action: Action to view more details about the documents and where they are at on the Offering process for the selected CIT Corporation.
+- **Status** -  Status of where the corporation is at on the Offering process (i.e., **All**, **Pending**, **Complete**)
 - **Action** - ``View More Details`` action: Action to view more details about the documents and where they are at on the onboarding process for the selected CIT Corporation.
 
 
@@ -61,7 +61,6 @@ This **ID** can be used for {insert significance o **ID**}
 
 
 (cit-corporation-Offering-documents-view-more-details-section)=
-
 #### Status Filter
 
 The table can be filtered by the following Statuses:
@@ -73,18 +72,18 @@ The table can be filtered by the following Statuses:
 1. Find and select the **Status** dropdown.
 
 ```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/status-dropdown-cit-Offering.jpg
-:width: 100%
+:width: 100 %
 :align: center
 ```
 
 2. Select the desired status from the dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/all-pending-complete-status-dropdown-expaned-universal.png
-:width: 75%
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-status-location.jpg
+:width: 75 %
 :align: center
 ```
 
-### Action: View More Details
+### Action: View More Details (Offering Documents)
 
 To view more details about each document in the Offering process for the selected CIT Corporation, do the following:
 
@@ -97,5 +96,5 @@ To view more details about each document in the Offering process for the selecte
 :::{admonition} Action Complete
 :class: seealso
 
-This action will take you to the [Offering/Offering Document Details](#onboarding-offering-document-details) page.
+This action will take you to the {ref}`onboarding-offering-document-details` page.
 :::

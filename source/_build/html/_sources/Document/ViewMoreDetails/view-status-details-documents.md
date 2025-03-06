@@ -17,11 +17,10 @@ The [View More Details](#view-more-details) action for either page will you to t
 :local:
 ```
 
-:::{admonition} Looking for
+:::{admonition} Looking for either the Offering or Onboarding documents sections?
 :class: seealso
 
-See [CIT Onboarding Documents](#cit-corporation-onboarding-section)
-
+See {ref}`cit-corporation-onboarding-section` or {ref}`cit-corporation-offering-section`
 :::
 
 # Tab Breakdown
@@ -85,7 +84,6 @@ Follow the instructions below to approve an uploaded document.
 
 2. Select the **Approve Uploaded Document** action.
 
-
 ```{lazyfigure} ../../_static/solo_app/Document/universal/view-detail/Homepage/view-more-details-page-pending-approval-action-selection.jpg
 :width: 100%
 ```
@@ -96,57 +94,56 @@ Follow the instructions below to approve an uploaded document.
 :width: 100%
 ```
 
-
 :::{admonition}  Action Completed
 :class: seealso
 
 The card for the document that was pending should immediately be moved to the "Completed" tab, like so:
-
-
 
 ```{lazyfigure} ../../_static/solo_app/Document/universal/view-detail/Homepage/pending-approval-to-complete.jpg
 :width: 100%
 ```
 
 :::
+
 ### Action Locations
 
 Each available action is located in the card associated with the document.
 
-
-#### Available Actions: Upload Pending
-
-
-The **Upload Pending** cards contain only two actions:
-
-
-- **Add Message** - Allows you to add a message to the document.
-- **Upload New File** - Allows you to upload a new file to the document.
-
-
-```{lazyfigure} ../../_static/solo_app/Document/universal/view-detail/Homepage/view-more-details-page-upload-pending-actions.jpg
-:width: 100 %
-```
-
+::::{admonition} Available Actions: Pending Approval
+:class: tip, dropdown
 
 
 #### Available Actions: Pending Approval
 
-The **Pending Approval** contains [all possible actions](#all-possible-actions) as can be seen:
-
+The **Pending Approval** contains {ref}`all-possible-actions` as can be seen:
 
 ```{lazyfigure} ../../_static/solo_app/Document/universal/view-detail/Homepage/view-more-details-page-pending-approval-actions.jpg
 :width: 100 %
 ```
 
+::::
 
+::::{admonition} Available Actions: Upload Pending
+:class: tip, dropdown
 
+The **Upload Pending** cards contain only two actions:
 
-#### Available Actions: Completed
+- **Add Message** - Allows you to add a message to the document.
+- **Upload New File** - Allows you to upload a new file to the document.
 
-The **Completed** cards contain every action besides the [Approve Uploaded Document](#approve-check-mark) action:
+```{lazyfigure} ../../_static/solo_app/Document/universal/view-detail/Homepage/view-more-details-page-upload-pending-actions.jpg
+:width: 100 %
+```
 
+::::
+
+::::{admonition} Available Actions: Completed Documents
+:class: tip, dropdown
+
+The **Completed** cards contain every action besides the [Approve Uploaded Document](#upload-logo-button) action:
 
 ```{lazyfigure} ../../_static/solo_app/Document/universal/view-detail/Homepage/view-more-details-page-completed-possible-actions.jpg
 :width: 100 %
 ```
+
+::::

@@ -44,11 +44,16 @@ This **ID** can be used for {insert significance o **ID**}
 - **Sponsorship Organization** - The **Sponsorship Organization** that is sponsoring the onboarding process.
 - **CIT Corporation**  - The **CIT Corporation** that is being onboarded.
 - **Document Complete** - Shows the number of onboarding documents a corporation has completed.
-- **Pending for Approaval** - Number of documents that have been submitted but are pending approval.
+- **Pending For Approaval** - Number of documents that have been submitted but are pending approval.
 - **New Message** - Will show the number of new messages regarding the onboarding process.
-- **Status** - Status of where the corporation is at on the onboarding process
+- **Status** -  Status of where the corporation is at on the Offering process (i.e., **All**, **Pending**, **Complete**)
 - **Action** - ``View More Details`` action: Action to view more details about the documents and where they are at on the onboarding process for the selected CIT Corporation.
 
+:::{admonition} Column Sorting
+:class: tip
+
+You can sort the columns (from **descending** to **ascending**) by clicking on the column name.
+:::
 
 (cit-offering-status-filter)=
 #### Status Filter
@@ -81,8 +86,8 @@ To view more details about each document in the onboarding process for the selec
 
 1. Select the [View More Icon](#view-more-icon) from the desired row. 
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-view-details-location.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOnboarding/ViewMoreDetails/view-more-details-cit-onboarding.jpg
 :width: 50 %
 ```
 
-This action will take you to the [Onboarding/Offering Document Details](#onboarding-offering-document-details) page.
+This action will take you to the {ref}`onboarding-offering-document-details` page.

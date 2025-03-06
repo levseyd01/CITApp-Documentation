@@ -49,8 +49,8 @@ This **ID** can be used for {insert significance o **ID**}
 - **Status** - Status of where the corporation is at on the onboarding process
 - **Action** - ``View More Details`` action: Action to view more details about the documents and where they are at on the onboarding process for the selected CIT Corporation.
 
-(cit-corporation-onboarding-documents-view-more-details-section)=
 
+(cit-offering-status-filter)=
 #### Status Filter
 
 The table can be filtered by the following Statuses:
@@ -61,7 +61,7 @@ The table can be filtered by the following Statuses:
 
 1. Find and select the **Status** dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/status-dropdown-cit-onboarding.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-status-location.jpg
 :width: 100%
 :align: center
 ```
@@ -73,14 +73,16 @@ The table can be filtered by the following Statuses:
 :align: center
 ```
 
+
+(cit-offering-view-more-details)=
 ### Action: View More Details
 
 To view more details about each document in the onboarding process for the selected CIT Corporation, do the following:
 
 1. Select the [View More Icon](#view-more-icon) from the desired row. 
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOnboarding/ViewMoreDetails/cit-corporation-onboarding-documents-view-more-details-icon-location.jpg
-:width: 50%
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-view-details-location.jpg
+:width: 50 %
 ```
 
 This action will take you to the [Onboarding/Offering Document Details](#onboarding-offering-document-details) page.

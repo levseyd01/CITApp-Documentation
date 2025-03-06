@@ -15,7 +15,7 @@ Welcome to the documentation for the **CIT Services** version of the CIT App. Se
 :caption: Contents
 
 My_Accounts/Index.md
-Dashboard/Index.md
+Dashboard/dashboard.md
 Profile/profile.md
 <!-- Beneficiaries/beneficiaries.md -->
 Users/users.md

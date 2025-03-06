@@ -61,6 +61,7 @@ The **Onboarding Document Details** section provides several actions for each ty
 - **Approve Uploaded Document** - Allows the user to approve any documents that have been uploaded. 
 
 
+
 ## How to Approve Uploaded Document
 
 Follow the instructions below to approve an uploaded document. 

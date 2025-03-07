@@ -1,4 +1,4 @@
-(how-to-filter-Users-user-table)=
+(how-to-filter-users-user-table)=
 ### Search and Filter Options
 
 The **User Table** can be filtered using two methods:
@@ -6,20 +6,22 @@ The **User Table** can be filtered using two methods:
 (how-to-search-users-user-table)=
 - **Search by User Name or Email**: Enter keywords in the search field.
 
-- **Status Dropdown**: Select a predefined status option from the dropdown menu.
 
+- **Filter by Status**: Select a predefined status option from the dropdown menu.
 
+(filter-by-status-users-user-options)=
+##### Status Options
 
 **Status** dropdown includes five different options:
 
 (status-options-full-list-users-user-table)=
+
 - {item-blue}`All` (Shows all users regardless of status)
 - {item-blue}`Active`
 - {item-blue}`Inactive`
 - {item-blue}`Pending Activation`
 - {item-blue}`Locked Out`
 
-(how-to-filter-users-user-table-by-status)=
 **To Filter Users by Status**:
 
 1. Click the {item}`Status` dropdown at the top of the user list.
@@ -34,4 +36,3 @@ The **User Table** can be filtered using two methods:
 
 User, User Homepage, Status Filter Dropdown
 ```
-

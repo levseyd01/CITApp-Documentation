@@ -22,9 +22,12 @@ This section is meant to house all of the information needed to navigate through
 
 ## User Details
 
-- [User Details](#user-details)
-- [View More Details](#user-details-main-page)
+- [User Details](#user-details-universal-page)
+- [View More Details](#user-details-accounts-tab)
 
 ## Extras
 
 - [Information Pane](#information-pane-main-page)
+
+
+

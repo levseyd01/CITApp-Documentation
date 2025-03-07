@@ -19,17 +19,21 @@ class TippyRefRole(SphinxRole):
             title = self.text
             target = self.text
             
-        # Create a standard reference node
+        # Create a standard reference node with appropriate reference attributes
         refnode = nodes.reference('', '')
-        refnode['refdocname'] = self.env.docname
-        refnode['refuri'] = f"#{target}"  # Link to target ID on the page
-        refnode['classes'] = ['tippy-reference']
         
-        # Set text and data attribute for Tippy
-        refnode += nodes.Text(title, title)
-        refnode['data-tippy-content'] = f"Loading preview for {title}..."
+        # Handle both cross-document and internal references
+        newnode = nodes.reference()
+        innernode = nodes.inline(title, title)
+        newnode['refdocname'] = self.env.docname
         
-        return [refnode], []
+        # Set up cross-document reference (similar to how Sphinx handles :ref:)
+        newnode['refuri'] = self.env.app.builder.get_relative_uri(
+            self.env.docname, self.env.docname) + '#' + target
+        newnode['classes'] = ['tippy-reference']
+        newnode += innernode
+        
+        return [newnode], []
 
 def setup(app):
     app.add_role('tabref', TabRole())

@@ -1,20 +1,35 @@
 
 # CIT App (CIT Services)
 
-Welcome to the documentation for the **CIT Services** version of the CIT App. See below to get started. 
-
-## Getting Started
+Welcome to the documentation for the {item}`CIT Services` version of the CIT App. See below to get started. 
 
 
-## Navigating the App
+# My Accounts
 
-### Main Sections
+The **CIT App** will always open up to the {page}`My Accounts Page`  
+
+```{lazyfigure} ../_static/solo_app/My_Accounts/overview-screen.webp
+:width: 100%
+:align: center
+```
+
+The main feature of the {page}`My Accounts Page` is that it allows you {tippy-ref}`Manage Different Accounts <changing-accounts-to-manage>`
+
+:::{admonition} Note
+:class: note
+
+You can navigate to the rest of the app through the {item}`Primary Sidebar`.
+:::
+
+For more on navigation and the primary sidebar, see {ref}`General Sidebar Navigation <general-sidebar-navigation>` page.
+
 
 ```{toctree}
 :maxdepth: 2
+:hidden:
 :caption: Contents
 
-My_Accounts/Index.md
+My_Accounts/my-accounts.md
 Dashboard/dashboard.md
 Profile/profile.md
 <!-- Beneficiaries/beneficiaries.md -->
@@ -25,10 +40,10 @@ Offering/Index.md
 ```
 
 
-### Other
 
 ```{toctree}
 :maxdepth:2
+:hidden:
 :caption: Contents
 
 

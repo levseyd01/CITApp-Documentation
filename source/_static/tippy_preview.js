@@ -1,10 +1,43 @@
 // tippy_preview.js - Load content previews for reference links
 // Compatible with Read the Docs and private repositories
+// Coordinated with enhance_references.js to prevent duplicate tooltips
 
 document.addEventListener('DOMContentLoaded', function() {
+  // Check if enhance_references.js is already loaded and initialized
+  // If not yet defined, set up a listener to coordinate initialization
+  if (typeof window.ENHANCE_REFERENCES_INITIALIZED === 'undefined') {
+    window.ENHANCE_REFERENCES_INITIALIZED = false;
+  }
+
+  // Check if sphinx_tippy is also loaded
+  // We need to ensure we don't create duplicate tooltips
+  if (typeof window.SPHINX_TIPPY_CONFIG !== 'undefined') {
+    // Override the sphinx_tippy configuration to prevent it from handling our reference links
+    // Save the original config first
+    const originalSphinxTippyConfig = window.SPHINX_TIPPY_CONFIG;
+    
+    // Replace it with a modified version that ignores our custom reference links
+    window.SPHINX_TIPPY_CONFIG = function(callback) {
+      // Get tippy instance from the original config
+      originalSphinxTippyConfig(function(tippy) {
+        // Only allow the built-in tippy to handle elements with specific tippy-role
+        // and exclude our custom references
+        const existingSelector = tippy.selector || '';
+        tippy.selector = existingSelector.replace('a.reference', 'a.reference.tippy-role');
+        
+        // Call the original callback with our modified config
+        callback(tippy);
+      });
+    };
+  }
+  
   // Initialize after a short delay to ensure DOM is fully ready
+  // and after sphinx_tippy has been initialized
   setTimeout(function() {
     initCustomTippyPreviews();
+    
+    // Also ensure we're not duplicating tooltips
+    fixDuplicateTooltips();
   }, 1000);
 });
 
@@ -17,21 +50,38 @@ function initCustomTippyPreviews() {
     console.error('Tippy.js not loaded - must be included in conf.py');
     return;
   }
+  
+  // Remove any existing tippy instances to prevent duplicates
+  removeExistingTippyInstances();
 
-  // Find all of our custom reference elements and internal reference links
+  // Find all reference elements to add tooltips to
+  // Purposely exclude elements that already have tippy-role class
+  // Also exclude elements already handled by enhance_references.js
   const referenceLinks = document.querySelectorAll(
-    '.page-reference, .section-reference, .subsection-reference, ' +
-    '.tab-reference, .table-reference, .column-reference, ' +
-    '.item-reference, .action-reference, .code-reference, ' +
-    '.item-blue-reference, a.reference.internal'
+    '.page-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    '.section-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    '.subsection-reference:not(.tippy-role):not(.enhance-references-initialized), ' +
+    '.tab-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    '.table-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    '.column-reference:not(.tippy-role):not(.enhance-references-initialized), ' +
+    '.item-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    '.action-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    '.code-reference:not(.tippy-role):not(.enhance-references-initialized), ' +
+    '.item-blue-reference:not(.tippy-role):not(.enhance-references-initialized), ' + 
+    'a.reference.internal:not(.tippy-role):not(.enhance-references-initialized):not(.tippyAnchor)'
   );
   
   if (referenceLinks.length === 0) {
-    console.log('No reference links found');
+    console.log('No reference links found that need custom tooltips');
     return;
   }
   
-  console.log(`Found ${referenceLinks.length} reference links for tooltips`);
+  console.log(`tippy_preview.js found ${referenceLinks.length} reference links for tooltips`);
+  
+  // Mark elements to prevent duplicate initialization
+  referenceLinks.forEach(el => {
+    el.classList.add('custom-tippy-initialized');
+  });
   
   // Initialize tippy on all reference links
   tippy(referenceLinks, {
@@ -55,6 +105,11 @@ function initCustomTippyPreviews() {
         return false; // Prevents tooltip from showing
       }
       
+      // Skip if this has already been handled by enhance_references.js
+      if (reference.classList.contains('enhance-references-initialized')) {
+        return false;
+      }
+      
       // Get the target href
       const href = reference.getAttribute('href');
       if (!href) return false;
@@ -67,10 +122,51 @@ function initCustomTippyPreviews() {
         // Cross-document reference
         handleCrossDocReference(href, instance);
       }
+    },
+    onMount(instance) {
+      // Add special class to identify our tooltips
+      instance.popper.classList.add('tippy-preview-tooltip');
     }
   });
   
-  console.log('Custom tooltips initialized');
+  console.log('Custom tooltips initialized by tippy_preview.js');
+}
+
+/**
+ * Remove any existing tippy instances to prevent duplicates
+ */
+function removeExistingTippyInstances() {
+  // Get all elements with existing tippy instances
+  const existingElements = document.querySelectorAll('[data-tippy-root]');
+  existingElements.forEach(el => {
+    // Only remove our custom tooltips, not the ones from sphinx_tippy
+    if (el._tippy && !el.classList.contains('tippy-role')) {
+      el._tippy.destroy();
+    }
+  });
+}
+
+/**
+ * Fix duplicate tooltips by removing extra instances
+ */
+function fixDuplicateTooltips() {
+  // Find elements that might have duplicate tooltips
+  document.querySelectorAll('.custom-tippy-initialized').forEach(el => {
+    // Find all tooltip instances for this element
+    const tippyInstances = document.querySelectorAll(`[data-tippy-root][aria-describedby^="tippy-"]`);
+    
+    // If there are duplicates, remove extras
+    if (tippyInstances.length > 1) {
+      // Keep only the first instance
+      for (let i = 1; i < tippyInstances.length; i++) {
+        if (tippyInstances[i]._tippy) {
+          tippyInstances[i]._tippy.destroy();
+        } else {
+          tippyInstances[i].remove();
+        }
+      }
+    }
+  });
 }
 
 /**

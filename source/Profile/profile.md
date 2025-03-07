@@ -1,50 +1,60 @@
-
 # Profile
 
-The **Profile** screen allows you to view and edit your company's profile information, including:
+The **Profile** section allows you to view and edit your company's profile information, including:
 
-- **Name** and **Contact** Informaion 
-- **Primary Address** 
-- **Mailing Address**
-- **Upload Logo** 
-- **View Activity Log** 
-- **View Created & Modified Information** 
+- {ref}`View and edit company name and contact information <view-and-edit-company-name-and-contact-information>`
+- {ref}`Manage primary and mailing addresses <manage-primary-and-mailing-addresses>`
+- {ref}`Upload your company logo <upload-your-company-logo>`
+- {ref}`View activity log <view-activity-log>`
+- {ref}`View created and modified information <view-created-and-modified-information>`
 
+You can find out more about each section below:
 
-## Navigating to the Profile Section
-
-
-You can find the **Profile** section along the left-hand side of the page:
-
-
-```{lazyfigure} ../_static/solo_app/Profile/profile-location.webp
-:width: 400px
-:align: center
-```
-
-:::::{admonition} Toggle Primary Sidebar
-:class: tip, dropdown
-:collapsible: closed
-
-:::{card}
+- [Editing Company Information](sections/editing-company-information.md)
+- [Managing Company Addresses](sections/managing-company-addresses.md)
+- [Uploading Company Logo](sections/uploading-company-logo.md)
+- [Viewing Activity Log](sections/viewing-activity-log.md)
 
 
-```{include} ../QuickTips/TogglePrimarySidebar.md
-```
-
-:::
-:::::
 
 ## Profile Sections
 
+### Company Information
 
-- See [Editing Company Information](sections/editing-company-information.md) for more information about editing your company's profile information.
+In this section, you can edit your company's basic information including:
 
+- **Company Name**
+- **Contact Information** (phone, email, website)
+- **Company Logo**
+
+See [Editing Company Information](sections/editing-company-information.md) for more details.
+
+### Address Information
+
+The Profile section allows you to manage both:
+
+- **Primary Address** - Your company's main location
+- **Mailing Address** - Where correspondence should be sent (if different)
+
+See [Managing Company Addresses](sections/managing-company-addresses.md) for more information.
+
+### Activity Tracking
+
+The Profile section also provides:
+
+- **Activity Log** - Track changes made to your company profile
+- **Created/Modified Information** - View when your profile was created and last modified
+
+See [Viewing Activity Log](sections/viewing-activity-log.md) for more details.
 
 ```{toctree}
 :caption: Table of Contents 
 :glob:
-:maxdepth: 2
+:hidden:
+:maxdepth: 1
 
 sections/editing-company-information.md
-```
+sections/managing-company-addresses.md
+sections/uploading-company-logo.md
+sections/viewing-activity-log.md
+``` 

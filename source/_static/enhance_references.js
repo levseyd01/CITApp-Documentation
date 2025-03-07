@@ -1,10 +1,27 @@
-// enhance_references.js - Add tooltip functionality to all reference links
+// enhance_references.js - Add tooltip functionality to reference links
+// Coordinated with tippy_preview.js to prevent duplicate tooltips
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Process all reference links with the tippyAnchor class
-  const refLinks = document.querySelectorAll('a.tippyAnchor, .standard-link.tippyAnchor');
+  // Check if we should run this script or defer to tippy_preview.js
+  // We'll use a global flag that tippy_preview.js can check
+  window.ENHANCE_REFERENCES_INITIALIZED = false;
   
+  // Process only links that are specifically tippyAnchor but NOT already handled by tippy_preview.js
+  // This helps avoid duplicate tooltips
+  const refLinks = document.querySelectorAll('a.tippyAnchor:not(.custom-tippy-initialized), .standard-link.tippyAnchor:not(.custom-tippy-initialized)');
+  
+  if (refLinks.length === 0) {
+    console.log('No links found for enhance_references.js to process');
+    return;
+  }
+  
+  console.log(`enhance_references.js found ${refLinks.length} links to process`);
+  
+  // Mark these elements so tippy_preview.js knows to skip them
   refLinks.forEach(link => {
+    // Mark as processed by this script
+    link.classList.add('enhance-references-initialized');
+    
     // Get the target ID from the link href
     const href = link.getAttribute('href');
     if (!href) return;
@@ -63,13 +80,44 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize or reinitialize tippy for all tooltip links
   if (typeof tippy !== 'undefined') {
-    tippy('a.tippyAnchor, .standard-link.tippyAnchor', {
-      allowHTML: true,
-      interactive: true,
-      maxWidth: 350,
-      theme: 'light-border',
-      placement: 'top',
-      delay: [200, 0] // 200ms delay before showing, 0ms delay before hiding
-    });
+    // Check if tippy_preview has already run
+    const alreadyInitialized = document.querySelector('.custom-tippy-initialized');
+    
+    if (alreadyInitialized) {
+      console.log('tippy_preview.js already initialized some tooltips, using selective initialization');
+      // Only initialize tooltips on elements not already processed by tippy_preview.js
+      tippy('a.tippyAnchor.enhance-references-initialized, .standard-link.tippyAnchor.enhance-references-initialized', {
+        allowHTML: true,
+        interactive: true,
+        maxWidth: 350,
+        theme: 'light',  // Use a different theme to avoid conflicts
+        placement: 'top',
+        delay: [200, 0], // 200ms delay before showing, 0ms delay before hiding
+        // Add a data attribute we can use for CSS targeting
+        onMount(instance) {
+          const tooltip = instance.popper;
+          tooltip.classList.add('enhance-references-tooltip');
+        }
+      });
+    } else {
+      console.log('First tooltip initialization from enhance_references.js');
+      // Initialize as normal if tippy_preview.js hasn't run yet
+      tippy('a.tippyAnchor.enhance-references-initialized, .standard-link.tippyAnchor.enhance-references-initialized', {
+        allowHTML: true,
+        interactive: true,
+        maxWidth: 350,
+        theme: 'light',  // Use a different theme to avoid conflicts
+        placement: 'top',
+        delay: [200, 0], // 200ms delay before showing, 0ms delay before hiding
+        // Add a data attribute we can use for CSS targeting
+        onMount(instance) {
+          const tooltip = instance.popper;
+          tooltip.classList.add('enhance-references-tooltip');
+        }
+      });
+    }
+    
+    // Set flag to let tippy_preview.js know we've run
+    window.ENHANCE_REFERENCES_INITIALIZED = true;
   }
 });

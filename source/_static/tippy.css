@@ -1,6 +1,7 @@
 /* 
    Tippy Tooltip Styling - Compatible with Read the Docs
    Works with both private repositories and public docs
+   Coordinated with both tippy_preview.js and enhance_references.js
 */
 
 /* Base tooltip styling */
@@ -13,6 +14,7 @@
     line-height: 1.4;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
+    z-index: 100000 !important; /* Make sure tooltips stay on top of other elements */
 }
 
 /* Support for standard reference links with tooltips */
@@ -59,7 +61,6 @@ a.reference.tippyAnchor, a.reference.internal {
 /* Make tippy boxes larger for full content */
 .tippy-box[data-theme="light-border"] {
     max-width: 800px !important;
-    z-index: 100000 !important; /* Make sure tooltips stay on top of Read the Docs elements */
 }
 
 /* Image styling */
@@ -132,136 +133,120 @@ a.reference.tippyAnchor, a.reference.internal {
     border-left: 4px solid #2980b9;
 }
 
-/* Fix for duplicate tooltips - ensure proper z-index priority */
-.tippy-box {
-    z-index: 100000 !important;
-}
-
-/* Make sure all tooltips are visible */
-.tippy-box[data-theme="light-border"] {
-    display: block !important;
-    opacity: 1 !important;
-}
-
-/* Reference styles - ensure compatibility with custom reference types */
-.tippy-content .page-reference,
-.tippy-content .section-reference,
-.tippy-content .subsection-reference,
-.tippy-content .tab-reference,
-.tippy-content .table-reference,
-.tippy-content .column-reference,
-.tippy-content .item-reference,
-.tippy-content .action-reference {
-    display: inline-block;
-    margin: 2px;
-    white-space: nowrap;
-}
-
-.tippy-content .page-reference {
-    background-color: #e8f0f7 !important;
-    border-color: #d0e0f0 !important;
-    color: #1a5891 !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .section-reference {
-    background-color: #e3f2fd !important; 
-    border-color: #bbdefb !important;
-    color: #1565c0 !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .subsection-reference {
-    background-color: #fce4ec !important;
-    border-color: #f8bbd0 !important;
-    color: #c2185b !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .tab-reference {
-    background-color: #eeeeee !important;
-    border-color: #e0e0e0 !important;
-    color: #424242 !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .table-reference {
-    background-color: #e0f2f1 !important;
-    border-color: #b2dfdb !important;
-    color: #00796b !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .column-reference {
-    background-color: #f5f5f5 !important;
-    border-color: #e0e0e0 !important;
-    color: #616161 !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .item-reference {
-    background-color: #f5f5f5 !important;
-    border-color: #e0e0e0 !important;
-    color: #212121 !important;
-    padding: 2px 6px !important;
-    border-radius: 3px !important;
-    font-size: 0.9em !important;
-}
-
-.tippy-content .action-reference {
-    background-color: #ffffff !important;
-    border: 1px solid #f44336 !important;
-    color: #f44336 !important;
-    font-weight: bold !important;
-    text-transform: uppercase !important;
-    padding: 1px 5px !important;
-    border-radius: 3px !important;
-    font-size: 0.85em !important;
-}
-
-/* Fix for reference icons in tooltips - hide the before elements that contain icons */
-.tippy-content .page-reference::before,
-.tippy-content .section-reference::before,
-.tippy-content .subsection-reference::before,
-.tippy-content .tab-reference::before, 
-.tippy-content .table-reference::before,
-.tippy-content .column-reference::before,
-.tippy-content .item-reference::before,
-.tippy-content .action-reference::before {
+/* ====== Fix for duplicate tooltips ====== */
+/* Hide tooltips created by sphinx_tippy on elements we handle with our custom tooltips */
+.custom-tippy-initialized + .tippy-box:not([data-theme="light-border"]) {
     display: none !important;
 }
 
-/* Adjust padding since we're hiding the icons */
-.tippy-content .page-reference,
-.tippy-content .section-reference,
-.tippy-content .subsection-reference,
-.tippy-content .tab-reference,
-.tippy-content .table-reference,
-.tippy-content .column-reference,
-.tippy-content .item-reference,
-.tippy-content .action-reference {
-    padding-left: 6px !important;
+/* Ensure enhance_references tooltips have proper styling */
+.enhance-references-tooltip {
+    z-index: 100000 !important;
+    opacity: 1 !important;
 }
 
-/* Add some basic styling for images in tooltips */
-.tippy-content img {
-    max-width: 100%;
-    height: auto;
+/* Style differences between the two tooltip systems */
+.tippy-box[data-theme="light"] {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tippy-box[data-theme="light-border"] {
+    z-index: 100001 !important; /* Higher than other tooltips */
+    opacity: 1 !important;
 }
 
 /* Hide the default browser tooltip */
 .reference[title] {
     text-decoration: none;
+}
+
+/* Reference styles - ensure compatibility with custom reference types */
+/* Page reference - blue-gray with document icon */
+.page-reference {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9em;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 22px;
+    text-decoration: none !important;
+    border: 1px solid #bbdefb;
+}
+
+.page-reference::before {
+    content: "📄";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+}
+
+/* Section reference - blue with list icon */
+.section-reference {
+    background-color: #e1f5fe;
+    color: #01579b;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9em;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 22px;
+    text-decoration: none !important;
+    border: 1px solid #b3e5fc;
+}
+
+.section-reference::before {
+    content: "📋";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+}
+
+/* Subsection reference - pink with column icon */
+.subsection-reference {
+    background-color: #fce4ec;
+    color: #c2185b;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9em;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 22px;
+    text-decoration: none !important;
+    border: 1px solid #f8bbd0;
+}
+
+.subsection-reference::before {
+    content: "📑";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+}
+
+/* Table reference - teal with grid icon */
+.table-reference {
+    background-color: #e0f2f1;
+    color: #00695c;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 0.9em;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 22px;
+    text-decoration: none !important;
+    border: 1px solid #b2dfdb;
+}
+
+.table-reference::before {
+    content: "🔲";
+    position: absolute;
+    left: 5px;
+    top: 1px;
 }

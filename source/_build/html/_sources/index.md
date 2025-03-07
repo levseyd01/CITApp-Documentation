@@ -8,9 +8,11 @@ Welcome to the documentation for the {item}`CIT Services` version of the CIT App
 
 The **CIT App** will always open up to the {page}`My Accounts Page`  
 
-```{lazyfigure} ../_static/solo_app/My_Accounts/overview-screen.webp
+```{lazyfigure} _static/solo_app/My_Accounts/overview-screen.webp
 :width: 100%
 :align: center
+
+CIT App, My Accounts Screen, Homepage
 ```
 
 The main feature of the {page}`My Accounts Page` is that it allows you {tippy-ref}`Manage Different Accounts <changing-accounts-to-manage>`

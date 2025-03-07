@@ -1,10 +1,29 @@
 // tippy_preview.js - Load content previews for tippy-ref links
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Process all tippy-reference links - both your custom tippy-ref role and standard references
+  // Wait a bit for everything to be loaded and settled before initializing
+  setTimeout(function() {
+    initTippyPreviews();
+  }, 500);
+});
+
+function initTippyPreviews() {
+  // First, destroy any existing tippy instances to prevent duplicates
+  if (typeof tippy !== 'undefined' && tippy.hideAll) {
+    tippy.hideAll();
+  }
+
+  // Get all elements that should have tippy tooltips
   const tippyLinks = document.querySelectorAll('.tippy-reference, a.reference.internal');
   
+  // Create a Set to track elements that already have tippy instances
+  const processedElements = new Set();
+  
   tippyLinks.forEach(link => {
+    // Skip if we've already processed this element
+    if (processedElements.has(link)) return;
+    processedElements.add(link);
+    
     // Get the target URL from the href
     const href = link.getAttribute('refuri') || link.getAttribute('href');
     if (!href) return;
@@ -26,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
           let previewContent = buildPreviewContent(namedElement);
           link.setAttribute('data-tippy-content', previewContent);
         } else {
+          console.log('Target not found:', targetId);
           link.setAttribute('data-tippy-content', 'Content preview not available (target not found)');
         }
         return;
@@ -39,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // We need to handle both relative and absolute paths
       let targetUrl = href;
       
-      // For Sphinx HTML output format the URL properly
+      // Check if this is a document reference 
       if (targetUrl.endsWith('.html')) {
         // Already an HTML link, keep as is
       } else if (targetUrl.includes('#')) {
@@ -50,13 +70,23 @@ document.addEventListener('DOMContentLoaded', function() {
         targetUrl = targetUrl + '.html';
       }
       
+      // For Sphinx HTML output, transform URL to get the proper HTML file
+      // This is needed because of how Sphinx generates HTML files from source files
+      targetUrl = targetUrl.replace(/\.\.\//g, ''); // Remove any relative path navigation
+
+      // Try to fetch from _build/html instead
+      let buildUrl = '/_build/html/' + targetUrl;
+      
+      console.log('Fetching content from:', buildUrl);
+      
       // Fetch the content of the linked page
-      fetchPageContent(targetUrl, link);
+      fetchPageContent(buildUrl, link);
     }
   });
   
-  // Initialize tippy for all relevant elements
+  // Initialize tippy just once for each element
   if (typeof tippy !== 'undefined') {
+    // Initialize new tippy instances
     tippy('.tippy-reference, a.reference.internal', {
       allowHTML: true,
       interactive: true,
@@ -67,16 +97,23 @@ document.addEventListener('DOMContentLoaded', function() {
       appendTo: document.body
     });
   }
-});
+}
 
 // Function to fetch cross-document content
 function fetchPageContent(url, link) {
-  console.log('Fetching content from:', url);
-  
   fetch(url)
     .then(response => {
       if (!response.ok) {
-        throw new Error(`Network response was not ok: ${response.status} ${response.statusText}`);
+        // Try another URL format if the first one fails
+        const alternateUrl = url.replace('/_build/html/', '/');
+        console.log('First URL failed, trying alternate URL:', alternateUrl);
+        return fetch(alternateUrl);
+      }
+      return response;
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.status} ${response.statusText} for URL: ${url}`);
       }
       return response.text();
     })
@@ -87,9 +124,9 @@ function fetchPageContent(url, link) {
       
       // Look for the main content area (most Sphinx themes use 'div.body' or 'main' or 'div.document')
       const mainContent = doc.querySelector('div.body') || 
-                         doc.querySelector('main') || 
-                         doc.querySelector('div.document') || 
-                         doc.body;
+                          doc.querySelector('main') || 
+                          doc.querySelector('div.document') || 
+                          doc.body;
       
       if (mainContent) {
         // Extract title
@@ -118,16 +155,8 @@ function fetchPageContent(url, link) {
         if (paragraphs.length > 0) {
           // Properly handle reference styles inside paragraphs
           const pClone = paragraphs[0].cloneNode(true);
-          const customRefs = pClone.querySelectorAll('.page-reference, .section-reference, .subsection-reference, .tab-reference, .table-reference, .column-reference, .item-reference, .action-reference');
-          customRefs.forEach(ref => {
-            // Just keep the text content with appropriate styling
-            const text = ref.textContent;
-            const span = document.createElement('span');
-            span.className = ref.className;
-            span.textContent = text;
-            ref.parentNode.replaceChild(span, ref);
-          });
           
+          // Extract content safely
           preview += `<div class="tippy-preview-content">${pClone.innerHTML}</div>`;
           
           if (paragraphs.length > 1) {
@@ -153,8 +182,12 @@ function fetchPageContent(url, link) {
         if (images.length > 0) {
           const imgSrc = images[0].getAttribute('src');
           // Handle relative paths
-          const imgUrl = new URL(imgSrc, url).href;
-          preview += `<div class="tippy-preview-image"><img src="${imgUrl}" alt="Preview"></div>`;
+          try {
+            const imgUrl = new URL(imgSrc, url).href;
+            preview += `<div class="tippy-preview-image"><img src="${imgUrl}" alt="Preview"></div>`;
+          } catch (error) {
+            console.error('Error processing image URL:', error);
+          }
         }
         
         preview += '</div>';
@@ -162,9 +195,9 @@ function fetchPageContent(url, link) {
         // Update the link with the preview content
         link.setAttribute('data-tippy-content', preview);
         
-        // Re-initialize tippy for this link to show the updated content
-        if (typeof tippy !== 'undefined') {
-          tippy(link);
+        // Update existing tippy instance if it exists
+        if (typeof tippy !== 'undefined' && link._tippy) {
+          link._tippy.setContent(preview);
         }
       } else {
         console.warn('No main content found in fetched page:', url);
@@ -172,7 +205,7 @@ function fetchPageContent(url, link) {
       }
     })
     .catch(error => {
-      console.error('Error fetching page:', error, url);
+      console.error('Error fetching page:', error);
       link.setAttribute('data-tippy-content', `Error loading preview: ${error.message}`);
     });
 }
@@ -210,17 +243,6 @@ function buildPreviewContent(element) {
   if (mainContent.length > 0) {
     // Create a clean clone of the paragraph
     const pClone = mainContent[0].cloneNode(true);
-    
-    // Process custom reference styles within the paragraph
-    const customRefs = pClone.querySelectorAll('.page-reference, .section-reference, .subsection-reference, .tab-reference, .table-reference, .column-reference, .item-reference, .action-reference');
-    customRefs.forEach(ref => {
-      // Just keep the text content for simplicity
-      const text = ref.textContent;
-      const span = document.createElement('span');
-      span.className = ref.className;
-      span.textContent = text;
-      ref.parentNode.replaceChild(span, ref);
-    });
     
     previewContent += `<div class="tippy-preview-content">${pClone.innerHTML}</div>`;
     

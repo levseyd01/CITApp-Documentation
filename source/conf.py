@@ -29,8 +29,6 @@ import base64
 source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
 
-
-
 latex_elements = {
     'preamble': r'''
 \usepackage{graphicx}
@@ -96,7 +94,9 @@ extensions = [
     'myst_parser',
     'sphinx_design',
     'post_process_refs',
-    'tabref']
+    'tabref',
+    '_ext.missing_ref_handler'
+]
 
 if os.environ.get('READTHEDOCS') == 'True':
     try:
@@ -129,65 +129,72 @@ upload_button_b64 = base64.b64encode(png_binary_data).decode("utf-8")
 '''
 with open("_static/upload-button.jpeg", "rb") as f:
     upload_button_b64 = base64.b64encode(f.read()).decode("utf-8")'''
-'''tippy_custom_tips = {
+    
+    
+tippy_custom_tips = {
     "#upload-button": (
-        "<img src='/_static/solo_app/Universal/buttons/upload-button.jpeg' "
+        "<img src='/_static/solo_app/Universal/buttons/upload-button.webp' "
         "alt='Upload Button' style='width:200px;'>"
     ),
     "#deactivate-button": (
-        "<img src='/_static/solo_app/Universal/buttons/deactivate-button.jpeg' "
+        "<img src='/_static/solo_app/Universal/buttons/deactivate.webp' "
         "alt='Deactivate Button' style='width:200px;'>"
     ),
     "#file-explorer-open": (
-        "<img src='/_static/solo_app/Universal/file-explorer-open.jpeg' "
+        "<img src='/_static/solo_app/Universal/file-explorer-open.webp' "
         "alt='File Explorer Open' style='width:200px;'>"
     ),
     "#new-beneficiary-button": (
-        "<img src='/_static/solo_app/Beneficiaries/new-beneficiary.jpeg' "
+        "<img src='/_static/solo_app/Beneficiaries/new-beneficiary.webp' "
         "alt='New Beneficiary Button' style='width:200px;'>"
     ),
     "#delete-icon": (
-        "<img src='/_static/solo_app/Universal/icons/delete-icon.jpeg' "
+        "<img src='/_static/solo_app/Universal/icons/delete-icon.webp' "
         "alt='Delete Icon' style='width:200px;'>"
     ),
     "#upload-logo-button": (
-        "<img src='/_static/solo_app/Profile/upload-logo-section/upload-logo-button.jpeg' "
+        "<img src='/_static/solo_app/Profile/upload-logo-section/upload-logo-button.webp' "
         "alt='Upload Logo Button' style='width:200px;'>"
     ),
     "#view-more-icon": (
-        "<img src='/_static/solo_app/Universal/icons/view-more-icon.jpeg' "
+        "<img src='/_static/solo_app/Universal/icons/view-more-icon.webp' "
         "alt='View More Icon' style='width:200px;'>"
     ),
     "#manage-button": (
-        "<img src='/_static/solo_app/Universal/buttons/manage-button.jpeg' "
+        "<img src='/_static/solo_app/Universal/buttons/manage-button.webp' "
         "alt='Manage Button' style='width:200px;'>"
     ),
      "#save-changes": (
-        "<img src='/_static/solo_app/Universal/buttons/save-changes.jpeg' "
+        "<img src='/_static/solo_app/Universal/buttons/save-changes.webp' "
         "alt='Save Changes' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (
-        "<img src='/_static/solo_app/Universal/actions/edit-permissions.jpeg' "
+        "<img src='/_static/solo_app/Universal/actions/edit-permissions.webp' "
         "alt='Edit Permissions Icon' style='width:200px;'>"
     ),
     "#new-user-button": (
-        "<img src='/_static/solo_app/Universal/buttons/new-user.jpeg' "
+        "<img src='/_static/solo_app/Universal/buttons/new-user.webp' "
         "alt='New User Button' style='width:200px;'>"
     ),
     "#menu-icon": (
-        "<img src='/_static/solo_app/Universal/icons/menu-icon.jpeg' "
+        "<img src='/_static/solo_app/Universal/icons/menu-icon.webp' "
         "alt='Menu Icon' style='width:100%;'>"
     ),
     "#navigating-to-user-detail": (
-        "<img src='/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.jpeg' "
+        "<img src='/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.webp' "
         "alt='Navigating to User Detail screenshot' style='width:100%;'>"
     ),
      "#reset-password": (
-        "<img src='/en/stable-edit/_static/solo_app/User/User-Detail/reset-password.jpeg' "
+        "<img src='/_static/solo_app/User/User-Detail/reset-password.webp' "
         "alt='Reset Password' style='width:200px;'>"
     ),
 }
-'''
+
+
+
+"""
+## These are for read the docs
+
 tippy_custom_tips = {
     "#upload-button": (
         "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/upload-button.jpeg' "
@@ -251,7 +258,7 @@ tippy_custom_tips = {
     ),
 }
 
-
+"""
 
 # Optionally, tweak tippy settings:
 #tippy_inline = True  # enable inline tips
@@ -343,6 +350,16 @@ sphinx_design_use_inserted_localstorage = False
 
 html_static_path = ['_static']
 
+suppress_warnings = [
+    'toc.excluded',  # Suppress warnings about documents not in a toctree
+    'myst.header',   # Suppress warnings about header level increases
+    "undefined",
+    'myst.xref_missing', # Suppress warnings about missing cross-references
+    'ref.ref',          # Suppress warnings about undefined references
+    'ref.undefined',    # Suppress warnings about undefined labels
+    'myst.directive_option', # Suppress warnings about directive options
+    'myst.directive_parse', # Suppress warnings about directive parsing
+]
 
 '''
 # Hoverxref configuration
@@ -367,13 +384,6 @@ hoverxref_api_version = 'cit-superadmin'
 hoverxref_auto_ref = True
 hoverxref_ignore_refs = ['genindex', 'modindex', 'search']
 '''
-
-suppress_warnings = [
-   "undefined"
-]
-
-
-
 
 def parse_tilde1(inline, match, state):
     """Handle ~some text~"""

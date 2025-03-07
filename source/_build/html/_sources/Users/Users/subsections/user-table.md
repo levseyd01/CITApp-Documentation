@@ -31,5 +31,5 @@ The {table}`User List Table` has the following {column}`Columns`:
 :hidden:
 :maxdepth: 1
 
-table/filter-table
+
 ```

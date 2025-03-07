@@ -154,7 +154,7 @@ Profile Screen, Upload Logo Section
 File Explorer, File Name Selected
 ```
 
-5. Click the [Open](#file-explorer-open){: .tippyAnchor} Button to upload the file.
+5. Click the [Open](#file-explorer-open) Button to upload the file.
 
 (information-pane-info-main)=
 

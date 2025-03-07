@@ -9,6 +9,7 @@ import os
 import sys
 
 from pathlib import Path
+from docutils import nodes
 
 project = 'CIT Services User Manual'
 copyright = '2024, Transfer Online.'
@@ -17,8 +18,12 @@ author = ''
 release = '1'
 
 language = 'en'
-
+import sys
+import os
 sys.path.append(os.path.abspath('_ext'))
+from tilde_plugin import tilde_plugin
+# from myst_parser.mdit_to_docutils.base import DocutilsRenderer
+
 import base64
 source_suffix = ['.rst', '.md']
 # -- General configuration ---------------------------------------------------
@@ -89,7 +94,8 @@ extensions = [
    # 'hoverxref.extension',
     'myst_parser',
     'sphinx_design',
-    'post_process_refs',]
+    'post_process_refs',
+    'tabref']
 
 if os.environ.get('READTHEDOCS') == 'True':
     try:
@@ -156,7 +162,7 @@ with open("_static/upload-button.jpeg", "rb") as f:
         "alt='Manage Button' style='width:200px;'>"
     ),
      "#save-changes": (
-        "<img src='/_static/solo_app/Universal/Universal/buttons/save-changes.jpeg' "
+        "<img src='/_static/solo_app/Universal/buttons/save-changes.jpeg' "
         "alt='Save Changes' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (
@@ -265,7 +271,10 @@ pdf_documents = [
 
 ]'''
 
-
+rst_prolog = """
+.. role:: tab
+   :class: tab-reference
+"""
 
 
 myst_all_links_external = False
@@ -306,7 +315,7 @@ tippy_js = ("https://unpkg.com/@popperjs/core@2", "https://unpkg.com/tippy.js@6"
 
 
 html_logo = "_static/CIT-Logo-white-background.jpg"
-
+# html_theme = 'sphinx_material'
 html_theme = 'sphinx_book_theme'
 
 templates_path = ['_templates']
@@ -360,3 +369,261 @@ hoverxref_ignore_refs = ['genindex', 'modindex', 'search']
 suppress_warnings = [
    "undefined"
 ]
+
+
+
+
+def parse_tilde1(inline, match, state):
+    """Handle ~some text~"""
+    content = match.group(1)
+    node = nodes.inline(content, content, classes=["page-reference"])
+    return node
+
+def parse_tilde2(inline, match, state):
+    """Handle ~~some text~~"""
+    content = match.group(1)
+    node = nodes.inline(content, content, classes=["section-reference"])
+    return node
+
+def parse_tilde3(inline, match, state):
+    """Handle ~~~some text~~~"""
+    content = match.group(1)
+    node = nodes.inline(content, content, classes=["subsection-reference"])
+    return node
+
+def parse_tilde4(inline, match, state):
+    """Handle ~~~~some text~~~~"""
+    content = match.group(1)
+    node = nodes.inline(content, content, classes=["tab-reference"])
+    return node
+
+# Create a page reference with screen reader text.
+def page_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a page reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Page: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['page-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a section reference with screen reader text.
+def section_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a section reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Section: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['section-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a subsection reference with screen reader text.
+def subsection_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a subsection reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Subsection: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['subsection-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a tab reference with screen reader text.
+def tab_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a tab reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Tab: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['tab-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a table reference with screen reader text.
+def table_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a table reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Table: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['table-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a column reference with screen reader text.
+def column_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a column reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Column: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['column-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a standard item reference with screen reader text.
+def item_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a standard item reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Item: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an action reference with screen reader text.
+def action_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an action reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Action: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    text_node['classes'] = ['action-reference']
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['action-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a code reference with screen reader text.
+def code_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a code reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Code: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['code-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an item-blue reference with screen reader text.
+def item_blue_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-blue reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-blue-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+
+def setup(app):
+    """Add our functionality to Sphinx."""
+    
+    # Setup CSS
+    app.add_css_file('css/custom.css')
+
+    # Register roles
+    app.add_role('page', page_role)
+    app.add_role('section', section_role)
+    app.add_role('subsection', subsection_role)
+    app.add_role('tab', tab_role)
+    app.add_role('table', table_role)
+    app.add_role('column', column_role)
+    app.add_role('item', item_role)
+    app.add_role('action', action_role)
+    app.add_role('code', code_role)
+    app.add_role('item-blue', item_blue_role)
+    
+    # We attach these new "inline syntaxes" to the DocutilsRenderer,
+    # which is used by MyST-Parser:
+    try:
+        from myst_parser.mdit_to_docutils.base import DocutilsRenderer
+        
+        # Order is important - register the patterns from most specific to least specific
+        DocutilsRenderer.inline_syntaxes.append(
+            ("tilde4", r'~~~~([^~]+)~~~~', parse_tilde4)
+        )
+        DocutilsRenderer.inline_syntaxes.append(
+            ("tilde3", r'~~~([^~]+)~~~', parse_tilde3)
+        )
+        DocutilsRenderer.inline_syntaxes.append(
+            ("tilde2", r'~~([^~]+)~~', parse_tilde2)
+        )
+        DocutilsRenderer.inline_syntaxes.append(
+            ("tilde1", r'~([^~]+)~', parse_tilde1)
+        )
+        print("Successfully registered tilde patterns!")
+    except Exception as e:
+        print(f"Warning: Could not register tilde patterns: {e}")
+    
+    # Tells Sphinx to load your custom CSS
+    app.add_css_file("my_custom.css")
+    
+    return {
+        'version': '0.1',
+        'parallel_read_safe': True,
+        'parallel_write_safe': True,
+    }

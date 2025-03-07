@@ -14,6 +14,12 @@ This section is meant to house all of the information needed to navigate through
 - [View Detailed Document Info](#onboarding-offering-document-details)
 
 
+
+## Edit Permissions
+
+- [Edit Permissions](#edit-permissions-universal)
+
+
 ## User Details
 
 - [User Details](#user-details)

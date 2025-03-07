@@ -8,7 +8,11 @@
 
 # Users
 
-The **User** section allows you to manage and view **User** accounts. 
+The {page}`Users Page` has the following features:
+
+- {item}`Search`,
+- {item}`Filter`, And 
+- {item}`View User Details`
 
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-homepage.webp
@@ -16,21 +20,20 @@ The **User** section allows you to manage and view **User** accounts.
 :align: center
 :name: user-homepage
 
-User, User Homepage
+Users, User list Table
 ```
 
+## User List Table
 
-## Navigating the User Table
+The {table}`User List Table` summarizes key details for each staff member, including:
 
+- {item}`Contact Information`
+- {item}`Status`
 
-The homepage displays a table of users with the following columns:
+Additionally, you can perform these actions directly from the table:
 
-- Contact Name
-- Contact Email
-- Number of Visits
-- Last Logged In
-- Status (Active or Inactive)
-- Action
+- {item}`Three Actions` (**i.e.,** [View User Details](#user-staff-view-user-details), [Edit User Details](#edit-permissions-universal), And [Delete User](#delete-user-universal)) 
+
 
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-column-options.webp
@@ -41,32 +44,36 @@ The homepage displays a table of users with the following columns:
 User, User, Column Options
 ```
 
+The {table}`User List Table` has the following {column}`Columns`:
+
+- {column}`Contact Name`
+- {column}`Contact Email`
+- {column}`Number of Visits`
+- {column}`Last Logged In`
+- {column}`Status` ({item}`Active` or {item}`Inactive`)
+- {column}`Action`
+
+
 ### Filtering the User Table
 
-The **User** table can be filtered by either of the following options:
+The **User Table** can be filtered using two methods:
 
-- Searching for a specific user on the page using the search bar, or 
-- Changing the filter options using the [Status dropdown](using-the-status-dropdown){: .tippyAnchor} at the top-left of the page.
+- **Search**: Enter keywords in the search field.
+- **Status Dropdown**: Select a predefined status option from the dropdown menu.
 
+There **Status** dropdown includes five different options:
 
-```{lazyfigure} ../../_static/solo_app/User/Users/user-user-hompage-filter-options.webp
-:width: 100%
-:align: center
-:name: user-user-hompage-filter-options
+- {item-blue}`All` (Shows all users regardless of status)
+- {item-blue}`Active`
+- {item-blue}`Inactive`
+- {item-blue}`Pending Activation`
+- {item-blue}`Locked Out`
 
-User, User Homepage, Filter Options
-```
+**To Filter Users by Status**:
 
-
-#### Using the Status Dropdown
-
-The **Status** dropdown can be used to filter the table by these options:
-
-- `All`
-- `Active`
-- `Inactive`
-- `Pending Activation (needs precise definition)`
-- `Locked Out (needs precise definition)`
+1. Click the {item}`Status` dropdown at the top of the user list.
+2. Select your desired filter option.
+3. The table updates automatically to display matching users.
 
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-status-filter.webp
@@ -77,45 +84,26 @@ The **Status** dropdown can be used to filter the table by these options:
 User, User Homepage, Status Filter Dropdown
 ```
 
-(user-user-view-user-details)=
-## View User Details
+
+### Remaining Sections
 
 
-To view a **User's** details:
+The remaining sections are universally shared throughout the app. 
 
 
-1. Find the **Action** column.
+**These sections include:**
+
+- {ref}`View User Details - User Information Tab <user-details-universal-page>`
+- {ref}`View User Details - Accounts Tab <user-details-accounts-tab>`
+- {ref}`Overview of the Information pane <information-pane-main-page>`
+
+:::{admonition} Note
+:class: note
+
+See {ref}`information-pane-main-page` for more information regarding {item}`Shared Sections`
+
+:::
 
 
-```{lazyfigure} ../../_static/solo_app/User/Users/user-user-action-column.webp
-:width: 100%
-:align: center
-:name: user-user-action-column
 
-User, User Homepage, Action Column
-```
-
-2. Find the row of the User you want to view.
-3. Click the [View More Icon](#view-more-icon).
-
-
-```{lazyfigure} ../../_static/solo_app/User/Users/user-user-view-more-location.webp
-:width: 100%
-:align: center
-:name: user-user-view-more-location
-
-User, User Homepage, View More Icon Location
-```
-
-
-```{include} ../../Universal/UserDetails/user-details-page.md
-```
-
-(user-user-view-user-details-information-pane)=
-
-```{include} ../../Universal/information-pane.md
-```
-
-```{include} ../../Universal/UserDetails/view-user-details-accounts-tab.md
-```
 

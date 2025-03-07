@@ -1,33 +1,8 @@
 
-# Staff 
+(user-staff-managing-staff-accounts)=
+# Staff
 
-
-You can find the **Manage Staff** section along the left-hand side of the page:
-
-```{lazyfigure} ../../_static/solo_app/User/Staff/manage-staff-location.webp
-:width: 50%
-:align: center
-:name: manage-staff-location
-```
-
-:::::{admonition} Toggle Primary Sidebar
-:class: tip, dropdown
-:collapsible: closed
-
-
-:::{card}
-
-
-```{include} ../../QuickTips/TogglePrimarySidebar.md
-```
-
-:::
-:::::
-
-
-
-> You should see the homepage for **Managing Staff** accounts:
-
+The {page}`Staff Page` opens up to the {table}`Staff List Table`: 
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage.webp
 :width: 100%
@@ -35,20 +10,46 @@ You can find the **Manage Staff** section along the left-hand side of the page:
 :name: staff-homepage
 ```
 
+The {table}`Staff List Table` provides an overview of staff member, it provides:
 
+- {item}`Contact Information`
+- {item}`Status`
+- {item}`Three Actions` (**i.e.,** [View User Details](#user-staff-view-user-details), [Edit User Details](#edit-permissions-universal), And [Delete User](#delete-user-universal)) 
 
-## Available Information for Staff
+:::{admonition} Finding the Staff Page
 
+You can find the {page}`Staff Page` along the left-hand side of the page:
 
-The homepage for **Managing Staff** accounts includes a table of accounts with the following columns:
+```{lazyfigure} ../../_static/solo_app/User/Staff/manage-staff-location.webp
+:width: 50%
+:align: center
+:name: manage-staff-location
+```
 
-- Contact Name
-- Contact Email
-- Number of Visits
-- Last Logged In
-- Status
-- Action
+:::
 
+:::::{admonition} Toggle Primary Sidebar
+:class: tip, dropdown
+:collapsible: closed
+
+:::{card}
+
+```{include} ../../QuickTips/TogglePrimarySidebar.md
+```
+
+:::
+:::::
+
+## Staff List Columns
+
+The {table}`Staff List Table` includes a table of accounts with the following columns:
+
+- {column}`Contact Name`
+- {column}`Contact Email` 
+- {column}`Number of Visits`
+- {column}`Last Logged In`
+- {column}`Status`
+- {column}`Action`
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns.webp
 :width: 100%
@@ -56,10 +57,7 @@ The homepage for **Managing Staff** accounts includes a table of accounts with t
 :name: staff-homepage-columns
 ```
 
-
-
 ## Status Column
-
 
 The **Status** column indicates the current status of the account. The following statuses are available:
 
@@ -116,19 +114,19 @@ User, Staff Homepage, Action Column
 User, Staff Homepage, View More Icon Location
 ```
 
+### Remaining Sections
 
-```{include} ../../Universal/UserDetails/user-details-page.md
-```
+The remaining sections are universally shared throughout the app. 
 
-(user-user-view-user-details-information-pane)=
+**These sections include:**
 
-```{include} ../../Universal/information-pane.md
-```
+- {ref}`View User Details - User Information Tab <user-details-universal-page>`
+- {ref}`View User Details - Accounts Tab <user-details-accounts-tab>`
+- {ref}`Overview of the Information pane <information-pane-main-page>`
 
-```{include} ../../Universal/UserDetails/view-user-details-accounts-tab.md
-```
+:::{admonition} Note
+:class: note
 
+See {ref}`information-pane-main-page` for more information regarding {item}`Shared Sections`
 
-
-
-
+:::

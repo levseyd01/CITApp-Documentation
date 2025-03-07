@@ -1,9 +1,10 @@
 
-(user-details-accounts-tab)
+
+(user-details-accounts-tab)=
 ## User Details - Accounts Tab 
 
 
-The **User Details** screen also has an **Accounts** tab that allows you to view the accounts associated with the user.
+The {page}`User Details` page also has an {tab}`Accounts` tab that allows you to view the accounts associated with the user.
 
 
 ```{lazyfigure} ../../_static/solo_app/User/User-Detail/accounts-tab.webp
@@ -11,12 +12,12 @@ The **User Details** screen also has an **Accounts** tab that allows you to view
 :align: center
 :name: user-user-accounts-tab
 
-User, User Homepage, Accounts Tab
+User, User Details Homepage, {tab}`Accounts` Tab
 ```
 
 ### Navigating the Accounts Tab
 
-The **Accounts** tab displays the following columns:
+The {tab}`Accounts` tab displays the following columns:
 
 - Account Name
 - Type
@@ -29,13 +30,13 @@ The **Accounts** tab displays the following columns:
 :align: center
 :name: user-user-accounts-tab-column-names
 
-User, User Homepage, Accounts Tab, Column Names
+User, User Details Homepage, {tab}`Accounts` Tab, Column Names
 ```
 
 ####  Action Column for Accounts Tab
 
 
-The **Action** column has three actions available:
+The {section}`Action` column has three actions available:
 
 - View Account
 - Edit Permissions
@@ -47,7 +48,7 @@ The **Action** column has three actions available:
 :align: center
 :name: user-user-accounts-tab-action-column
 
-User, User Homepage, Accounts Tab, Action Column
+User, User Details Homepage, {tab}`Accounts` Tab, {section}`Action` Column
 ```
 
 
@@ -61,21 +62,19 @@ User, User Homepage, Accounts Tab, Action Column
 :align: center
 :name: user-user-details-accounts-tab-view-icon
 
-User, User Homepage, Accounts Tab, View Account Icon
+User, User Details Homepage, {tab}`Accounts` Tab, View Account Icon
 ```
 
 ```{admonition} Note
 :class: note
 
-- Selecting the **View Account** button will take you to the **Sponsorship Organization** screen.
+- Selecting the **View Account** button will take you to the {page}`Sponsorship Organization` screen.
 
-- See [View Sponsorhip Account](view-sponsorship-account-section) for more information about the managing a **Sponsorship Organization** account.
+- See {section}`View Sponsorhip Account` for more information about the managing a **Sponsorship Organization** account.
 ```
 
 
 ```{admonition}  Seealso
 :class: seealso
 
- - See [Information Pane](user-user-view-user-details) to learn more about the details in the Information Pane.
-
-```
+ - See {page}`Information Pane` to learn more about the details in the Information Pane.

@@ -130,7 +130,11 @@ A high-level overview of all documents and their statuses.
 The **Dashboard Table** section allows you to view a table which contains the following columns:
 
 - **Offering Year**:  The year of the offering
-- ...
+- **Authorized Shares**: The total number of authorized shares issued for the offering.
+- **Number of Shares Available for Sale**:  Includes both new and old shares.
+- **Number of New Shares Available for Sale**:  New shares that have not yet been sold.
+- **Total Current Investment Amount**:  The total current investment amount for the offering.
+- **LC Limit**:  The loweest price a stock can fall to during a trading sesson. 
 - **Total Cashout Shares**:  The total number of cashout shares issued for the offering
 
 

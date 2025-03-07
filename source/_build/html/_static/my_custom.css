@@ -10,6 +10,302 @@ div.margin {
     border: 1px solid #ccc;
 }
 
+.page-reference {
+  color: #263238 !important;
+  font-weight: 600 !important;
+  background-color: #f5f5f5 !important;
+  border: 2px solid #546e7a !important;
+  border-radius: 3px !important;
+  padding: 2px 6px 2px 26px !important;
+  position: relative !important;
+}
+
+.page-reference::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23546e7a"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.page-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.section-reference {
+  color: #0D47A1 !important;
+  font-weight: 600 !important;
+  background-color: #E3F2FD !important;
+  border: 2px solid #2196F3 !important;
+  border-radius: 3px !important;
+  padding: 2px 6px 2px 26px !important;
+  position: relative !important;
+}
+
+.section-reference::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232196F3"><path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.subsection-reference {
+  color: #C2185B !important;
+  font-weight: 600 !important;
+  background-color: #FCE4EC !important;
+  border: 2px solid #E91E63 !important;
+  border-radius: 3px !important;
+  padding: 2px 6px 2px 26px !important;
+  position: relative !important;
+}
+
+.subsection-reference::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23E91E63"><path d="M7 19h10V4H7v15zm-5-2h4V6H2v11zM18 6v11h4V6h-4z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.subsection-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.tab-reference {
+  color: #546e7a !important;
+  font-weight: 600 !important;
+  background-color: #f5f5f5 !important;
+  border: 2px solid #546e7a !important;  /* Thicker and darker border for better contrast */
+  border-radius: 3px !important;
+  padding: 2px 6px 2px 26px !important;
+  position: relative !important;
+}
+
+.tab-reference::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23546e7a"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h10v4h8v10z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.tab-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.table-reference {
+  color: #00695C !important;
+  font-weight: 600 !important;
+  background-color: #E0F2F1 !important;
+  border: 2px solid #009688 !important;
+  border-radius: 3px !important;
+  padding: 2px 6px 2px 26px !important;
+  position: relative !important;
+}
+
+.table-reference::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23009688"><path d="M3 3v18h18V3H3zm8 16H5v-6h6v6zm0-8H5V5h6v6zm8 8h-6v-6h6v6zm0-8h-6V5h6v6z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.table-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.column-reference {
+  color: #212121 !important; /* Darker text */
+  font-weight: 600 !important;
+  background-color: #EEEEEE !important; /* Light grey background */
+  border-radius: 3px !important;
+  padding: 2px 6px 2px 26px !important;
+  position: relative !important;
+}
+
+.column-reference::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23616161"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 14H4v-4h8v4zm0-5H4V9h8v4zm9 5h-8V9h8v9z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.column-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.item-reference {
+  color: #212121 !important; /* Darker text */
+  font-weight: 600 !important;
+  background-color: #F5F5F5 !important; /* Light grey background */
+  border-radius: 3px !important;
+  padding: 2px 6px !important; /* No extra left padding since there's no icon */
+  position: relative !important;
+}
+
+.item-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.action-reference {
+  color: #D32F2F !important; /* Bold red text */
+  font-weight: 700 !important; /* Extra bold */
+  background-color: #FFEBEE !important; /* Very light red background */
+  border: 1px solid #D32F2F !important; /* Thin red border */
+  border-radius: 4px !important; /* Rounded corners */
+  padding: 2px 8px !important;
+  position: relative !important;
+  letter-spacing: 0.5px !important; /* Slightly spread out letters for bubbly feel */
+  text-transform: uppercase !important; /* All caps for emphasis */
+  font-size: 0.9em !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important; /* Subtle shadow for depth */
+}
+
+.action-reference::before {
+  display: none; /* Hide the icon */
+}
+
+.action-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.code-reference {
+  color: #1A237E !important; /* Dark navy blue text */
+  font-weight: 500 !important;
+  background-color: #E8EAF6 !important; /* Very light indigo background */
+  border-radius: 3px !important;
+  padding: 2px 5px !important;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !important; /* Monospace font */
+  white-space: nowrap !important;
+  position: relative !important;
+}
+
+.code-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.item-blue-reference {
+  color: #673AB7 !important; /* Purple text to match the colors in the screenshot */
+  font-weight: normal !important;
+  background-color: #F5F5F5 !important; /* Light gray background */
+  border-radius: 3px !important;
+  padding: 2px 5px !important; /* Smaller padding */
+  position: relative !important;
+  border: 1px solid #E0E0E0 !important; /* Light gray border */
+  font-size: 0.9em !important; /* Slightly smaller font */
+}
+
+.item-blue-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .custom-dropdown {
   background-color: light-green; /* light blue background */
   border: 1px solid #ccc;   /* a subtle border */

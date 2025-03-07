@@ -1,3 +1,5 @@
+
+
 (users-user-list-table-page)=
 ## User List Table
 
@@ -27,9 +29,3 @@ The {table}`User List Table` has the following {column}`Columns`:
 - {column}`Status` ({item}`Active` or {item}`Inactive`)
 - {column}`Action`
 
-```{toctree}
-:hidden:
-:maxdepth: 1
-
-
-```

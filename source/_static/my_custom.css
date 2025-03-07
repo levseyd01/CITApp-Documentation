@@ -364,3 +364,35 @@ a[href^="https://fake-"] {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+/* Style for tippy-ref role - make it look like a standard hyperlink */
+.tippy-reference {
+  color: #0645ad !important; /* Standard link blue */
+  text-decoration: underline !important;
+  background: none !important; 
+  border: none !important;
+  padding: 0 !important;
+  font-weight: normal !important;
+  display: inline !important;
+}
+
+.tippy-reference:hover {
+  color: #0B0080 !important; /* Darker blue on hover */
+  text-decoration: underline !important;
+}
+
+.standard-link {
+  color: #3498db !important; /* Standard hyperlink blue color */
+  text-decoration: underline !important;
+  background: none !important; /* Remove any background */
+  border: none !important; /* Remove any border */
+  padding: 0 !important; /* Remove any padding */
+  font-weight: normal !important; /* Regular font weight */
+  display: inline !important;
+  position: static !important; /* Reset position if needed */
+}
+
+.standard-link:hover {
+  color: #1a5a9e !important; /* Darker blue on hover */
+  text-decoration: underline !important;
+}

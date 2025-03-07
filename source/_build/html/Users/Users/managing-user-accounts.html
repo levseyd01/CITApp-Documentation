@@ -35,10 +35,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/my_custom.css?v=841623df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my_custom.css?v=a4811b3e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../../_static/tippy.css?v=51a9431c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/my_custom.css?v=841623df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tippy.css?v=84e65ab2" />
+    <link rel="stylesheet" type="text/css" href="../../_static/my_custom.css?v=a4811b3e" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -51,6 +51,7 @@
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/close_dropdown.js?v=1dd5df88"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -61,13 +62,15 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy\Users\Users\managing-user-accounts.2f623063-bb73-422c-9477-b71e924ed666.js"></script>
+    <script defer="defer" src="../../_static/tippy\Users\Users\managing-user-accounts.ddf998d7-af3e-45ef-9c47-1d75085db6a0.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Users/Users/managing-user-accounts';</script>
+    <script src="../../_static/enhance_references.js?v=f535b422"></script>
+    <script src="../../_static/tippy_preview.js?v=2b8f8880"></script>
     <script src="../../_static/close_dropdowns.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="User List Table" href="subsections/user-table.html" />
-    <link rel="prev" title="Staff" href="../Staff/managing-staff-accounts.html" />
+    <link rel="prev" title="Staff List Table" href="../Staff/subsections/staff-table.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -172,13 +175,17 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../users.html">User</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Staff/managing-staff-accounts.html">Staff</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Users</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="subsections/user-table.html">User List Table</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l2 has-children"><a class="reference internal" href="../Staff/managing-staff-accounts.html">Staff</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Staff/subsections/remaining-staff-list-sections.html">View Staff Details and Other Remaining Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Staff/subsections/staff-list-columns.html">Staff List Columns</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../Staff/subsections/staff-table.html">Staff List Table</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Users</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="subsections/user-table.html">User List Table</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subsections/filter-table.html">Search and Filter Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subsections/remaining-sections.html">View User Details and Other Remaining Sections</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subsections/remaining-user-list-sections.html">View User Details and Other Remaining Sections</a></li>
 </ul>
 </details></li>
 </ul>
@@ -200,7 +207,8 @@
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../Universal/universal.html">Navigating the App</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Universal/universal.html">Commmon</a></li>
+
 </ul>
 
     </div>
@@ -307,7 +315,7 @@
 <li><p><a class="reference internal" href="subsections/user-table.html#users-user-list-table-page"><span class="std std-ref">Table Overview</span></a>,</p></li>
 <li><p><a class="reference internal" href="subsections/filter-table.html#how-to-search-users-user-table"><span class="std std-ref">Search by User Name or Email</span></a>,</p></li>
 <li><p><a class="reference internal" href="subsections/filter-table.html#filter-by-status-users-user-options"><span class="std std-ref">Filter by Status</span></a>, And</p></li>
-<li><p><a class="reference internal" href="subsections/remaining-sections.html#remaining-sections-users-user-page"><span class="std std-ref">View User Details and Other Features</span></a></p></li>
+<li><p><a class="reference internal" href="subsections/remaining-user-list-sections.html#remaining-sections-users-user-page"><span class="std std-ref">View User Details and Other Features</span></a></p></li>
 </ul>
 <figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/user-user-homepage.webp" id="user-homepage"><img alt="../../_images/user-user-homepage.webp" id="user-homepage" loading="lazy" src="../../_images/user-user-homepage.webp" style="width: 100%;" />
@@ -332,12 +340,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Staff/managing-staff-accounts.html"
+       href="../Staff/subsections/staff-table.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Staff</p>
+        <p class="prev-next-title">Staff List Table</p>
       </div>
     </a>
     <a class="right-next"

@@ -1,4 +1,4 @@
-# Navigating the App 
+# Commmon
 
 
 This section is meant to house all of the information needed to navigate through portions of the App that come up most frequently. 
@@ -8,6 +8,14 @@ This section is meant to house all of the information needed to navigate through
 :local:
 :depth: 3
 ```
+
+
+
+# Navigation Section
+
+- {ref}`General Sidebar Navigation <general-sidebar-navigation>`
+
+
 
 ## Documents
 
@@ -31,3 +39,12 @@ This section is meant to house all of the information needed to navigate through
 
 
 
+```{toctree}
+:hidden:
+:maxdepth: 1
+
+Navigation/general-sidebar-navigation
+Navigation/toggle-primary-sidebar
+subsections/user-details
+subsections/information-pane
+```

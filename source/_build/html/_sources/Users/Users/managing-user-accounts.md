@@ -31,5 +31,5 @@ Users, User list Table
 
 subsections/user-table
 subsections/filter-table
-subsections/remaining-sections
+subsections/remaining-user-list-sections
 ```

@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 import os
 import sys
+import re
 
 from pathlib import Path
 from docutils import nodes
@@ -302,7 +303,15 @@ html_theme_options = {
     "use_download_button": False
 }
 
+html_css_files = ["tippy.css", "my_custom.css"]
+
+# -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
+
+# Add our custom JS files
 html_js_files = [
+    'enhance_references.js',
+    'tippy_preview.js',
     'close_dropdowns.js',  # must match the filename in _static/
 ]
 #html_js_files = ["js/tippy.js", "js/popper.js"]
@@ -332,13 +341,6 @@ sphinx_design_use_inserted_localstorage = False
 
 # -- General configuration ---------------------------------------------------
 
-html_css_files = ["tippy.css", "my_custom.css"]
-
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
-
-# html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 
 
@@ -396,6 +398,36 @@ def parse_tilde4(inline, match, state):
     content = match.group(1)
     node = nodes.inline(content, content, classes=["tab-reference"])
     return node
+
+def split_explicit_title(text):
+    """Split role content into title and target, if given."""
+    match = re.search(r'^(.+?)\s*<(.+)>$', text)
+    if match:
+        return True, match.group(1), match.group(2)
+    return False, text, text
+
+# Create a tippy-ref reference that looks like a standard hyperlink but has Tippy tooltips
+def tippy_ref_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a standard hyperlink-styled reference with Tippy tooltip support."""
+    # Parse the input text for the link
+    has_explicit_title, title, target = split_explicit_title(text)
+    
+    # Create reference node
+    from sphinx.util import ws_re
+    refnode = nodes.reference('', '')
+    
+    # Add target ID
+    refnode['refid'] = target
+    refnode['classes'] = ['standard-link', 'tippyAnchor']
+    
+    # Add text content
+    innernode = nodes.inline(title, title)
+    refnode.append(innernode)
+    
+    # Add data attribute for JavaScript to use
+    refnode['data-preview'] = 'true'
+    
+    return [refnode], []
 
 # Create a page reference with screen reader text.
 def page_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
@@ -586,6 +618,10 @@ def setup(app):
     app.add_css_file('css/custom.css')
 
     # Register roles
+    app.add_role('tilde1', parse_tilde1)
+    app.add_role('tilde2', parse_tilde2)
+    app.add_role('tilde3', parse_tilde3)
+    app.add_role('tilde4', parse_tilde4)
     app.add_role('page', page_role)
     app.add_role('section', section_role)
     app.add_role('subsection', subsection_role)
@@ -596,6 +632,7 @@ def setup(app):
     app.add_role('action', action_role)
     app.add_role('code', code_role)
     app.add_role('item-blue', item_blue_role)
+    app.add_role('tippy-ref', tippy_ref_role)  # Add the new tippy-ref role
     
     # We attach these new "inline syntaxes" to the DocutilsRenderer,
     # which is used by MyST-Parser:

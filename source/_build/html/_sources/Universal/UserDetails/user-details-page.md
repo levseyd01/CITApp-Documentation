@@ -30,6 +30,7 @@ You can find the actions at the bottom-right of the page:
 User Actions Location, Bottom Right
 ```
 
+(edit-user-details-universal)=
 #### Edit User Details
 
 The {tab}`User Information` allows you to edit the following fields:

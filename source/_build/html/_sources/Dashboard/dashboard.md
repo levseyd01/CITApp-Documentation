@@ -1,8 +1,6 @@
 (dashboard-tile-overview-section)=
 # Dashboard
 
-Click any of the tiles below to view more details. 
-
 :::::{grid} 2 2 3 4
 :gutter: 3
 
@@ -14,7 +12,8 @@ Click any of the tiles below to view more details.
 ![Communities Section](../_static/solo_app/Dashboard/tiles/communities.png)
 
 <div class="card-description">
-Communities
+
+Provides the number of **Sponsorship Organizations**.
 </div>
 ::::
 
@@ -26,7 +25,8 @@ Communities
 ![CIT Corporations Tile](../_static/solo_app/Dashboard/tiles/cit-corporations.jpg)
 
 <div class="card-description">
-CIT Corporations
+
+Provides the number of **CIT Corporations**.
 </div>
 ::::
 
@@ -38,7 +38,8 @@ CIT Corporations
 ![Pending CIT Corporations Onboarding Tile](../_static/solo_app/Dashboard/tiles/pending-cit-corporations.jpg)
 
 <div class="card-description">
-Pending CIT Corporations Onboarding Tile
+
+Provides the number of CIT Corporations that are going through the **Onboarding Process**. 
 </div>
 ::::
 
@@ -50,7 +51,8 @@ Pending CIT Corporations Onboarding Tile
 ![Offering Year 2010, Pending CIT Corporations Onboarding Setups](../_static/solo_app/Dashboard/tiles/pending-cit-corporations-onboarding.jpg)
 
 <div class="card-description">
-Offering Year 2010, Pending CIT Corporations Onboarding Setups
+
+Provides details for specific Offering Year with **Year filter set for 2010.**
 </div>
 ::::
 
@@ -62,7 +64,8 @@ Offering Year 2010, Pending CIT Corporations Onboarding Setups
 ![Offering Year 2025, Pending CIT Corporations Onboarding Setups](../_static/solo_app/Dashboard/tiles/pending-cit-corporation-setups.jpg)
 
 <div class="card-description">
-Offering Year 2025, Pending CIT Corporations Onboarding Setups
+
+Provides details for specific Offering Year with **Year filter set for 2025.**
 </div>
 ::::
 
@@ -74,7 +77,8 @@ Offering Year 2025, Pending CIT Corporations Onboarding Setups
 ![Onboarding Documents for Approval Tile](../_static/solo_app/Dashboard/tiles/onboarding-documents-for-approval.jpg)
 
 <div class="card-description">
-Onboarding Documents for Approval
+
+Provides number of **Onboarding Documents** pending for approval from a specific CIT Corporation.
 </div>
 ::::
 
@@ -86,19 +90,17 @@ Onboarding Documents for Approval
 ![Offering Documents Pending for Approval Tile](../_static/solo_app/Dashboard/tiles/offering-documents-pending-for-approval.jpg)
 
 <div class="card-description">
-Offering Documents Pending for Approval
+
+Provides number of **Offering Documents** pending for approval from a specific CIT Corporation.
 </div>
 ::::
 :::::
-
 
 :::{admonition} Clicking Tiles Will Cause Redirect
 :class: note
 
 Clicking on any of the cards will take you to the section that corresponds to where the tile takes you in the app. 
 :::
-
-
 
 (dashboard-table-section)=
 #### Dashboard Table Section
@@ -109,30 +111,13 @@ Clicking on any of the cards will take you to the section that corresponds to wh
 A high-level overview of all documents and their statuses.
 ```
 
+The {table}`Dashboard Table` contains the following columsn:
 
-
-
-
-The **Dashboard Table** section allows you to view a table which contains the following columns:
-
-- **Offering Year**:  The year of the offering
-- **Authorized Shares**: The total number of authorized shares issued for the offering.
-- **Number of Shares Available for Sale**:  Includes both new and old shares.
-- **Number of New Shares Available for Sale**:  New shares that have not yet been sold.
-- **Total Current Investment Amount**:  The total current investment amount for the offering.
-- **LC Limit**:  The loweest price a stock can fall to during a trading sesson. 
-- **Total Cashout Shares**:  The total number of cashout shares issued for the offering
-
-
-This section also allows you to filter the table by the entity's name:  
-
-
-
-```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/Main/sponsorship-organization-homepage.webp
-:width: 100%
-:align: center
-:name: sponsor-organization-homepage
-
-Sponsorship Organization, Homepage
-```
+- **Offering Year**: The calendar year in which the Offering occurred.
+- **Authorized Shares**: The total number of shares authorized for issuance under the Offering.
+- **Number of Shares Available for Sale**: The total shares currently available for sale, including both new and existing (previously issued) shares.
+- **Number of New Shares Available for Sale**: The number of newly issued shares that have not yet been sold.
+- **Total Current Investment Amount**: The total amount currently invested in the Offering.
+- **LC Limit**: The lowest price a stock can reach during a single trading session.
+- **Total Cashout Shares**: The total number of shares issued specifically for cashing out under the Offering.
 

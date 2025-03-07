@@ -1,16 +1,15 @@
 (how-to-filter-users-user-table)=
-### Search and Filter Options
+# Search and Filter Options
 
-The **User Table** can be filtered using two methods:
+The {table}`User Table` can be filtered using two methods:
 
 (how-to-search-users-user-table)=
-- **Search by User Name or Email**: Enter keywords in the search field.
+- **Search by User Name or Email**: Enter keywords into search field.
 
-
-- **Filter by Status**: Select a predefined status option from the dropdown menu.
+- **Filter by Status**: Select predefined status options from the dropdown menu.
 
 (filter-by-status-users-user-options)=
-##### Status Options
+## Status Options
 
 **Status** dropdown includes five different options:
 

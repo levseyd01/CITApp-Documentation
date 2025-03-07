@@ -1,7 +1,7 @@
 
 
-(user-details-accounts-tab)=
-## User Details - Accounts Tab 
+(view-and-edit-a-details-of-a-specific-staff-or-user)=
+## User Details: Accounts Tab 
 
 
 The {page}`User Details` page also has an {tab}`Accounts` tab that allows you to view the accounts associated with the user.

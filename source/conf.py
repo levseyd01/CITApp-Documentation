@@ -643,6 +643,25 @@ def smallicon_role(name, rawtext, text, lineno, inliner, options={}, content=[])
         prb = inliner.problematic(rawtext, rawtext, msg)
         return [prb], [msg]
 
+# Create a simple red text role
+def red_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a simple red text display."""
+    # Create the text node
+    text_node = nodes.inline('', text)
+    
+    # Create the screen reader node for accessibility
+    sr_node = nodes.inline('', 'Red text: ' + text)
+    sr_node['classes'] = ['visually-hidden']
+    
+    # Create the container node
+    container = nodes.inline('', '')
+    container['classes'] = ['red-reference']
+    container += sr_node
+    container += text_node
+    
+    return [container], []
+
+
 def setup(app):
     """Add our functionality to Sphinx."""
     
@@ -666,6 +685,7 @@ def setup(app):
     app.add_role('item-blue', item_blue_role)
     app.add_role('tippy-ref', tippy_ref_role)  # Add the new tippy-ref role
     app.add_role('smallicon', smallicon_role)  # Add the new smallicon role
+    app.add_role('red', red_role)  # Add the new red text role
     
     # We attach these new "inline syntaxes" to the DocutilsRenderer,
     # which is used by MyST-Parser:

@@ -197,7 +197,7 @@ div.margin {
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23616161"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 14H4v-4h8v4zm0-5H4V9h8v4zm9 5h-8V9h8v9z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23616161"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H4V5h10v4h8v10z"/></svg>');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -223,6 +223,26 @@ div.margin {
 }
 
 .item-reference span.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.red-reference {
+  color: #D32F2F !important; /* Bold red text */
+  font-weight: 600 !important;
+  background-color: #FFEBEE !important; /* Very light red background */
+  border-radius: 3px !important;
+  padding: 2px 6px !important; /* No extra left padding since there's no icon */
+  position: relative !important;
+}
+
+.red-reference span.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;

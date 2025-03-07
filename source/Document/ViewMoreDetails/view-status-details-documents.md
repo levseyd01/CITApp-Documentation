@@ -2,7 +2,7 @@
 (onboarding-offering-document-details)=
 # View More Details: Documents
 
-The **View More Details** page for both the **Onboarding Documents** and **Offering Documents** pages provide detailed information about documents related to each process. 
+The {page}`View More Details` page for both the {section}`Onboarding Documents` and {section}`Offering Documents` sections provide detailed information about documents related to each process. However, the functionality offered by each is very similar, s
 
 
 The [View More Details](#view-more-details) action for either page will you to the following page:

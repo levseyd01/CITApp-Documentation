@@ -201,59 +201,59 @@ tippy_custom_tips = {
         "alt='Upload Button' style='width:200px;'>"
     ),
     "#deactivate-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/deactivate-button.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/deactivate-button.webp' "
         "alt='Deactivate Button' style='width:200px;'>"
     ),
     "#file-explorer-open": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/file-explorer-open.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/file-explorer-open.webp' "
         "alt='File Explorer Open' style='width:200px;'>"
     ),
     "#save-icon":(
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/save-icon.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/save-icon.webp' "
         "alt='Save Icon' style='width:200px;'>"
     ),
     "#new-beneficiary-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Beneficiaries/new-beneficiary.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Beneficiaries/new-beneficiary.webp' "
         "alt='New Beneficiary Button' style='width:200px;'>"
     ),
     "#delete-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/delete-icon.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/delete-icon.webp' "
         "alt='Delete Icon' style='width:200px;'>"
     ),
     "#upload-logo-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Profile/upload-logo-section/upload-logo-button.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Profile/upload-logo-section/upload-logo-button.webp' "
         "alt='Upload Logo Button' style='width:200px;'>"
     ),
     "#view-more-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/view-more-icon.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/view-more-icon.webp' "
         "alt='View More Icon' style='width:200px;'>"
     ),
     "#manage-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/manage-button.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/manage-button.webp' "
         "alt='Manage Button' style='width:200px;'>"
     ),
      "#save-changes": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/save-changes.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/save-changes.webp' "
         "alt='Save Changes' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/actions/edit-permissions.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/actions/edit-permissions.webp' "
         "alt='Edit Permissions Icon' style='width:200px;'>"
     ),
     "#new-user-button": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/new-user.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/new-user.webp' "
         "alt='New User Button' style='width:200px;'>"
     ),
     "#menu-icon": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/menu-icon.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/icons/menu-icon.webp' "
         "alt='Menu Icon' style='width:100%;'>"
     ),
     "#navigating-to-user-detail": (
-        "<img src='/en/stable-edit/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.jpeg' "
+        "<img src='/en/stable-edit/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.webp' "
         "alt='Navigating to User Detail screenshot' style='width:100%;'>"
     ),
      "#reset-password": (
-        "<img src='/en/stable-edit/en/stable-edit/_static/solo_app/User/User-Detail/reset-password.jpeg' "
+        "<img src='/en/stable-edit/en/stable-edit/_static/solo_app/User/User-Detail/reset-password.webp' "
         "alt='Reset Password' style='width:200px;'>"
     ),
 }

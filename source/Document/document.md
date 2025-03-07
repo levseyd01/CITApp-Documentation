@@ -22,6 +22,7 @@ The **Document** section of the software is divided into two main parts:
 CITCorpOffering/cit-corp-offering.md
 CITCorpOnboarding/cit-corp-onboarding.md
 ViewMoreDetails/view-status-details-documents.md
+InvestorDocs/investor-docs.md
 ```
 
 

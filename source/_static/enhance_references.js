@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
         // First try to get heading
         const heading = targetElement.querySelector('h1, h2, h3, h4, h5, h6');
         if (heading) {
-          previewContent += `<h4>${heading.textContent}</h4>`;
+          previewContent += `<h4>${sanitizeContent(heading.textContent)}</h4>`;
         }
         
         // Try to get paragraph content
         const paragraphs = targetElement.querySelectorAll('p');
         if (paragraphs.length > 0) {
           // Get first paragraph text
-          previewContent += `<p>${paragraphs[0].textContent}</p>`;
+          previewContent += `<p>${sanitizeContent(paragraphs[0].textContent)}</p>`;
           
           // If there's more than one paragraph, add a note
           if (paragraphs.length > 1) {
@@ -65,7 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const image = targetElement.querySelector('img');
         if (image) {
           const imgSrc = image.getAttribute('src');
-          previewContent += `<div style="text-align:center;margin-top:8px;"><img src="${imgSrc}" alt="Preview" style="max-width: 250px; margin:auto;"></div>`;
+          // Only include the image if it has a valid src attribute
+          if (imgSrc && !isBinaryContent(imgSrc)) {
+            previewContent += `<div style="text-align:center;margin-top:8px;"><img src="${imgSrc}" alt="Preview" style="max-width: 250px; margin:auto;"></div>`;
+          }
         }
         
         // If no content found, use a default message
@@ -81,12 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
     else {
       // Set a default message for external links
       const linkText = link.textContent || 'this section';
-      link.setAttribute('data-tippy-content', `<p>Link to ${linkText}</p><small>Click to navigate</small>`);
+      link.setAttribute('data-tippy-content', `<p>Link to ${sanitizeContent(linkText)}</p><small>Click to navigate</small>`);
     }
   });
   
   // Initialize or reinitialize tippy for all tooltip links
-  if (typeof tippy !== 'undefined' && !window.ENHANCE_REFERENCES_INITIALIZED) {
+  if (typeof tippy !== 'undefined') {
     // Check if tippy_preview has already run
     const alreadyInitialized = document.querySelector('.custom-tippy-initialized');
     
@@ -128,3 +131,43 @@ document.addEventListener('DOMContentLoaded', function() {
     window.ENHANCE_REFERENCES_INITIALIZED = true;
   }
 });
+
+/**
+ * Helper function to check if content appears to be binary data
+ * This helps prevent binary image data from showing up as text in tooltips
+ * @param {string} content - The content to check
+ * @returns {boolean} - True if the content appears to be binary data
+ */
+function isBinaryContent(content) {
+  if (!content) return false;
+  
+  // Check for common binary data patterns in PNG/JPG files
+  const binaryPatterns = [
+    '�PNG', 'PNG', 'IHDR', 'IDAT', 'IEND', // PNG header/chunks
+    'JFIF', '�JFIF', '�Exif', // JPEG markers
+    'sRGB', 'gAMA', // Color profiles
+    'pHYs', 'tEXt', // PNG metadata
+    '���', // Common in binary data
+    String.fromCharCode(0x89) + 'PNG' // PNG file signature
+  ];
+  
+  // Check if the content contains any of these binary patterns
+  return binaryPatterns.some(pattern => content.includes(pattern));
+}
+
+/**
+ * Sanitize content to remove binary data or invalid characters
+ * @param {string} content - The content to sanitize
+ * @returns {string} - Sanitized content
+ */
+function sanitizeContent(content) {
+  if (!content) return '';
+  
+  // If content looks like binary data, return a placeholder
+  if (isBinaryContent(content)) {
+    return '[Image content]';
+  }
+  
+  // Replace any sequences of non-printable/weird characters with a space
+  return content.replace(/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F-\x9F\uFFFD\u{10FFFF}]{4,}/gu, ' ');
+}

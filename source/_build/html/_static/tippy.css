@@ -177,3 +177,18 @@ a.reference.tippyAnchor {
     max-width: 100%;
     height: auto;
 }
+
+/* Fix for duplicate tooltips - remove rules that hide tooltips */
+.custom-tippy-tooltip + .tippy-box {
+  /* display: none !important; */
+}
+
+/* Keep all tooltips visible */
+.tippy-box[data-theme="light-border"] {
+  display: block !important;
+}
+
+/* Hide the default browser tooltip */
+.reference[title] {
+  text-decoration: none;
+}

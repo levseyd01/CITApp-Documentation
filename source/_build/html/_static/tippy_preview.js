@@ -24,12 +24,22 @@ function initTippyPreviews() {
     if (processedElements.has(link)) return;
     processedElements.add(link);
     
+    // Add class to identify these links as having our custom tooltips
+    link.classList.add('custom-tippy-tooltip');
+    
     // Get the target URL from the href
     const href = link.getAttribute('refuri') || link.getAttribute('href');
     if (!href) return;
     
     // Set initial loading state for all links
     link.setAttribute('data-tippy-content', 'Loading preview...');
+    
+    // Prevent native title tooltip from showing - this stops the double tooltip
+    if (link.hasAttribute('title')) {
+      // Store original title but remove it
+      link.setAttribute('data-original-title', link.getAttribute('title'));
+      link.removeAttribute('title');
+    }
     
     // Handle both same-page and cross-document references
     if (href.startsWith('#')) {
@@ -87,7 +97,7 @@ function initTippyPreviews() {
   // Initialize tippy just once for each element
   if (typeof tippy !== 'undefined') {
     // Initialize new tippy instances
-    tippy('.tippy-reference, a.reference.internal', {
+    tippy('.custom-tippy-tooltip', {
       allowHTML: true,
       interactive: true,
       maxWidth: 450,

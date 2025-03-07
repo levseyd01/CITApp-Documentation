@@ -82,7 +82,7 @@ extensions = [
      'lazyfigure',
      'lazy_figure',
      'sphinx.ext.intersphinx',
-     'sphinx.ext.autosectionlabel',
+     #'sphinx.ext.autosectionlabel',
      'rst2pdf.pdfbuilder',
 # 'sphinx_search.extension',
     #'sphinx_prompt',
@@ -93,7 +93,7 @@ extensions = [
    # 'hoverxref.extension',
     'myst_parser',
     'sphinx_design',
-    'post_process_refs',
+   # 'post_process_refs',
     'tabref',
     '_ext.missing_ref_handler'
 ]

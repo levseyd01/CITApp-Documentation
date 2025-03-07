@@ -340,24 +340,107 @@ function fixImagePaths(htmlContent, fetchedUrl) {
   // Find all image elements
   const images = tempDiv.querySelectorAll('img');
   
+  // Check if we're on Read the Docs
+  const isReadTheDocs = window.location.hostname.includes('readthedocs') || 
+                        document.querySelector('meta[name="generator"][content*="Read the Docs"]') !== null;
+  
+  // Get base URL parts for RTD
+  let rtdBasePath = '';
+  if (isReadTheDocs) {
+    // Format: https://project-name.readthedocs-hosted.com/en/latest/
+    const pathParts = window.location.pathname.split('/');
+    // Get parts up to "en/latest" or "en/stable"
+    const versionIndex = pathParts.findIndex(part => part === 'en' || part === 'latest' || part === 'stable');
+    if (versionIndex > 0) {
+      rtdBasePath = pathParts.slice(0, versionIndex + 2).join('/');
+    }
+  }
+  
   // Process each image source
   images.forEach(img => {
     const src = img.getAttribute('src');
     if (!src) return;
     
-    // Skip absolute URLs and data URIs
-    if (src.startsWith('http://') || 
-        src.startsWith('https://') || 
-        src.startsWith('data:')) {
+    // Skip data URIs
+    if (src.startsWith('data:')) {
       return;
     }
     
-    try {
-      // Rebase the relative path against the fetched document's URL
-      const absoluteUrl = new URL(src, fetchedUrl).href;
-      img.setAttribute('src', absoluteUrl);
-    } catch (e) {
-      console.warn('Failed to rebase image URL:', src, e);
+    // For Read the Docs hosted sites
+    if (isReadTheDocs) {
+      // If it's already an absolute URL with the correct domain, leave it
+      if (src.startsWith('http') && src.includes(window.location.hostname)) {
+        return;
+      }
+      
+      // If it's an absolute path starting with /
+      if (src.startsWith('/')) {
+        // Use the RTD base with the absolute path
+        img.setAttribute('src', window.location.origin + src);
+        return;
+      }
+      
+      // If it's a relative path to _static or _images
+      if (src.includes('_static/') || src.includes('_images/')) {
+        // Extract the path part after _static/ or _images/
+        let resourcePath = '';
+        if (src.includes('_static/')) {
+          resourcePath = '_static/' + src.split('_static/')[1];
+        } else if (src.includes('_images/')) {
+          resourcePath = '_images/' + src.split('_images/')[1];
+        }
+        
+        // Construct a proper RTD path
+        if (rtdBasePath) {
+          img.setAttribute('src', window.location.origin + rtdBasePath + '/' + resourcePath);
+        } else {
+          // Fallback to just appending to origin
+          img.setAttribute('src', window.location.origin + '/' + resourcePath);
+        }
+        return;
+      }
+      
+      // For other relative paths, try to use the fetched document's path as base
+      try {
+        // Get the directory of the fetched document
+        const fetchedUrlObj = new URL(fetchedUrl);
+        const fetchedDir = fetchedUrlObj.pathname.split('/').slice(0, -1).join('/');
+        
+        // Handle path with or without leading ../
+        let relativePath = src;
+        if (src.startsWith('../')) {
+          // Go up one level from the fetched directory
+          const dirParts = fetchedDir.split('/');
+          dirParts.pop();
+          const parentDir = dirParts.join('/');
+          relativePath = src.replace(/^\.\.\//, '');
+          img.setAttribute('src', window.location.origin + parentDir + '/' + relativePath);
+        } else {
+          // Use the fetched directory as is
+          img.setAttribute('src', window.location.origin + fetchedDir + '/' + relativePath);
+        }
+      } catch (e) {
+        console.warn('Failed to rebase image URL for RTD:', src, e);
+        // Last resort - try to make an absolute URL from the RTD base
+        if (rtdBasePath) {
+          img.setAttribute('src', window.location.origin + rtdBasePath + '/' + src);
+        }
+      }
+    } 
+    // For local development or other environments
+    else {
+      // If it's already absolute, leave it alone
+      if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('/')) {
+        return;
+      }
+      
+      try {
+        // Rebase the relative path against the fetched document's URL
+        const absoluteUrl = new URL(src, fetchedUrl).href;
+        img.setAttribute('src', absoluteUrl);
+      } catch (e) {
+        console.warn('Failed to rebase image URL:', src, e);
+      }
     }
   });
   

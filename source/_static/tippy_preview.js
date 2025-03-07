@@ -31,13 +31,29 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
   
+  // Set up a flag to track if we've already initialized tooltips
+  window.TIPPY_PREVIEW_INITIALIZED = window.TIPPY_PREVIEW_INITIALIZED || false;
+  
+  // If we've already run, don't run again
+  if (window.TIPPY_PREVIEW_INITIALIZED) {
+    console.log('tippy_preview.js already initialized, skipping duplicate initialization');
+    return;
+  }
+  
   // Initialize after a short delay to ensure DOM is fully ready
   // and after sphinx_tippy has been initialized
   setTimeout(function() {
+    // Clean up any existing tooltips first
+    removeExistingTippyInstances();
+    
+    // Initialize our custom tooltips
     initCustomTippyPreviews();
     
     // Also ensure we're not duplicating tooltips
     fixDuplicateTooltips();
+    
+    // Mark as initialized
+    window.TIPPY_PREVIEW_INITIALIZED = true;
   }, 1000);
 });
 
@@ -60,27 +76,27 @@ function initCustomTippyPreviews() {
   // CRITICAL: Don't process elements inside tooltips (.tippy-box, .tippy-content)
   const referenceLinks = document.querySelectorAll(
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.page-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.page-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.section-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.section-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.subsection-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' +
+    '.subsection-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' +
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.tab-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.tab-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.table-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.table-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.column-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' +
+    '.column-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' +
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.item-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.item-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.action-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.action-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.code-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' +
+    '.code-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' +
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    '.item-blue-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview), ' + 
+    '.item-blue-reference:not(.tippy-role):not(.enhance-references-initialized):not(.no-preview):not(.tippy-initialized), ' + 
     ':not(.tippy-box):not(.tippy-content):not(.tippy-preview-tooltip):not(.tippy-preview) > ' +
-    'a.reference.internal:not(.tippy-role):not(.enhance-references-initialized):not(.tippyAnchor):not(.no-preview)'
+    'a.reference.internal:not(.tippy-role):not(.enhance-references-initialized):not(.tippyAnchor):not(.no-preview):not(.tippy-initialized)'
   );
   
   if (referenceLinks.length === 0) {
@@ -89,6 +105,13 @@ function initCustomTippyPreviews() {
   }
   
   console.log(`tippy_preview.js found ${referenceLinks.length} reference links for tooltips`);
+  
+  // Check if any of these elements already have tippy instances and destroy them
+  referenceLinks.forEach(el => {
+    if (el._tippy) {
+      el._tippy.destroy();
+    }
+  });
   
   // Mark elements to prevent duplicate initialization
   referenceLinks.forEach(el => {
@@ -452,10 +475,31 @@ function fixImagePaths(htmlContent, fetchedUrl) {
  * This prevents duplicate tooltips when re-initializing
  */
 function removeExistingTippyInstances() {
-  // Try to find any elements with _tippy property and destroy those instances
+  // First, try to find any elements with _tippy property and destroy those instances
   document.querySelectorAll('[data-tippy-content]').forEach(el => {
     if (el._tippy) {
       el._tippy.destroy();
+    }
+  });
+  
+  // Then, try to find any elements with tippy-initialized class
+  document.querySelectorAll('.tippy-initialized').forEach(el => {
+    if (el._tippy) {
+      el._tippy.destroy();
+    }
+  });
+  
+  // Also check for our custom class
+  document.querySelectorAll('.custom-tippy-initialized').forEach(el => {
+    if (el._tippy) {
+      el._tippy.destroy();
+    }
+  });
+  
+  // Remove any tippy-root elements that might be orphaned
+  document.querySelectorAll('.tippy-box').forEach(box => {
+    if (box && box.parentNode) {
+      box.parentNode.removeChild(box);
     }
   });
 }
@@ -464,18 +508,36 @@ function removeExistingTippyInstances() {
  * Fix duplicate tooltips by identifying and removing them
  */
 function fixDuplicateTooltips() {
-  // Look for elements with multiple tippy instances
-  document.querySelectorAll('a.reference, .page-reference, .section-reference, .subsection-reference, .tab-reference, .table-reference, .column-reference, .item-reference, .action-reference, .code-reference, .item-blue-reference').forEach(el => {
-    // If multiple tooltips are attached, keep only one
-    if (el._tippy && document.querySelectorAll(`[data-tippy-root][data-reference-for="${el.id}"]`).length > 1) {
-      // Destroy all but keep the most recent one
-      el._tippy.destroy();
-      
-      // Mark as needing reinit
-      el.classList.remove('custom-tippy-initialized');
-      el.classList.remove('enhance-references-initialized');
-    }
-  });
+  // Wait a moment for all tooltips to be created
+  setTimeout(function() {
+    // First, find all elements that might have multiple tooltips
+    const allElements = document.querySelectorAll('.page-reference, .section-reference, .subsection-reference, .tab-reference, .table-reference, .column-reference, .item-reference, .action-reference, .code-reference, .item-blue-reference, a.reference.internal, a.tippyAnchor');
+    
+    // Check each element
+    allElements.forEach(el => {
+      // If an element has both classes, it might have duplicate tooltips
+      if (el.classList.contains('custom-tippy-initialized') && 
+          el.classList.contains('enhance-references-initialized')) {
+        // Keep only one tooltip - prioritize the custom-tippy ones
+        if (el._tippy) {
+          el._tippy.destroy();
+        }
+        // Remove any class that might trigger another tooltip
+        el.classList.remove('enhance-references-initialized');
+        el.classList.add('no-preview');
+      }
+    });
+    
+    // For elements inside tooltips, disable any tooltips
+    document.querySelectorAll('.tippy-content a, .tippy-content .page-reference, .tippy-content .section-reference, .tippy-content .subsection-reference, .tippy-content .tab-reference, .tippy-content .table-reference, .tippy-content .column-reference, .tippy-content .item-reference, .tippy-content .action-reference, .tippy-content .code-reference').forEach(el => {
+      el.classList.add('no-preview');
+      if (el._tippy) {
+        el._tippy.destroy();
+      }
+    });
+    
+    console.log('Duplicate tooltips fixed');
+  }, 2000);
 }
 
 /**

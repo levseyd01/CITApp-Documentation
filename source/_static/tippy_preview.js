@@ -364,9 +364,11 @@ function buildCrossDocPreview(contentElement, title) {
     ref.classList.remove('reference', 'internal');
   });
   
-  // Instead of appending all sections, use only the first relevant one
+  // Include all sections instead of just the first one
   if (mainSections.length > 0) {
-    // Find only the top-level sections (not nested)
+    preview += `<div class="tippy-full-content">`;
+    
+    // Find top-level sections (not nested)
     const topLevelSections = Array.from(mainSections).filter(section => {
       // Check if this section is not nested inside another section
       const parent = section.parentElement;
@@ -374,13 +376,18 @@ function buildCrossDocPreview(contentElement, title) {
     });
     
     if (topLevelSections.length > 0) {
-      // Use only the first top-level section to avoid duplication
-      const firstSection = topLevelSections[0];
-      preview += `<div class="tippy-section">${firstSection.innerHTML}</div>`;
+      // Include all top-level sections
+      topLevelSections.forEach(section => {
+        preview += `<div class="tippy-section">${section.innerHTML}</div>`;
+      });
     } else {
-      // Fallback to first section if no top-level sections found
-      preview += `<div class="tippy-section">${mainSections[0].innerHTML}</div>`;
+      // Include all sections if no top-level sections found
+      Array.from(mainSections).forEach(section => {
+        preview += `<div class="tippy-section">${section.innerHTML}</div>`;
+      });
     }
+    
+    preview += `</div>`;
   } else {
     // Fallback for documents without section divisions
     preview += `<div class="tippy-content-wrapper">${contentClone.innerHTML}</div>`;

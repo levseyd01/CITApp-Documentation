@@ -3,14 +3,15 @@
 
 The **User** section allows you to do the following for both **Staff** and **User** accounts:
 
-- View and edit a details of a specific staff or user.
-- Edit a specific permissions for a staff or user.
-- Delete either a staff or user.
+- {ref}`View and edit a details of a specific staff or user <view-and-edit-a-details-of-a-specific-staff-or-user>`
+- {ref}`Edit a specific permissions for a staff or user.`
+- {ref}`Delete either a staff or user.`
 
 You can found out more about each section below:
 
 - [Managing User Accounts](Users/managing-user-accounts.md)
 - [Managing Staff Accounts](Staff/managing-staff-accounts.md)
+
 
 
 ## Navigating to Each Section

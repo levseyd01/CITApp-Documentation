@@ -157,40 +157,95 @@ function initCustomTippyPreviews() {
 }
 
 /**
- * Remove any existing tippy instances to prevent duplicates
+ * Handle cross-document reference tooltips
+ * Uses a more compatible approach for Read the Docs
  */
-function removeExistingTippyInstances() {
-  // Get all elements with existing tippy instances
-  const existingElements = document.querySelectorAll('[data-tippy-root]');
-  existingElements.forEach(el => {
-    // Only remove our custom tooltips, not the ones from sphinx_tippy
-    if (el._tippy && !el.classList.contains('tippy-role')) {
-      el._tippy.destroy();
-    }
-  });
-}
-
-/**
- * Fix duplicate tooltips by removing extra instances
- */
-function fixDuplicateTooltips() {
-  // Find elements that might have duplicate tooltips
-  document.querySelectorAll('.custom-tippy-initialized').forEach(el => {
-    // Find all tooltip instances for this element
-    const tippyInstances = document.querySelectorAll(`[data-tippy-root][aria-describedby^="tippy-"]`);
+function handleCrossDocReference(href, instance) {
+  // Create a special tooltip body with a loading message
+  instance.setContent(`
+    <div class="tippy-preview">
+      <div class="tippy-preview-heading">Loading content...</div>
+      <div class="tippy-preview-content">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+  `);
+  
+  // Resolve the target path by joining with the current path
+  let targetPath = '';
+  
+  if (href.startsWith('http://') || href.startsWith('https://')) {
+    // Full URL - use as is
+    targetPath = href;
+  } else if (href.startsWith('/')) {
+    // Absolute path - join with origin
+    targetPath = window.location.origin + href;
+  } else {
+    // Relative path - resolve against current page
+    // Get the current path minus filename
+    const currentPath = window.location.pathname.split('/');
+    currentPath.pop(); // Remove current file name
     
-    // If there are duplicates, remove extras
-    if (tippyInstances.length > 1) {
-      // Keep only the first instance
-      for (let i = 1; i < tippyInstances.length; i++) {
-        if (tippyInstances[i]._tippy) {
-          tippyInstances[i]._tippy.destroy();
-        } else {
-          tippyInstances[i].remove();
-        }
+    // Build the target path
+    targetPath = window.location.origin + 
+                 currentPath.join('/') + '/' + 
+                 href.split('#')[0]; // Remove any fragments
+  }
+  
+  // Store the original targeted URL for later use with image path fixing
+  const fetchedUrl = new URL(targetPath, window.location.href).href;
+  
+  // Initialize parser if not already done
+  if (!window.customDOMParser) {
+    window.customDOMParser = new DOMParser();
+  }
+  const parser = window.customDOMParser;
+  
+  // Fetch the content
+  fetch(targetPath)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to fetch content: ${response.status} ${response.statusText}`);
       }
-    }
-  });
+      return response.text();
+    })
+    .then(html => {
+      // Parse the HTML
+      const doc = parser.parseFromString(html, 'text/html');
+      
+      // Find the main content and title
+      const mainContent = doc.querySelector('.document') || 
+                          doc.querySelector('article') || 
+                          doc.querySelector('main') || 
+                          doc.querySelector('.content') ||
+                          doc.querySelector('.rst-content') ||
+                          doc.querySelector('.body') ||
+                          doc.body;
+      
+      const title = doc.querySelector('h1') || 
+                    doc.querySelector('title');
+                    
+      const titleText = title ? title.textContent.trim() : 'Content Preview';
+      
+      // Build preview with content sections
+      let preview = buildCrossDocPreview(mainContent, titleText);
+      
+      // Fix image paths using the fetchedUrl
+      preview = fixImagePaths(preview, fetchedUrl);
+      
+      instance.setContent(preview);
+    })
+    .catch(error => {
+      console.error('Error fetching content:', error);
+      instance.setContent(`
+        <div class="tippy-preview">
+          <div class="tippy-preview-heading">Preview Unavailable</div>
+          <div class="tippy-preview-content">
+            <p>Could not load content preview.</p>
+          </div>
+        </div>
+      `);
+    });
 }
 
 /**
@@ -211,79 +266,6 @@ function handleSamePageReference(targetId, instance) {
   
   // Set the content
   instance.setContent(previewContent);
-}
-
-/**
- * Handle cross-document reference tooltips
- * Uses a more compatible approach for Read the Docs
- */
-function handleCrossDocReference(href, instance) {
-  // Create a special tooltip body with a loading message
-  instance.setContent(`
-    <div class="tippy-preview">
-      <div class="tippy-preview-heading">Loading content...</div>
-      <div class="tippy-preview-content">
-        <div class="loading-spinner"></div>
-        <p>Content preview is loading...</p>
-      </div>
-    </div>
-  `);
-  
-  // Get the target path
-  let targetPath = href;
-  
-  // Clean up the href to work with both RTD and local builds
-  // Remove any URL parameters and fragments
-  targetPath = targetPath.split('#')[0].split('?')[0];
-  
-  // Handle different URL formats, ensuring compatibility with Read the Docs
-  if (!targetPath.endsWith('.html')) {
-    targetPath = targetPath + '.html';
-  }
-  
-  // Use the relative href directly - works with both local and RTD
-  fetch(targetPath)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load content (${response.status})`);
-      }
-      return response.text();
-    })
-    .then(html => {
-      // Create a temporary DOM to parse the fetched HTML
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      
-      // Find main content section - RTD and Sphinx have different content structures
-      const mainContent = 
-        doc.querySelector('[role="main"]') || // RTD main element
-        doc.querySelector('div.body') ||      // Sphinx body 
-        doc.querySelector('div.document') ||  // Alternative Sphinx container
-        doc.querySelector('main');            // HTML5 main element
-        
-      if (!mainContent) {
-        throw new Error('Could not find content in the target document');
-      }
-      
-      // Extract title from the document
-      const title = doc.querySelector('h1') || doc.querySelector('title');
-      const titleText = title ? title.textContent.trim() : 'Content Preview';
-      
-      // Build preview with content sections
-      instance.setContent(buildCrossDocPreview(mainContent, titleText));
-    })
-    .catch(error => {
-      console.error('Error fetching content:', error);
-      instance.setContent(`
-        <div class="tippy-preview">
-          <div class="tippy-preview-heading">Preview Unavailable</div>
-          <div class="tippy-preview-content">
-            <p>Could not load content preview.</p>
-            <p class="tippy-error-message">${error.message}</p>
-          </div>
-        </div>
-      `);
-    });
 }
 
 /**
@@ -345,83 +327,103 @@ function buildCrossDocPreview(contentElement, title) {
 }
 
 /**
- * Build preview content for same-page references
+ * Fix image paths to be compatible with RTD and local builds
+ * @param {string} htmlContent - The HTML content to process
+ * @param {string} fetchedUrl - The URL of the document the content was fetched from
+ * @returns {string} HTML content with fixed image paths
  */
-function buildPreviewContent(element) {
-  // Start with preview container
-  let preview = `
-    <div class="tippy-preview">
-  `;
-  
-  // Add heading if present
-  const heading = element.querySelector('h1, h2, h3, h4, h5, h6');
-  if (heading) {
-    preview += `<div class="tippy-preview-heading">${heading.textContent.trim()}</div>`;
-  } else if (element.tagName.match(/^H[1-6]$/i)) {
-    // Element itself is a heading
-    preview += `<div class="tippy-preview-heading">${element.textContent.trim()}</div>`;
-  }
-  
-  // Add full content container
-  preview += `<div class="tippy-preview-full-content">`;
-  
-  // Get a clone of element to avoid modifying DOM
-  const contentClone = element.cloneNode(true);
-  
-  // Remove navigation links, edit buttons, etc.
-  const elementsToRemove = contentClone.querySelectorAll(
-    '.headerlink, .toctree-wrapper, .edit-this-page, ' +
-    '.ethical-rtd, .injected, .rst-versions'
-  );
-  elementsToRemove.forEach(el => el.remove());
-  
-  // Make sure section and subsection titles are included
-  preview += contentClone.innerHTML;
-  
-  // Fix image paths to be compatible with RTD
-  preview = fixImagePaths(preview);
-  
-  // Close containers
-  preview += `</div></div>`;
-  
-  return preview;
-}
-
-/**
- * Fix image paths to be compatible with Read the Docs and local builds
- */
-function fixImagePaths(htmlContent) {
-  // Create a temporary div to manipulate the HTML
+function fixImagePaths(htmlContent, fetchedUrl) {
+  // Create a temporary div to manipulate the DOM
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = htmlContent;
   
-  // Find all images
+  // Find all image elements
   const images = tempDiv.querySelectorAll('img');
   
-  // Process each image
+  // Process each image source
   images.forEach(img => {
     const src = img.getAttribute('src');
     if (!src) return;
     
-    // Leave absolute URLs and data URLs alone
-    if (src.match(/^(https?:\/\/|data:)/) || src.startsWith('/')) {
+    // Skip absolute URLs and data URIs
+    if (src.startsWith('http://') || 
+        src.startsWith('https://') || 
+        src.startsWith('data:')) {
       return;
     }
     
-    // For relative paths, determine the correct path based on document location
-    // This works for both Read the Docs and local builds
-    let basePath = window.location.pathname.split('/');
-    basePath.pop(); // Remove the current document name
-    
-    // Join the base path with the relative image path
-    let correctedPath = [...basePath, src].join('/');
-    
-    // Clean up path - remove any double slashes
-    correctedPath = correctedPath.replace(/\/+/g, '/');
-    
-    // Set the corrected path
-    img.setAttribute('src', correctedPath);
+    try {
+      // Rebase the relative path against the fetched document's URL
+      const absoluteUrl = new URL(src, fetchedUrl).href;
+      img.setAttribute('src', absoluteUrl);
+    } catch (e) {
+      console.warn('Failed to rebase image URL:', src, e);
+    }
   });
   
   return tempDiv.innerHTML;
+}
+
+/**
+ * Remove existing tippy instances from elements
+ * This prevents duplicate tooltips when re-initializing
+ */
+function removeExistingTippyInstances() {
+  // Try to find any elements with _tippy property and destroy those instances
+  document.querySelectorAll('[data-tippy-content]').forEach(el => {
+    if (el._tippy) {
+      el._tippy.destroy();
+    }
+  });
+}
+
+/**
+ * Fix duplicate tooltips by identifying and removing them
+ */
+function fixDuplicateTooltips() {
+  // Look for elements with multiple tippy instances
+  document.querySelectorAll('a.reference, .page-reference, .section-reference, .subsection-reference, .tab-reference, .table-reference, .column-reference, .item-reference, .action-reference, .code-reference, .item-blue-reference').forEach(el => {
+    // If multiple tooltips are attached, keep only one
+    if (el._tippy && document.querySelectorAll(`[data-tippy-root][data-reference-for="${el.id}"]`).length > 1) {
+      // Destroy all but keep the most recent one
+      el._tippy.destroy();
+      
+      // Mark as needing reinit
+      el.classList.remove('custom-tippy-initialized');
+      el.classList.remove('enhance-references-initialized');
+    }
+  });
+}
+
+/**
+ * Build preview content for an element
+ * @param {Element} targetElement - The element to preview
+ * @returns {string} HTML content for the preview
+ */
+function buildPreviewContent(targetElement) {
+  // Clone the target to avoid modifying the original
+  const clone = targetElement.cloneNode(true);
+  
+  // Process internal links to prevent nested tooltips
+  clone.querySelectorAll('a.reference, .page-reference, .section-reference, .subsection-reference, .tab-reference, .table-reference, .column-reference, .item-reference, .action-reference, .code-reference, .item-blue-reference').forEach(ref => {
+    ref.classList.add('no-preview');
+    ref.classList.remove('reference', 'internal');
+  });
+  
+  // Create a container for the preview
+  let preview = `<div class="tippy-preview">`;
+  
+  // Add a title if there is one
+  const heading = clone.querySelector('h1, h2, h3, h4, h5, h6');
+  if (heading) {
+    preview += `<div class="tippy-preview-heading">${heading.textContent.trim()}</div>`;
+  }
+  
+  // Add the content
+  preview += `<div class="tippy-preview-content">${clone.innerHTML}</div>`;
+  
+  // Close the container
+  preview += `</div>`;
+  
+  return preview;
 }

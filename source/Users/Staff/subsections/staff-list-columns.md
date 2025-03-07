@@ -11,6 +11,9 @@ The {table}`Staff List Table` includes a table of accounts with the following co
 - {column}`Status`
 - {column}`Action`
 
+
+User/Staff/staff-homepage-columns.webp
+
 ```{lazyfigure} ../../../_static/solo_app/User/Staff/staff-homepage-columns.webp
 :width: 100%
 :align: center

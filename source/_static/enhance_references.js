@@ -33,6 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const href = link.getAttribute('href');
     if (!href) return;
     
+    // Skip image links - check for image extensions directly
+    if (isImageLink(href)) {
+      // Set a simple message for image links
+      link.setAttribute('data-tippy-content', `<p>Image link</p><small>Click to view image</small>`);
+      return;
+    }
+    
     // For internal page links that start with #
     if (href.startsWith('#')) {
       const targetId = href.substring(1);
@@ -66,7 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (image) {
           const imgSrc = image.getAttribute('src');
           // Only include the image if it has a valid src attribute
-          if (imgSrc && !isBinaryContent(imgSrc)) {
+          // And make sure it's not an image link that could contain binary data
+          if (imgSrc && !isImageLink(imgSrc)) {
             previewContent += `<div style="text-align:center;margin-top:8px;"><img src="${imgSrc}" alt="Preview" style="max-width: 250px; margin:auto;"></div>`;
           }
         }
@@ -107,6 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
         onMount(instance) {
           const tooltip = instance.popper;
           tooltip.classList.add('enhance-references-tooltip');
+        },
+        // Additional safeguard to prevent showing tooltips for image links
+        onShow(instance) {
+          const href = instance.reference.getAttribute('href') || '';
+          if (isImageLink(href)) {
+            return false; // Don't show the tooltip for image links
+          }
         }
       });
     } else {
@@ -123,6 +138,13 @@ document.addEventListener('DOMContentLoaded', function() {
         onMount(instance) {
           const tooltip = instance.popper;
           tooltip.classList.add('enhance-references-tooltip');
+        },
+        // Additional safeguard to prevent showing tooltips for image links
+        onShow(instance) {
+          const href = instance.reference.getAttribute('href') || '';
+          if (isImageLink(href)) {
+            return false; // Don't show the tooltip for image links
+          }
         }
       });
     }
@@ -133,26 +155,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Helper function to check if content appears to be binary data
- * This helps prevent binary image data from showing up as text in tooltips
- * @param {string} content - The content to check
- * @returns {boolean} - True if the content appears to be binary data
+ * Helper function to check if a URL is an image link
+ * @param {string} url - The URL to check
+ * @returns {boolean} - True if the URL is likely an image link
  */
-function isBinaryContent(content) {
-  if (!content) return false;
+function isImageLink(url) {
+  if (!url) return false;
   
-  // Check for common binary data patterns in PNG/JPG files
-  const binaryPatterns = [
-    '�PNG', 'PNG', 'IHDR', 'IDAT', 'IEND', // PNG header/chunks
-    'JFIF', '�JFIF', '�Exif', // JPEG markers
-    'sRGB', 'gAMA', // Color profiles
-    'pHYs', 'tEXt', // PNG metadata
-    '���', // Common in binary data
-    String.fromCharCode(0x89) + 'PNG' // PNG file signature
-  ];
+  // Check for common image extensions
+  if (/\.(png|jpe?g|webp|gif|svg|ico|bmp|tiff?)$/i.test(url)) {
+    return true;
+  }
   
-  // Check if the content contains any of these binary patterns
-  return binaryPatterns.some(pattern => content.includes(pattern));
+  // Check for image URLs that may not have a file extension
+  if (/\/(image|img|picture|photo)s?\/[^\/]+$/i.test(url)) {
+    return true;
+  }
+  
+  // Check for URLs that contain image in the query string
+  if (/[?&](image|img)=/i.test(url)) {
+    return true;
+  }
+  
+  return false;
 }
 
 /**
@@ -170,4 +195,39 @@ function sanitizeContent(content) {
   
   // Replace any sequences of non-printable/weird characters with a space
   return content.replace(/[\x00-\x09\x0B\x0C\x0E-\x1F\x7F-\x9F\uFFFD\u{10FFFF}]{4,}/gu, ' ');
+}
+
+/**
+ * Helper function to check if content appears to be binary data
+ * This helps prevent binary image data from showing up as text in tooltips
+ * @param {string} content - The content to check
+ * @returns {boolean} - True if the content appears to be binary data
+ */
+function isBinaryContent(content) {
+  if (!content) return false;
+  
+  // Check for common binary data patterns in image files
+  const binaryPatterns = [
+    // PNG patterns
+    '�PNG', 'PNG', 'IHDR', 'IDAT', 'IEND', 
+    String.fromCharCode(0x89) + 'PNG',
+    
+    // JPEG patterns
+    'JFIF', '�JFIF', '�Exif', 
+    
+    // WEBP patterns
+    'WEBP', 'VP8', 'RIFF',
+    
+    // Common in various binary files
+    'sRGB', 'gAMA', 'pHYs', 'tEXt', '���'
+  ];
+  
+  // Check if content has a high ratio of non-printable characters
+  const nonPrintableCount = (content.match(/[^\x20-\x7E]/g) || []).length;
+  if (nonPrintableCount > content.length * 0.2) {
+    return true;
+  }
+  
+  // Check if the content contains any of these binary patterns
+  return binaryPatterns.some(pattern => content.includes(pattern));
 }

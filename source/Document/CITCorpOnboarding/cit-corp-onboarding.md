@@ -20,7 +20,7 @@ The **CIT Corp Onboarding** section can be used to help track the progress of ea
 
 The **Onboarding Documents Table** is what first appears on the homepage of the **CIT Corporation Onboarding Docunents** section:
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOnboarding/cit-corp-onboarding-homepage-table.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOnboarding/cit-corp-onboarding-homepage-table.webp
 :width: 200%
 :align: center
 ```
@@ -66,14 +66,14 @@ The table can be filtered by the following Statuses:
 
 1. Find and select the **Status** dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-status-location.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-status-location.webp
 :width: 100%
 :align: center
 ```
 
 2. Select the desired status from the dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/all-pending-complete-status-dropdown-expaned-universal.png
+```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/all-pending-complete-status-dropdown-expaned-universal.webp
 :width: 75%
 :align: center
 ```
@@ -86,7 +86,7 @@ To view more details about each document in the onboarding process for the selec
 
 1. Select the [View More Icon](#view-more-icon) from the desired row. 
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOnboarding/ViewMoreDetails/view-more-details-cit-onboarding.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOnboarding/ViewMoreDetails/view-more-details-cit-onboarding.webp
 :width: 50 %
 ```
 

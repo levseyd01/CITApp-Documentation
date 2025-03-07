@@ -184,6 +184,48 @@ function initCustomTippyPreviews() {
  * Uses a more compatible approach for Read the Docs
  */
 function handleCrossDocReference(href, instance) {
+  // Skip empty links
+  if (!href) return;
+  
+  // If the link is to an anchor on the current page
+  if (href.startsWith('#')) {
+    const targetId = href.substring(1);
+    handleSamePageReference(targetId, instance);
+    return;
+  }
+
+  // Skip image links - check URL extension before attempting to fetch
+  if (isImageLink(href)) {
+    instance.setContent(`
+      <div class="tippy-preview">
+        <div class="tippy-preview-heading">Image Link</div>
+        <div class="tippy-preview-content">
+          <p>Click to view the image</p>
+        </div>
+      </div>
+    `);
+    return;
+  }
+  
+  // Process the URL for different RTD compatibility scenarios
+  let targetPath = href;
+  
+  // Special case for absolute URLs to other sites
+  if (href.startsWith('http://') || href.startsWith('https://')) {
+    // For external links, just show a basic preview
+    if (!href.includes(window.location.hostname)) {
+      instance.setContent(`
+        <div class="tippy-preview">
+          <div class="tippy-preview-heading">External Link</div>
+          <div class="tippy-preview-content">
+            <p>This link points to an external website: ${href}</p>
+          </div>
+        </div>
+      `);
+      return;
+    }
+  }
+  
   // Create a special tooltip body with a loading message
   instance.setContent(`
     <div class="tippy-preview">
@@ -230,9 +272,21 @@ function handleCrossDocReference(href, instance) {
       if (!response.ok) {
         throw new Error(`Failed to fetch content: ${response.status} ${response.statusText}`);
       }
+      
+      // Check if the Content-Type is HTML. If not, skip.
+      const contentType = response.headers.get('Content-Type') || '';
+      if (!contentType.includes('text/html')) {
+        throw new Error(`Unsupported content type: ${contentType}`);
+      }
+      
       return response.text();
     })
     .then(html => {
+      // Check if content looks like binary data before parsing
+      if (isBinaryContent(html)) {
+        throw new Error('Content appears to be binary data');
+      }
+      
       // Parse the HTML
       const doc = parser.parseFromString(html, 'text/html');
       
@@ -468,6 +522,65 @@ function fixImagePaths(htmlContent, fetchedUrl) {
   });
   
   return tempDiv.innerHTML;
+}
+
+/**
+ * Check if a URL appears to be an image link
+ * @param {string} url - The URL to check
+ * @returns {boolean} True if URL appears to be an image link
+ */
+function isImageLink(url) {
+  if (!url) return false;
+  
+  // Check for common image extensions
+  if (/\.(png|jpe?g|webp|gif|svg|ico|bmp|tiff?)$/i.test(url)) {
+    return true;
+  }
+  
+  // Check for image URLs that may not have a file extension
+  if (/\/(image|img|picture|photo)s?\/[^\/]+$/i.test(url)) {
+    return true;
+  }
+  
+  // Check for URLs that contain image in the query string
+  if (/[?&](image|img)=/i.test(url)) {
+    return true;
+  }
+  
+  return false;
+}
+
+/**
+ * Check if content appears to be binary data
+ * @param {string} content - The content to check
+ * @returns {boolean} True if content appears to be binary data
+ */
+function isBinaryContent(content) {
+  if (!content) return false;
+  
+  // Check for common binary data patterns in image files
+  const binaryPatterns = [
+    // PNG patterns
+    '�PNG', 'PNG', 'IHDR', 'IDAT', 'IEND', 
+    
+    // JPEG patterns
+    'JFIF', '�JFIF', '�Exif', 
+    
+    // WEBP patterns
+    'WEBP', 'VP8', 'RIFF',
+    
+    // Common in various binary files
+    'sRGB', 'gAMA', 'pHYs', 'tEXt'
+  ];
+  
+  // Check if the content contains any of these binary patterns
+  if (binaryPatterns.some(pattern => content.includes(pattern))) {
+    return true;
+  }
+  
+  // Simple heuristic: if content contains a lot of non-ASCII characters, it might be binary
+  const nonAsciiCount = content.split('').filter(char => char.charCodeAt(0) > 127).length;
+  return nonAsciiCount > content.length * 0.1;
 }
 
 /**

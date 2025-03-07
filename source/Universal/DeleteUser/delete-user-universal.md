@@ -7,7 +7,7 @@ To delete a user, staff, company, or anything else throughout the app, follow th
 
 1. Find the **Action** column.
 
-```{lazyfigure} ../../_static/solo_app/Universal/locations/action-column-location.jpg
+```{lazyfigure} ../../_static/solo_app/Universal/locations/action-column-location.webp
 :width: 100%
 :align: center
 :name: action-column-location
@@ -19,7 +19,7 @@ General Action Column Location
 3. Click the [Delete Icon](#delete-icon)
 
 
-```{lazyfigure} ../../_static/solo_app/Universal/locations/delete-location.jpg
+```{lazyfigure} ../../_static/solo_app/Universal/locations/delete-location.webp
 :width: 100%
 :align: center
 :name: general-delete-icon-location
@@ -29,7 +29,7 @@ General Delete Icon Location
 
 4. Confirm the deletion.
 
-```{lazyfigure} ../../_static/solo_app/Universal/popups/general-remove-popup.jpg
+```{lazyfigure} ../../_static/solo_app/Universal/popups/general-remove-popup.webp
 :width: 100%
 :align: center
 :name: general-remove-popup-notification

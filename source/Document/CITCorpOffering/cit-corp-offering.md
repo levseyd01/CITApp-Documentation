@@ -53,7 +53,7 @@ This **ID** can be used for {insert significance o **ID**}
 - **Action** - ``View More Details`` action: Action to view more details about the documents and where they are at on the onboarding process for the selected CIT Corporation.
 
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-column-names.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-column-names.webp
 :width: 200%
 :align: center
 ```
@@ -71,14 +71,14 @@ The table can be filtered by the following Statuses:
 
 1. Find and select the **Status** dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/status-dropdown-cit-Offering.jpg
+```{lazyfigure} ../../_static/solo_app/Document/universal/StatusDropdowns/status-dropdown-cit-Offering.webp
 :width: 100 %
 :align: center
 ```
 
 2. Select the desired status from the dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-status-location.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-status-location.webp
 :width: 75 %
 :align: center
 ```
@@ -89,7 +89,7 @@ To view more details about each document in the Offering process for the selecte
 
 1. Select the [View More Icon](#view-more-icon) from the desired row. 
 
-```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-view-details-location.jpg
+```{lazyfigure} ../../_static/solo_app/Document/CITCorpOffering/cit-corporations-offering-documents-view-details-location.webp
 :width: 50%
 ```
 

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-A script to convert all JPEG images in a specified directory (default: source/_static/solo_app) to WebP format.
+A script to convert all PNG and JPEG images in the _static directory to WebP format.
 
 Usage: python convert_png_to_webp.py [directory]
-If no directory is provided, it defaults to 'source/_static/solo_app'.
+If no directory is provided, it defaults to the _static directory relative to the script's location.
 
 Requirements:
     pip install pillow
@@ -15,7 +15,7 @@ from PIL import Image
 
 
 def convert_png_to_webp(directory):
-    """Convert all JPEG images in the given directory (and subdirectories) to WebP format."""
+    """Convert all PNG and JPEG images in the given directory (and subdirectories) to WebP format."""
     for root, dirs, files in os.walk(directory):
         for file in files:
             if file.lower().endswith(('.png', '.jpg', '.jpeg')):
@@ -31,9 +31,19 @@ def convert_png_to_webp(directory):
 
 
 if __name__ == "__main__":
-    # Default directory is 'source/_static/solo_app' but can be overridden by command line argument
-    directory = sys.argv[1] if len(sys.argv) > 1 else os.path.join('source', '_static', 'solo_app')
+    # Get the directory of the current script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Default directory is '../_static' relative to the script location
+    # This resolves to the _static folder from the _ext folder
+    default_static_dir = os.path.normpath(os.path.join(script_dir, '..', '_static'))
+    
+    # Allow directory override via command line argument
+    directory = sys.argv[1] if len(sys.argv) > 1 else default_static_dir
+    
     if not os.path.isdir(directory):
         print(f"Directory not found: {directory}")
         sys.exit(1)
+    
+    print(f"Processing images in: {directory}")
     convert_png_to_webp(directory)

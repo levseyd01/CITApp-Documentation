@@ -4,7 +4,7 @@
 
 In general, you can navigate through the site using the left-hand sidebar:
 
-```{lazyfigure} ../../_static/solo_app/Universal/GeneralNavigation/sidenav-dropdowns-closed-location.jpg
+```{lazyfigure} ../../_static/solo_app/Universal/GeneralNavigation/sidenav-dropdowns-closed-location.webp
 :width: 50%
 :align: center
 :name: navigation-sidenav-location

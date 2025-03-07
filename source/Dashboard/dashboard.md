@@ -103,7 +103,7 @@ Clicking on any of the cards will take you to the section that corresponds to wh
 (dashboard-table-section)=
 #### Dashboard Table Section
 
-```{lazyfigure} ../_static/solo_app/Dashboard/table/dashboard-table-section.png
+```{lazyfigure} ../_static/solo_app/Dashboard/table/dashboard-table-section.webp
 :alt: Dashboard Table screenshot
 :width: 120%
 A high-level overview of all documents and their statuses.

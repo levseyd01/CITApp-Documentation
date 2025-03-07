@@ -194,18 +194,28 @@ function handleCrossDocReference(href, instance) {
     return;
   }
 
-  // Skip image links - check URL extension before attempting to fetch
-  if (isImageLink(href)) {
+  // Quick check for image extensions - prevent fetching binary content
+  if (/\.(png|jpe?g|webp|gif|svg|ico|bmp|tiff?)$/i.test(href)) {
     instance.setContent(`
       <div class="tippy-preview">
-        <div class="tippy-preview-heading">Image Link</div>
+        <div class="tippy-preview-heading">Image</div>
         <div class="tippy-preview-content">
-          <p>Click to view the image</p>
+          <p>Click to view image</p>
         </div>
       </div>
     `);
     return;
   }
+  
+  // Create a special tooltip body with a loading message
+  instance.setContent(`
+    <div class="tippy-preview">
+      <div class="tippy-preview-heading">Loading...</div>
+      <div class="tippy-preview-content">
+        <p>Fetching content preview...</p>
+      </div>
+    </div>
+  `);
   
   // Process the URL for different RTD compatibility scenarios
   let targetPath = href;
@@ -218,28 +228,12 @@ function handleCrossDocReference(href, instance) {
         <div class="tippy-preview">
           <div class="tippy-preview-heading">External Link</div>
           <div class="tippy-preview-content">
-            <p>This link points to an external website: ${href}</p>
+            <p>This link points to an external website</p>
           </div>
         </div>
       `);
       return;
     }
-  }
-  
-  // Create a special tooltip body with a loading message
-  instance.setContent(`
-    <div class="tippy-preview">
-      <div class="tippy-preview-heading">Loading content...</div>
-      <div class="tippy-preview-content">
-        <div class="loading-spinner"></div>
-      </div>
-    </div>
-  `);
-  
-  // Resolve the target path by joining with the current path
-  let targetPath = '';
-  
-  if (href.startsWith('http://') || href.startsWith('https://')) {
     // Full URL - use as is
     targetPath = href;
   } else if (href.startsWith('/')) {
@@ -257,7 +251,7 @@ function handleCrossDocReference(href, instance) {
                  href.split('#')[0]; // Remove any fragments
   }
   
-  // Store the original targeted URL for later use with image path fixing
+  // Track the URL we fetched from for fixing relative paths later
   const fetchedUrl = new URL(targetPath, window.location.href).href;
   
   // Initialize parser if not already done
@@ -282,11 +276,6 @@ function handleCrossDocReference(href, instance) {
       return response.text();
     })
     .then(html => {
-      // Check if content looks like binary data before parsing
-      if (isBinaryContent(html)) {
-        throw new Error('Content appears to be binary data');
-      }
-      
       // Parse the HTML
       const doc = parser.parseFromString(html, 'text/html');
       
@@ -319,6 +308,7 @@ function handleCrossDocReference(href, instance) {
           <div class="tippy-preview-heading">Preview Unavailable</div>
           <div class="tippy-preview-content">
             <p>Could not load content preview.</p>
+            <small>${error.message}</small>
           </div>
         </div>
       `);

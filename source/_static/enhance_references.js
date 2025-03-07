@@ -206,27 +206,16 @@ function sanitizeContent(content) {
 function isBinaryContent(content) {
   if (!content) return false;
   
-  // Check for common binary data patterns in image files
+  // Check for common binary data patterns in PNG/JPG/WEBP files
   const binaryPatterns = [
-    // PNG patterns
-    '�PNG', 'PNG', 'IHDR', 'IDAT', 'IEND', 
-    String.fromCharCode(0x89) + 'PNG',
-    
-    // JPEG patterns
-    'JFIF', '�JFIF', '�Exif', 
-    
-    // WEBP patterns
-    'WEBP', 'VP8', 'RIFF',
-    
-    // Common in various binary files
-    'sRGB', 'gAMA', 'pHYs', 'tEXt', '���'
+    '�PNG', 'PNG', 'IHDR', 'IDAT', 'IEND', // PNG header/chunks
+    'JFIF', '�JFIF', '�Exif', // JPEG markers
+    'sRGB', 'gAMA', // Color profiles
+    'pHYs', 'tEXt', // PNG metadata
+    '���', // Common in binary data
+    'WEBP', 'VP8', 'RIFF', // WEBP file signatures and chunks
+    String.fromCharCode(0x89) + 'PNG' // PNG file signature
   ];
-  
-  // Check if content has a high ratio of non-printable characters
-  const nonPrintableCount = (content.match(/[^\x20-\x7E]/g) || []).length;
-  if (nonPrintableCount > content.length * 0.2) {
-    return true;
-  }
   
   // Check if the content contains any of these binary patterns
   return binaryPatterns.some(pattern => content.includes(pattern));

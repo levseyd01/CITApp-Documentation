@@ -610,6 +610,28 @@ def item_blue_role(name, rawtext, text, lineno, inliner, options={}, content=[])
     
     return [container], []
 
+# Create a small icon reference
+def smallicon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a small icon reference that renders icons in a smaller size."""
+    # Get the icon key by adding # prefix
+    icon_key = f"#{text}"
+    
+    # Check if the icon exists in the icon_substitutions
+    if icon_key in icon_substitutions:
+        # Create a container for the small icon
+        container = nodes.inline('', '')
+        container['classes'] = ['small-icon-reference']
+        
+        # Create a raw HTML node with the icon content
+        icon_html = icon_substitutions[icon_key][0]  # Get the HTML content
+        raw_node = nodes.raw('', icon_html, format='html')
+        container += raw_node
+        
+        return [container], []
+    else:
+        msg = inliner.reporter.error(f"Unknown icon: {text}", line=lineno)
+        prb = inliner.problematic(rawtext, rawtext, msg)
+        return [prb], [msg]
 
 def setup(app):
     """Add our functionality to Sphinx."""
@@ -633,6 +655,7 @@ def setup(app):
     app.add_role('code', code_role)
     app.add_role('item-blue', item_blue_role)
     app.add_role('tippy-ref', tippy_ref_role)  # Add the new tippy-ref role
+    app.add_role('smallicon', smallicon_role)  # Add the new smallicon role
     
     # We attach these new "inline syntaxes" to the DocutilsRenderer,
     # which is used by MyST-Parser:

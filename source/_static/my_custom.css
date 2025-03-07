@@ -396,3 +396,17 @@ a[href^="https://fake-"] {
   color: #1a5a9e !important; /* Darker blue on hover */
   text-decoration: underline !important;
 }
+
+/* Style for small-icon role - make icons smaller */
+.small-icon-reference {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.small-icon-reference img {
+  width: 16px !important;
+  height: 16px !important;
+  vertical-align: middle;
+  margin: 0 2px;
+}

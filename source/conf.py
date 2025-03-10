@@ -131,7 +131,7 @@ upload_button_b64 = base64.b64encode(png_binary_data).decode("utf-8")
 with open("_static/upload-button.jpeg", "rb") as f:
     upload_button_b64 = base64.b64encode(f.read()).decode("utf-8")'''
     
-    
+"""   
 tippy_custom_tips = {
     "#upload-button": (
         "<img src='/_static/solo_app/Universal/buttons/upload-button.webp' "
@@ -199,9 +199,8 @@ tippy_custom_tips = {
     ),
 }
 
-
-
 """
+
 ## These are for read the docs
 
 tippy_custom_tips = {
@@ -267,7 +266,7 @@ tippy_custom_tips = {
     ),
 }
 
-"""
+
 
 # Optionally, tweak tippy settings:
 #tippy_inline = True  # enable inline tips

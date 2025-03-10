@@ -335,6 +335,67 @@ div.margin {
   font-size: 0.9em !important; /* Slightly smaller font */
 }
 
+
+/* Main container */
+.admonition.action-complete {
+  display: flex;
+  flex-direction: column;
+  border-left: 6px solid #28a745;
+  border-radius: 4px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Header section - IMPORTANT CHANGES HERE */
+.admonition.action-complete > .admonition-title {
+  display: flex;
+  align-items: center;
+  background-color: #d4edda;
+  color: #28a745;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  margin: 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  
+  /* This is crucial - ensures no default icon appears */
+  padding-left: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2328a745' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: 20px;
+}
+
+/* This specifically removes the bell or any other icons */
+.admonition.action-complete > .admonition-title::before {
+  content: none !important;
+  display: none !important;
+}
+
+/* Also ensure no other pseudo-elements are adding the bell */
+.admonition.action-complete > .admonition-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Content section */
+.admonition.action-complete > .admonition-content {
+  padding: 1rem;
+  background-color: white;
+}
+
+/* Link styling */
+.admonition.action-complete a {
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.admonition.action-complete a:hover {
+  text-decoration: underline;
+}
+
 .item-blue-reference span.visually-hidden {
   position: absolute;
   width: 1px;

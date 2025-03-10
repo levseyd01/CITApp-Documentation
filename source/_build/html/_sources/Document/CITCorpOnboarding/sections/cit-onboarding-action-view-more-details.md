@@ -10,7 +10,11 @@ To view more details about each document in the onboarding process for the selec
 :width: 50 %
 ```
 
-This action will take you to the {ref}`onboarding-offering-document-details` page.
+:::{admonition} Action Complete
+:class: action-complete
+
+This action will take you to the {ref}`Offering Document Details <onboarding-offering-document-details>` page.
+:::
 
 ## Onboarding Document Details Page
 

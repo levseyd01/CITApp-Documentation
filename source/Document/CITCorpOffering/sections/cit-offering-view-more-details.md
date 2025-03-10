@@ -14,7 +14,7 @@ To view more details about each document in the Offering process for the selecte
 ```
 
 :::{admonition} Action Complete
-:class: seealso
+:class: action-complete
 
 This action will take you to the {ref}`Offering Document Details <onboarding-offering-document-details>` page.
 :::

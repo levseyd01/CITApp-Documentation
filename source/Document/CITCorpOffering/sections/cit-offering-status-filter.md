@@ -19,7 +19,7 @@ The {table}`Offering Documents Table` can be filtered by the following {item-blu
 
 2. Select the desired status from the dropdown.
 
-```{lazyfigure} ../../../_static/solo_app/Document/universal/StatusDropdowns/all-pending-complete-status-dropdown-expaned-universal.png
+```{lazyfigure} ../../../_static/solo_app/Document/universal/StatusDropdowns/all-pending-complete-status-dropdown-expaned-universal.webp
 :width: 50%
 :align: center
 ```

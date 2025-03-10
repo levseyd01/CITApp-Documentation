@@ -26,7 +26,7 @@ Navigation, Sidenav Location
 See {ref}`How to Toggle Primary Sidebar <how-to-toggle-primary-sidebar>`
 :::
 
-```{lazyfigure} ../../_static/solo_app/Universal/GeneralNavigation/sidenav-select-staff-example-users-section.jpg
+```{lazyfigure} ../../_static/solo_app/Universal/GeneralNavigation/sidenav-select-staff-example-users-section.webp
 :width: 50%
 :align: center
 :name: sidenav-select-staff-example-find-users-section
@@ -36,7 +36,7 @@ Navigation, Staff Page Example, Find Users Section
 
 2. Select {page}`Staff Page`.
 
-```{lazyfigure} ../../_static/solo_app/Universal/GeneralNavigation/sidenav-select-staff-example.jpg
+```{lazyfigure} ../../_static/solo_app/Universal/GeneralNavigation/sidenav-select-staff-example.webp
 :width: 50%
 :align: center
 :name: sidenav-select-staff-example

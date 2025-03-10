@@ -4,9 +4,9 @@
 
 The {page}`CIT Corporations` page allows you to:
 
-- View CIT Corporation details
-- Manage CIT Corporations
-- Add New CIT Corporation
+- {ref}`View Corporation Details <view-cit-account-section>`
+- Manage a CIT Corporations {ref}`Legal Information <cit-corporation-legal-information-tab-section>`
+- Add New CIT Corporation {ref}`Users Tab <account-cit-corporation-users-tab-section>`
 
 The {page}`CIT Corporations` section is located under the {section}`Account` section, and opens up to the following table:
 
@@ -47,7 +47,7 @@ The {table}`CIT Corporations Table` has several columns that provide key informa
 
 You can access additional information through:
 
-- {ref}`View Corporation Details <view-cit-account-section>`
+
 - {ref}`Legal Information Tab <cit-corporation-legal-information-tab-section>`
 - {ref}`Users Tab <account-cit-corporation-users-tab-section>`
 

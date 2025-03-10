@@ -14,7 +14,7 @@ The {page}`Investor Documents Page` allows you to quickly:
 - View document details or download documents directly.
 
 
-```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-homepage-with-location.jpg
+```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-homepage-with-location.webp
 :width: 200%
 :align: center
 
@@ -26,7 +26,7 @@ Investor Documents, Homepage and Location
 
 The **Investor Documents Table** is the primary interface for accessing investor-related files:
 
-```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table.jpg
+```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table.webp
 :width: 200%
 :align: center
 ```
@@ -36,7 +36,7 @@ The **Investor Documents Table** provides a concise yet informative overview of 
 (investor-documents-table-columns-subsection)=
 ### Table Columns Explained
 
-```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-column-headers.jpg
+```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-column-headers.webp
 :width: 200%
 :align: center
 ```
@@ -67,14 +67,14 @@ You can filter the table by the CIT Corporation:
 
 1. Click the **CIT Corporation** dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-cit-corporation-filter.jpg
+```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-cit-corporation-filter.webp
 :width: 100%
 :align: center
 ```
 
 2. Select the desired CIT Corporation or **All** from the dropdown.
 
-```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-cit-corporation-filter-dropdown.jpg
+```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-cit-corporation-filter-dropdown.webp
 :width: 75%
 :align: center
 ```
@@ -86,7 +86,7 @@ To search for a specific document or investor:
 
 1. Find the **Search** bar.
 
-```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-cit-corporation-search-typing-step.jpg
+```{lazyfigure} ../../_static/solo_app/Document/InvestorDocuments/investor-documents-table-cit-corporation-search-typing-step.webp
 :width: 100%
 :align: center
 ```

@@ -26,6 +26,5 @@ Profile Screen, Information Section
 
 sections/name-and-contact-information.md
 sections/primary-address.md
-sections/mailing-address.md
 sections/upload-logo.md
 ```

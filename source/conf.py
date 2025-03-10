@@ -141,6 +141,10 @@ tippy_custom_tips = {
         "<img src='/_static/solo_app/Universal/buttons/deactivate.webp' "
         "alt='Deactivate Button' style='width:200px;'>"
     ),
+    "#add-new-staff-plus-button": (
+        "<img src='/_static/solo_app/Universal/buttons/new-staff.webp' "
+        "alt='Add New Staff Plus Button' style='width:200px;'>"
+    ),
     "#file-explorer-open": (
         "<img src='/_static/solo_app/Universal/file-explorer-open.webp' "
         "alt='File Explorer Open' style='width:200px;'>"
@@ -188,6 +192,10 @@ tippy_custom_tips = {
      "#reset-password": (
         "<img src='/_static/solo_app/User/User-Detail/reset-password.webp' "
         "alt='Reset Password' style='width:200px;'>"
+    ),
+    "#manage-icon": (
+        "<img src='/_static/solo_app/User/User-Detail/manage-icon.jpg' "
+        "alt='Manage Icon' style='width:200px;'>"
     ),
 }
 

@@ -1,6 +1,7 @@
-# View CIT Corporation Details
 
 (view-cit-account-section)=
+# View CIT Corporation Details
+
 
 When you need to view more details about a specific CIT Corporation, you can use the {action}`View Account` button to access all information.
 
@@ -18,6 +19,7 @@ CIT Corporation, Homepage, View More Icon Location
 
 > Selecting the {action}`View Account` button will take you to the {page}`CIT Corporation Information` screen.
 
+(view-cit-account-section-corporate-information-tab)=
 ## Corporation Information Tab
 
 The {tab}`CIT Corporation Information` tab allows you to view and edit the following information:
@@ -52,3 +54,11 @@ There is no {action}`Edit` button in this section. The fields are editable as is
 :class: seealso
 
 - See [Editing Company Information](editing-company-information-section) to learn more about editing your company's profile information.
+
+```{toctree}
+:maxdepth: 2
+:hidden:
+
+tabs/legal-information-tab
+tabs/users-tab
+```

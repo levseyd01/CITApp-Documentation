@@ -1,17 +1,16 @@
 
 
-## Users Tab
+(account-cit-corporation-users-tab-section)=
+# Users Tab
 
+The **Users** tab is a list of all users associated with the **CIT Corporation**.
 
-
-The **Users** tab is a list of all users associated with the **Sponsor Organization**.
-
-```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-location-of-tab.webp
+```{lazyfigure} ../../../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-location-of-tab.webp
 :width: 100%
 :align: center
 :name: sponsor-organization-users-tab-location-of-tab
 
-Sponsorship Organization, Users Tab
+CIT Corporation, Users Tab
 ```
 
 ### Navigating the Users Tab
@@ -23,40 +22,11 @@ The **Actions** column for the **Users** tab has the following actions available
 - Remove User Access from Entity
 
 
-####  Adding a New User to the Sponsorship Organization
+##  Adding a New User to the CIT Corporation
 
 
-**To Add a New User:**
+1. Follow the instructions in the {ref}`Adding a New User <adding-new-user-section-universal>` section.
 
-1. Click the **New User** button at the top right of the screen. 
-
-```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-new-user-location.webp
-:width: 100%
-:align: center
-:name: sponsor-organization-users-tab-new-user-location
-
-Sponsorship Organization, Users Tab, New User Location
-```
-
-2. Fill out the required fields.
-
-
-```{admonition} Note
-All three fields are required:
-
-- Email
-- First Name
-- Last Name
-
-```
-
-```{lazyfigure} ../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-add-new-user-popup.webp
-:width: 75%
-:align: center
-:name: sponsor-organization-users-tab-add-new-user-popup
-
-Sponsorship Organization, Users Tab, Add New User Popup
-```
 
 ```{admonition} Permissions Options
 :class: tip, dropdown
@@ -97,9 +67,7 @@ Sponsorship Organization, Users Tab, Add New User Popup
 ```
 
 
-3. Select desired permissions for the new user. 
 
-4. Click [Save](#save-icon) to add the new user.
 
 
 

@@ -49,7 +49,7 @@ You can access additional information through:
 
 - {ref}`View Corporation Details <view-cit-account-section>`
 - {ref}`Legal Information Tab <cit-corporation-legal-information-tab-section>`
-- {ref}`Users Tab <cit-corporation-users-tab-section>`
+- {ref}`Users Tab <account-cit-corporation-users-tab-section>`
 
 ```{toctree}
 :maxdepth: 2

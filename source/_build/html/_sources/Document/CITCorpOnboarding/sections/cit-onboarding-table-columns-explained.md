@@ -1,9 +1,9 @@
 
-(cit-onboarding-documents-table-column-description-subsection)=
+(cit-onboarding-table-columns-explained)=
 # CIT Onboarding Documents Table: Columns Explained
 
 
-
+cit-onboarding-table-columns-explained
 ```{lazyfigure} ../../../_static/solo_app/Document/CITCorpOnboarding/cit-corporation-onboarding-documents-column-names.webp
 :width: 200%
 :align: center

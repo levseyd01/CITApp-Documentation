@@ -1,5 +1,5 @@
 
-(cit-onboarding-view-more-details)=
+(cit-onboarding-action-view-more-details)=
 ## Action: View More Details
 
 To view more details about each document in the onboarding process for the selected CIT Corporation, do the following:

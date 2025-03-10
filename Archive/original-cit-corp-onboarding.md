@@ -27,7 +27,7 @@ The **Onboarding Documents Table** is what first appears on the homepage of the 
 
 The **Onboarding Documents Table** provides a brief, but detailed, overview of where each CIT Corporation is at in the onboarding process.
 
-(cit-onboarding-documents-table-column-description-subsection)=
+(cit-onboarding-table-columns-explained)=
 ### Table Columns Explained
 
 There are 8 columns in the **Onboarding Documents Table**:

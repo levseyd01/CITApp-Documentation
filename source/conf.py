@@ -8,9 +8,12 @@
 import os
 import sys
 import re
+import sphinx.writers.html5
+from sphinx.util.docutils import SphinxDirective
+from docutils import nodes
+from docutils.parsers.rst import directives, Directive
 
 from pathlib import Path
-from docutils import nodes
 
 project = 'CIT Services User Manual'
 copyright = '2024, Transfer Online.'
@@ -19,8 +22,6 @@ author = ''
 release = '1'
 
 language = 'en'
-import sys
-import os
 sys.path.append(os.path.abspath('_ext'))
 from tilde_plugin import tilde_plugin
 # from myst_parser.mdit_to_docutils.base import DocutilsRenderer
@@ -303,6 +304,7 @@ html_theme_options = {
     "repository_branch": "stable",
     "use_repository_button": False,
     #'language_selector': True,
+    "use_sidenotes": True,
     "use_issues_button": False,
     #'logo_only': True,
     "collapse_navbar": False,
@@ -571,11 +573,8 @@ def action_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     # Create visually hidden span for screen readers
     screen_reader_node = nodes.inline('', 'Action: ')
     screen_reader_node['classes'] = ['visually-hidden']
-    
     # Create the visible text node
     text_node = nodes.inline('', text)
-    text_node['classes'] = ['action-reference']
-    
     # Create the container node with both children
     container = nodes.inline('', '')
     container['classes'] = ['action-reference']
@@ -620,20 +619,110 @@ def item_blue_role(name, rawtext, text, lineno, inliner, options={}, content=[])
     
     return [container], []
 
+# Create an item-cyan reference with screen reader text.
+def item_cyan_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-cyan reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Cyan Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-cyan-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an item-green reference with screen reader text.
+def item_green_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-green reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Green Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-green-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an item-orange reference with screen reader text.
+def item_orange_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-orange reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Orange Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-orange-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an item-deepblue reference with screen reader text.
+def item_deepblue_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-deepblue reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Deep Blue Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-deepblue-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an item-teal reference with screen reader text.
+def item_teal_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-teal reference with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Teal Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-teal-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
 # Create a small icon reference
 def smallicon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """Create a small icon reference that renders icons in a smaller size."""
     # Get the icon key by adding # prefix
     icon_key = f"#{text}"
     
-    # Check if the icon exists in the icon_substitutions
-    if icon_key in icon_substitutions:
+    # Check if the icon exists in the tippy_custom_tips
+    if icon_key in tippy_custom_tips:
         # Create a container for the small icon
         container = nodes.inline('', '')
         container['classes'] = ['small-icon-reference']
         
         # Create a raw HTML node with the icon content
-        icon_html = icon_substitutions[icon_key][0]  # Get the HTML content
+        icon_html = tippy_custom_tips[icon_key]  # Get the HTML content
         raw_node = nodes.raw('', icon_html, format='html')
         container += raw_node
         
@@ -662,6 +751,24 @@ def red_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     return [container], []
 
 
+# Create a category reference with screen reader text.
+def category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a category reference for sidebar navigation items with screen reader text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Navigation Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['category-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
 def setup(app):
     """Add our functionality to Sphinx."""
     
@@ -683,31 +790,15 @@ def setup(app):
     app.add_role('action', action_role)
     app.add_role('code', code_role)
     app.add_role('item-blue', item_blue_role)
+    app.add_role('item-cyan', item_cyan_role)
+    app.add_role('item-green', item_green_role)
+    app.add_role('item-orange', item_orange_role)
+    app.add_role('item-deepblue', item_deepblue_role)
+    app.add_role('item-teal', item_teal_role)
     app.add_role('tippy-ref', tippy_ref_role)  # Add the new tippy-ref role
     app.add_role('smallicon', smallicon_role)  # Add the new smallicon role
     app.add_role('red', red_role)  # Add the new red text role
-    
-    # We attach these new "inline syntaxes" to the DocutilsRenderer,
-    # which is used by MyST-Parser:
-    try:
-        from myst_parser.mdit_to_docutils.base import DocutilsRenderer
-        
-        # Order is important - register the patterns from most specific to least specific
-        DocutilsRenderer.inline_syntaxes.append(
-            ("tilde4", r'~~~~([^~]+)~~~~', parse_tilde4)
-        )
-        DocutilsRenderer.inline_syntaxes.append(
-            ("tilde3", r'~~~([^~]+)~~~', parse_tilde3)
-        )
-        DocutilsRenderer.inline_syntaxes.append(
-            ("tilde2", r'~~([^~]+)~~', parse_tilde2)
-        )
-        DocutilsRenderer.inline_syntaxes.append(
-            ("tilde1", r'~([^~]+)~', parse_tilde1)
-        )
-        print("Successfully registered tilde patterns!")
-    except Exception as e:
-        print(f"Warning: Could not register tilde patterns: {e}")
+    app.add_role('category', category_role)  # Add the new category role
     
     # Tells Sphinx to load your custom CSS
     app.add_css_file("my_custom.css")

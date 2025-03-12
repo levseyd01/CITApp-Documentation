@@ -91,7 +91,7 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           # Make sure this matches your actual GitHub secret name
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_PEBBLE_089AF6A11E }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_PEBBLE_08AF6A11E }}
           action: "upload"
           # These paths should align with how your docs are built
           app_location: "build/html"
@@ -113,5 +113,5 @@ jobs:
         uses: Azure/static-web-apps-deploy@v1
         with:
           # Must be the same secret so it can manage PR statuses
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_PEBBLE_089AF6A11E }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_HAPPY_PEBBLE_08AF6A11E }}
           action: "close"

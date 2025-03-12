@@ -34,12 +34,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install sphinx sphinx-rtd-theme sphinx-design sphinx-copybutton sphinx-togglebutton sphinx-tippy myst-parser sphinx_book_theme rst2pdf
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f source/requirements.txt ]; then pip install -r source/requirements.txt; fi
           
       - name: Build Sphinx docs
         run: |
           # List directory structure before build
           echo "Current directory structure:"
           ls -la
+          
+          # Create symbolic link for _ext directory to ensure it's found
+          mkdir -p build/html/_ext
+          cp -r source/_ext/* build/html/_ext/
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          
+          # Debug the Python import paths
+          echo "Python path:"
+          python -c "import sys; print(sys.path)"
           
           # Build the docs using the Makefile
           make html

@@ -41,38 +41,18 @@ jobs:
           echo "Current directory structure:"
           ls -la
           
-          # Build the docs using the Makefile (which knows your project structure)
+          # Build the docs using the Makefile
           make html
           
-          # Check if build directory exists in standard location
-          echo "Checking build directory locations:"
-          ls -la build/html 2>/dev/null || echo "No build/html directory"
-          ls -la source/_build/html 2>/dev/null || echo "No source/_build/html directory"
-          
-          # Create source/build/html directory and copy files there
-          mkdir -p source/build/html
-          
-          # Copy from build/html if it exists
-          if [ -d "build/html" ]; then
-            echo "Copying from build/html to source/build/html"
-            cp -r build/html/* source/build/html/
-          # Otherwise copy from source/_build/html if it exists
-          elif [ -d "source/_build/html" ]; then
-            echo "Copying from source/_build/html to source/build/html"
-            cp -r source/_build/html/* source/build/html/
-          else
-            echo "WARNING: Could not find any build output to copy to source/build/html!"
-          fi
+          # Check build directory
+          echo "Checking build directory:"
+          ls -la build/html || echo "No build/html directory found!"
           
           # Copy routes.json to the build directory
-          if [ -f "routes.json" ]; then
-            echo "Copying routes.json to source/build/html"
-            cp routes.json source/build/html/
+          if [ -f "routes.json" ] && [ -d "build/html" ]; then
+            echo "Copying routes.json to build/html"
+            cp routes.json build/html/
           fi
-          
-          # Final check of build directory
-          echo "Final build directory contents:"
-          ls -la source/build/html || echo "Still no source/build/html directory!"
           
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
@@ -92,7 +72,7 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "source/build/html" # Changed to match Azure's expected location
+          app_location: "build/html" # This matches the Makefile build output location
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}

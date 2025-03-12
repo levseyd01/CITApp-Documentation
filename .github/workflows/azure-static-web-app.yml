@@ -37,12 +37,34 @@ jobs:
           
       - name: Build Sphinx docs
         run: |
-          # List directory contents to debug
+          # List directory structure before build
+          echo "Current directory structure:"
           ls -la
-          # Build the docs to the build/html directory
-          sphinx-build -b html source build/html
-          # Verify the build directory exists
-          ls -la build/html || echo "Build directory not created!"
+          
+          # Build the docs using the Makefile (which knows your project structure)
+          make html
+          
+          # Check if build directory exists in standard location
+          echo "Checking build directory locations:"
+          ls -la build/html 2>/dev/null || echo "No build/html directory"
+          ls -la source/_build/html 2>/dev/null || echo "No source/_build/html directory"
+          
+          # Create build directory if it doesn't exist
+          if [ ! -d "build/html" ] && [ -d "source/_build/html" ]; then
+            echo "Copying from source/_build/html to build/html"
+            mkdir -p build/html
+            cp -r source/_build/html/* build/html/
+          fi
+          
+          # Copy routes.json to the build directory
+          if [ -f "routes.json" ] && [ -d "build/html" ]; then
+            echo "Copying routes.json to build/html"
+            cp routes.json build/html/
+          fi
+          
+          # Final check of build directory
+          echo "Final build directory contents:"
+          ls -la build/html || echo "Still no build/html directory!"
           
       - name: Install OIDC Client from Core Package
         run: npm install @actions/core@1.6.0 @actions/http-client
@@ -62,7 +84,7 @@ jobs:
           action: "upload"
           ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "build/html" # Updated path to match Sphinx build output
+          app_location: "build/html" # Build output path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}

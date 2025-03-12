@@ -34,6 +34,10 @@ jobs:
       - name: Build docs
         run: |
           cd source
+          # Create an empty __init__.py file in the _ext directory to make it a proper Python package
+          touch _ext/__init__.py
+          # Set PYTHONPATH to include the current directory so _ext can be found
+          export PYTHONPATH=.:$PYTHONPATH
           sphinx-build -b html . _build/html
           cd ..
           ls -la source/_build/html  # Debug: List directory contents to verify files exist

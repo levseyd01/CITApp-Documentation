@@ -241,7 +241,7 @@ tippy_custom_tips = {
         "alt='Manage Button' style='width:200px;'>"
     ),
      "#save-changes": (
-        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/save-changes.webp' "
+        "<img src='/en/stable-edit/_static/solo_app/Universal/buttons/save-changes.jpg' "
         "alt='Save Changes' style='width:200px;'>"
     ),
     "#edit-permissions-icon": (

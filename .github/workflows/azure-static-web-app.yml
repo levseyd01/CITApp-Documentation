@@ -36,18 +36,25 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ -f source/requirements.txt ]; then pip install -r source/requirements.txt; fi
           
+      - name: Create modified conf.py without _ext dependency
+        run: |
+          # Create a backup of the original conf.py
+          cp source/conf.py source/conf.py.backup
+          
+          # Remove the problematic extension from conf.py
+          sed -i "s/'_ext.missing_ref_handler',*/# '_ext.missing_ref_handler', # temporarily removed for build/g" source/conf.py
+          
+          # Show the modified conf.py for debugging
+          echo "Modified conf.py:"
+          grep -n "missing_ref_handler" source/conf.py || echo "String not found in conf.py"
+          
       - name: Build Sphinx docs
         run: |
           # List directory structure before build
           echo "Current directory structure:"
           ls -la
           
-          # Create symbolic link for _ext directory to ensure it's found
-          mkdir -p build/html/_ext
-          cp -r source/_ext/* build/html/_ext/
-          export PYTHONPATH=$PYTHONPATH:$(pwd)
-          
-          # Debug the Python import paths
+          # Debug Python's import path
           echo "Python path:"
           python -c "import sys; print(sys.path)"
           

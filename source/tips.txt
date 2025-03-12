@@ -1,0 +1,39 @@
+From the logs, you can tell that the wrong workflow file (the auto‑generated one) is actually running—not the custom file that builds your docs and deploys from build/html. That’s why it keeps complaining about source/build/html.
+
+Azure Static Web Apps creates (and by default uses) a file like:
+
+swift
+Copy
+.github/workflows/azure-static-web-apps-<APPNAME>.yml
+In your case, that file has:
+
+yaml
+Copy
+app_location: "source/build/html"
+…which causes the “Could not detect this directory” error. Meanwhile, you’ve got a second, manually maintained workflow (in .github/workflows/azure-static-web-app.yml) that actually installs Sphinx, builds to build/html, etc.
+
+How to Fix It
+Option 1: Remove or disable the auto‑generated workflow
+Delete (or rename) the file .github/workflows/azure-static-web-apps-wonderful-plant-0e077991e.yml so it no longer triggers.
+Make sure your custom workflow (azure-static-web-app.yml) is committed to the same branch (stable) that Azure is watching.
+In the Azure portal, under your Static Web App’s “Deployment” or “Workflow configuration,” ensure it’s set to “Use existing workflow” (if that option is visible) or just accept that the portal’s “preview” won’t match your real build steps.
+Push a new commit to stable.
+The only workflow that triggers will be your custom file.
+It will run Sphinx, produce build/html, and then deploy that folder.
+Option 2: Edit the auto‑generated file to do everything
+If you must keep the auto‑generated file for some reason, you could add your Sphinx build steps and set app_location: "build/html". But typically, it’s easiest just to delete or disable that file and rely on your custom workflow (Option 1).
+
+Why This Happens
+Azure tries to “help” by generating a minimal workflow that just deploys whatever you’ve told the portal (source/build/html).
+Your custom file (with Sphinx build steps) is never actually used if the auto‑generated file is also in .github/workflows and has the same triggers (on: push to stable).
+Whichever workflow file name happens to run (the auto‑generated one in your case) is looking for source/build/html before the docs are even built—hence the error.
+Confirming the Fix
+Once you remove/rename the auto‑generated file and push a commit:
+
+Go to GitHub → Actions tab in your repo.
+Watch the new run for your custom workflow.
+You should see steps like “Install dependencies,” “Build Sphinx docs,” etc.
+It will place the final HTML in build/html.
+The “Build And Deploy” step in that same workflow will then deploy build/html.
+Azure’s deployment logs should say “Deployment complete!” rather than complaining about source/build/html.
+That’s it! By making sure only your custom workflow runs, you will resolve the path mismatch once and for all.

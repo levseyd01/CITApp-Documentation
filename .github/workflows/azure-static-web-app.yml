@@ -38,9 +38,9 @@ jobs:
           touch _ext/__init__.py
           # Set PYTHONPATH to include the current directory so _ext can be found
           export PYTHONPATH=.:$PYTHONPATH
-          sphinx-build -b html . _build/html
+          sphinx-build -b html . build/html
           cd ..
-          ls -la source/_build/html  # Debug: List directory contents to verify files exist
+          ls -la source/build/html  # Debug: List directory contents to verify files exist
           
       - name: Build And Deploy
         id: builddeploy
@@ -49,7 +49,7 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "source/_build/html" # App source code path
+          app_location: "source/build/html" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           routes_location: "/" # Location of routes.json file

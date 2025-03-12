@@ -1,12 +1,12 @@
 (changing-accounts-to-manage)= 
 ## Managing Different Accounts
 
-You can select an account to manage by clicking the {ref}`Manage <manage-button>` button associated with the desired account.
+You can select an account to manage by clicking the {ref}`Manage <m# anage-button>` button associated with the desired account.
 
 To **Manage an Account**:
 
 1. Find the account you want to manage. 
-2. Click the {ref}`Manage <manage-button>` button next to the account name.
+2. Click the {ref}`Manage <#manage-button>` button next to the account name.
 
 ```{lazyfigure} ../_static/solo_app/My_Accounts/my-accounts-manage-location.webp
 :width: 50%

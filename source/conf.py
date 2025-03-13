@@ -334,6 +334,9 @@ html_js_files = [
     "https://unpkg.com/@popperjs/core@2",
     "https://unpkg.com/tippy.js@6",     
     "tippy-init.js",
+
+    'enhance_references.js',
+    'tippy_preview.js'
 ]
 #html_js_files = ["js/tippy.js", "js/popper.js"]
 '''tippy_js = [

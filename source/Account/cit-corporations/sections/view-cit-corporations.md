@@ -74,5 +74,5 @@ CIT Corporation, Save Changes Location
 :hidden:
 
 tabs/legal-information-tab
-tabs/users-tab
+tabs/cit-corporation-users-tab
 ```

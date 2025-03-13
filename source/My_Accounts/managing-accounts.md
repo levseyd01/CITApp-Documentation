@@ -5,7 +5,7 @@ Managing accounts allows you to quickly navigate between the homepages of differ
 
 To **Manage an Account**:
 
-1. Go to the {page}`My Accounts` page. 
+1. Go to the {my-accounts-category}`My Accounts` page. 
 
 ```{lazyfigure} ../_static/solo_app/My_Accounts/my-accounts-main-page-location.jpg
 :width: 50%

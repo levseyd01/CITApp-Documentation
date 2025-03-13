@@ -11,13 +11,8 @@ Profile Screen, Name and Contact Information
 The following fields can be edited:
 
 - {item-red}`Name`
-- ``Website``
-- ``Billing Email``
-- ``Company Email``
-- ``Phone Number``
+- {item-blue}`Website`
+- {item-blue}`Billing Email`
+- {item-blue}`Company Email`
+- {item-blue}`Phone Number`
 
-:::{admonition} Note
-:class: note
-
-The `Name` field is required and cannot be left blank.
-:::

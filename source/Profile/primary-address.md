@@ -16,8 +16,8 @@ Profile Screen, Primary Address
 
 You can edit the following information for the {section}`Primary Address` section:
 
-- `Street Name`
-- `Suite/Apt Number`
-- `City`
-- `State`
-- `Zip Code`
+- {item-red}`Street Name`
+- {item-blue}`Suite/Apt Number`
+- {item-red}`City`
+- {item-red}`State`
+- {item-red}`Zip Code`

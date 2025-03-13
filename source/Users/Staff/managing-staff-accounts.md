@@ -83,7 +83,7 @@ The **Status** column indicates the current status of the account. The following
 ```
 
 (remaining-sections-users-staff-page)=
-# View Staff Details and Other Remaining Sections
+## View Staff Details and Other Remaining Sections
 
 The remaining sections are universally shared throughout the app. 
 

@@ -70,16 +70,6 @@ jobs:
             echo "Copying routes.json to build/html"
             cp routes.json build/html/
           fi
-
-      # 6) Copy staticwebapp.config.json if it exists
-      - name: Copy staticwebapp.config.json
-        run: |
-          if [ -f "staticwebapp.config.json" ] && [ -d "build/html" ]; then
-            echo "Copying staticwebapp.config.json to build/html"
-            cp staticwebapp.config.json build/html/
-          else
-            echo "staticwebapp.config.json not found or build/html does not exist."
-          fi
           
       # 7) Install OIDC client (only needed if you want the ID token below)
       - name: Install OIDC Client from Core Package

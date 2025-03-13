@@ -798,10 +798,8 @@ def category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
 def my_accounts_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """Create a My Accounts category reference with account_balance icon."""
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
-    icon_node['aria-hidden'] = 'true'
-    
-
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
+    icon_node += nodes.Text('account_balance')
     
     # Create visually hidden span for screen readers
     screen_reader_node = nodes.inline('', 'My Accounts Category: ')
@@ -819,12 +817,11 @@ def my_accounts_category_role(name, rawtext, text, lineno, inliner, options={}, 
     
     return [container], []
 
-# Create a Dashboard category reference with home icon
 def dashboard_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """Create a Dashboard category reference with home icon."""
-    # Create icon node
+    # Create icon node (with hide-icon-text)
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('home')
     
     # Create visually hidden span for screen readers
@@ -834,7 +831,7 @@ def dashboard_category_role(name, rawtext, text, lineno, inliner, options={}, co
     # Create the visible text node
     text_node = nodes.inline('', text)
     
-    # Create the container node with both children
+    # Create the container node with both children (no hide-icon-text here)
     container = nodes.inline('', '')
     container['classes'] = ['dashboard-category', 'category-reference']
     container += icon_node
@@ -843,12 +840,12 @@ def dashboard_category_role(name, rawtext, text, lineno, inliner, options={}, co
     
     return [container], []
 
-# Create a Profile category reference with folder_shared icon
+
 def profile_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """Create a Profile category reference with folder_shared icon."""
-    # Create icon node
+    # Create icon node (with hide-icon-text)
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('folder_shared')
     
     # Create visually hidden span for screen readers
@@ -858,7 +855,7 @@ def profile_category_role(name, rawtext, text, lineno, inliner, options={}, cont
     # Create the visible text node
     text_node = nodes.inline('', text)
     
-    # Create the container node with both children
+    # Create the container node with both children (no hide-icon-text here)
     container = nodes.inline('', '')
     container['classes'] = ['profile-category', 'category-reference']
     container += icon_node
@@ -872,7 +869,7 @@ def user_category_role(name, rawtext, text, lineno, inliner, options={}, content
     """Create a User category reference with people icon."""
     # Create icon node
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('people')
     
     # Create visually hidden span for screen readers
@@ -896,7 +893,7 @@ def account_category_role(name, rawtext, text, lineno, inliner, options={}, cont
     """Create an Account category reference with account_balance icon."""
     # Create icon node
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('account_balance')
     
     # Create visually hidden span for screen readers
@@ -920,7 +917,7 @@ def document_category_role(name, rawtext, text, lineno, inliner, options={}, con
     """Create a Document category reference with file_copy icon."""
     # Create icon node
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('file_copy')
     
     # Create visually hidden span for screen readers
@@ -944,9 +941,9 @@ def offering_category_role(name, rawtext, text, lineno, inliner, options={}, con
     """Create an Offering category reference with local_offer icon."""
     # Create icon node
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('local_offer')
-    
+        
     # Create visually hidden span for screen readers
     screen_reader_node = nodes.inline('', 'Offering Category: ')
     screen_reader_node['classes'] = ['visually-hidden']
@@ -968,7 +965,7 @@ def setting_category_role(name, rawtext, text, lineno, inliner, options={}, cont
     """Create a Setting category reference with settings_suggest icon."""
     # Create icon node
     icon_node = nodes.inline('', '')
-    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node['classes'] = ['mat-icon', 'material-icons', 'hide-icon-text']
     icon_node += nodes.Text('settings_suggest')
     
     # Create visually hidden span for screen readers
@@ -992,6 +989,8 @@ def setup(app):
     
     # Setup CSS
     app.add_css_file('css/custom.css')
+      # Add Google Fonts for Material Icons
+    app.add_css_file("https://fonts.googleapis.com/icon?family=Material+Icons")
 
     # Register roles
     app.add_role('tilde1', parse_tilde1)

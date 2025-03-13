@@ -55,6 +55,13 @@ div.margin {
   background-size: contain;
 }
 
+.hide-icon-text {
+  color: transparent;      /* or color: rgba(0,0,0,0) */
+  font-size: 0;
+  line-height: 0;
+}
+
+
 .page-reference span.visually-hidden {
   position: absolute;
   width: 1px;

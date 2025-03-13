@@ -29,7 +29,7 @@ The **Status** column indicates the current status of the account. The following
 - {item-blue}`Pending Activation (needs precise definition)`
 - {item-blue}`Locked Out (needs precise definition)`
 
-```{lazyfigure} ../../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.webp
+```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.webp
 :width: 100%
 :align: center
 :name: staff-homepage-statuscolumns

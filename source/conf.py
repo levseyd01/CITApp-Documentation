@@ -137,6 +137,10 @@ tippy_custom_tips = {
         "<img src='/_static/solo_app/Universal/buttons/upload-button.webp' "
         "alt='Upload Button' style='width:200px;'>"
     ),
+    "#upload-file-explorer-button": (
+        "<img src='/_static/solo_app/Universal/buttons/open-file-explorer.jpg' "
+        "alt='Open File Explorer' style='width:200px;'>"
+    ),
     "#deactivate-button": (
         "<img src='/_static/solo_app/Universal/buttons/deactivate.webp' "
         "alt='Deactivate Button' style='width:200px;'>"
@@ -157,6 +161,7 @@ tippy_custom_tips = {
         "<img src='/_static/solo_app/Universal/icons/delete-icon.webp' "
         "alt='Delete Icon' style='width:200px;'>"
     ),
+    
     "#upload-logo-button": (
         "<img src='/_static/solo_app/Profile/upload-logo-section/upload-logo-button.webp' "
         "alt='Upload Logo Button' style='width:200px;'>"
@@ -326,9 +331,9 @@ html_css_files = ["tippy.css", "my_custom.css"]
 
 # Add our custom JS files
 html_js_files = [
-    'enhance_references.js',
-    'tippy_preview.js',
-    'close_dropdowns.js',  # must match the filename in _static/
+    "https://unpkg.com/@popperjs/core@2",
+    "https://unpkg.com/tippy.js@6",     
+    "tippy-init.js",
 ]
 #html_js_files = ["js/tippy.js", "js/popper.js"]
 '''tippy_js = [

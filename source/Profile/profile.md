@@ -16,7 +16,6 @@ The {page}`Profile Page` allows you edit the following information about your co
 Profile Screen, Information Section
 ```
 
-
 :::{admonition} Note
 :class: note
 

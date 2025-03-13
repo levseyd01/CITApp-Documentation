@@ -58,6 +58,13 @@ The {table}`Staff List Table` includes a table of accounts with the following co
 :name: staff-homepage-columns
 ```
 
+:::{admonition} Note
+:class: note
+
+- {item-red}`Red` items are *required* and cannot be left blank.
+- {item-blue}`Blue` items are *optional*.
+:::
+
 (staff-status-column-options)=
 ## Status Column for Staff
 
@@ -66,8 +73,8 @@ The **Status** column indicates the current status of the account. The following
 - {item-blue}`Active`
 - {item-blue}`Activation Pending`
 - {item-blue}`Inactive`
-- {item-blue}`Pending Activation (needs precise definition)`
-- {item-blue}`Locked Out (needs precise definition)`
+- {item-blue}`Pending Activation`
+- {item-blue}`Locked Out`
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns-status-column.webp
 :width: 100%

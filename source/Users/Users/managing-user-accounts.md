@@ -24,6 +24,13 @@ The {page}`Users` page has the following features:
 Users, User list Table
 ```
 
+:::{admonition} Note
+:class: note
+
+- {item-red}`Red` items are *required* and cannot be left blank.
+- {item-blue}`Blue` items are *optional*.
+:::
+
 ```{include} subsections/user-table.md
 ```
 

@@ -7,7 +7,7 @@ To **Manage an Account**:
 
 1. Go to the {my-accounts-category}`My Accounts` page. 
 
-```{lazyfigure} ../_static/solo_app/My_Accounts/my-accounts-main-page-location.jpg
+```{lazyfigure} ../_static/solo_app/My_Accounts/my-accounts-main-page-location.webp
 :width: 50%
 :name: my-accounts-manage-location
 :align: center

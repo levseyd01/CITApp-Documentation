@@ -25,15 +25,17 @@ CIT Corporation, Homepage, View More Icon Location
 (view-cit-account-section-corporate-information-tab)=
 ## Corporation Information Tab
 
-```{lazyfigure} ../../../_static/solo_app/CIT_Corporation/cit-corporations-view-corp-section.webp
+The {tab}`CIT Corporation Information` tab provides a comprehensive overview of the {item}`CIT Corporation`.
+
+```{lazyfigure} ../../../_static/solo_app/Account/CITCorporations/cit-corporate-information-tab-location.jpg
 :width: 100%
 :align: center
-:name: cit-corporations-view-corp-section
+:name: cit-corporations-view-corp-section-location
 
-CIT Corporation, View Corporation Icon Location
+CIT Corporation, View Corporation, Corporation Information Tab Location
 ```
 
-The {tab}`CIT Corporation Information Tab` allows you to modify the following:
+The {tab}`CIT Corporation Information` tab allows you to modify the following:
 
 - {item}`Name`
 - {item}`Website`

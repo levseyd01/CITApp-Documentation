@@ -199,7 +199,7 @@ tippy_custom_tips = {
         "alt='Reset Password' style='width:200px;'>"
     ),
     "#manage-icon": (
-        "<img src='/_static/solo_app/User/User-Detail/manage-icon.jpg' "
+        "<img src='/_static/solo_app/Universal/icons/manage-icon.webp' "
         "alt='Manage Icon' style='width:200px;'>"
     ),
 }
@@ -1020,6 +1020,13 @@ def setting_category_role(name, rawtext, text, lineno, inliner, options={}, cont
     
     return [container], []
 
+def item_dark_blue_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    from docutils import nodes
+    from docutils.parsers.rst.roles import set_classes
+    set_classes(options)
+    node = nodes.inline(rawtext, text, classes=['item-dark-blue'])
+    return [node], []
+
 def setup(app):
     """Add our functionality to Sphinx."""
     
@@ -1064,6 +1071,7 @@ def setup(app):
     app.add_role('document-category', document_category_role)
     app.add_role('offering-category', offering_category_role)
     app.add_role('setting-category', setting_category_role)
+    app.add_role('item-dark-blue', item_dark_blue_role)
     
     # Tells Sphinx to load your custom CSS
     app.add_css_file("my_custom.css")

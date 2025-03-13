@@ -45,11 +45,11 @@ accounts-tab/accounts-tab-available-actions
 
 The {Column}`Action` has three {action}`Actions` available:
 
-- [View Account](#view-account) - Takes you to the {ref}`Sponsorship Organization Page <user-details-universal-page>`
-- [Edit Permissions](#edit-permissions) - Allows you to {ref}`modify the user's access rights <edit-permissions-universal>`
-- [Delete](#delete) - Allows you to {ref}`remove the user's access <delete-user-universal>`
+- [View Account](#view-more-icon) - Takes you to the {ref}`Sponsorship Organization Page <user-details-universal-page>`
+- [Edit Permissions](#edit-permissions-icon) - Allows you to {ref}`modify the user's access rights <edit-permissions-universal>`
+- [Delete](#delete-icon) - Allows you to {ref}`remove the user's access <delete-user-universal>`
 
-```{lazyfigure} ../../../../_static/solo_app/User/User-Detail/accounts-tab-action-section.webp
+```{lazyfigure} ../../../_static/solo_app/User/User-Detail/accounts-tab-action-section.webp
 :width: 100%
 :align: center
 :name: user-user-accounts-tab-action-column
@@ -61,7 +61,7 @@ User, User Details Homepage, {tab}`Accounts` Tab, {section}`Action` Column
 
 - Select the {ref}`View Account <view-sponsorship-org-details>` button for the account you want to view. 
 
-```{lazyfigure} ../../../../_static/solo_app/User/User-Detail/user-user-details-accounts-tab-view-icon.webp
+```{lazyfigure} ../../../_static/solo_app/User/User-Detail/user-user-details-accounts-tab-view-icon.webp
 :width: 100%
 :align: center
 :name: user-user-details-accounts-tab-view-icon

@@ -3,7 +3,7 @@
 # Legal Information Tab
 
 
-The {tab}`Legal Information`  tab is the second tab inside the {ref}`View Account Details <view-cit-account-section>` section.
+The {tab}`Legal Information` tab is the second tab inside the {ref}`View Account Details <view-cit-account-section>` section.
 
 ```{lazyfigure} ../../../../_static/solo_app/CIT_Corporation/legal-information-tab/legal-information-tab-location.jpg
 :width: 100%
@@ -15,7 +15,7 @@ CIT Corporation, Legal Information Tab
 
 ## Information Available in the Legal Tab
 
-The {tab}`Legal Information Tab` allows you to view and the following information about a given {item}`CIT Corporation`:
+The {tab}`Legal Information` tab allows you to view and the following information about a given {item}`CIT Corporation`:
 
 - {item}`Legal Name`
 - {item}`EIN`
@@ -31,14 +31,12 @@ In addition, this tab allows you to view and edit a {item}`CIT Corporation's`:
 - {item}`Accounting Contact`
 - {item}`Legal Contact`
 
-
-
 (modify-fields-sponsorship-organization-information)=
 ## Editing Legal Information for CIT Corporations
 
 1. Place cursor in the field you want to edit.
-1. Input the desired information.
-1. Click [Save Changes](#save-changes) at the bottom of the page.
+2. Input the desired information.
+3. Click [Save Changes](#save-changes) at the bottom of the page.
 
 :::{admonition} Trying to Edit Other Company Information?
 :class: seealso

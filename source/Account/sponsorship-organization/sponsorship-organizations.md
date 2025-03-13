@@ -3,7 +3,7 @@
 # Sponsorship Organizations
 
 
-The {page}`Sponsorship Organizations Page` allows you to:
+The {page}`Sponsorship Organizations` page allows you to:
 
 - [View Sponsorship Organization details](view-details-sponsorship-account-section)
 - [See a quick overview of important details](sponsorship-organization-table-overview)
@@ -13,7 +13,7 @@ The {page}`Sponsorship Organizations Page` allows you to:
 :::{admonition} Note
 :class: note
 
-The [Manage Sponsorship Organizations icon](#manage-icon) will take you to the {page}`Dashboard Page` for the chosen {item}`Sponsorship Organization`
+The [Manage Sponsorship Organizations](#manage-icon) will take you to the {ref}`Dashboard Page <dashboard-tile-overview-section>` for the chosen {item}`Sponsorship Organization`
 :::
 
 

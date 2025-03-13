@@ -45,12 +45,3 @@ In addition, this tab allows you to view and edit a {item}`CIT Corporation's`:
 
 - See [Editing Company Information](profile-section-homepage) to learn more about editing your company's profile information.
 :::
-
-```{toctree}
-:hidden:
-:maxdepth: 1
-
-Tabs/entity-list-tab
-Tabs/users-tab
-Tabs/view-sponsorship-org-details
-```

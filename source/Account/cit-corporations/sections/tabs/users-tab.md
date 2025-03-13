@@ -3,29 +3,30 @@
 (account-cit-corporation-users-tab-section)=
 # Users Tab
 
-The **Users** tab is a list of all users associated with the **CIT Corporation**.
+The {tab}`Users` tab is a list of all users associated with the {page}`CIT Corporation`.
 
-```{lazyfigure} ../../../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-location-of-tab.webp
+```{lazyfigure} ../../../../_static/solo_app/CIT_Corporation/cit-organization-users-tab-location.jpg
 :width: 100%
 :align: center
-:name: sponsor-organization-users-tab-location-of-tab
+:name: cit-corporations-users-tab-location
 
-CIT Corporation, Users Tab
+CIT Corporation, Users Tab Location
 ```
 
+(action-column-location-users-tab-cit-corporations)=
 ### Navigating the Users Tab
 
-The **Actions** column for the **Users** tab has the following actions available:
+The {column}`Actions` column for the {tab}`Users` tab has the following actions available:
 
-- View User Details
-- Edit Permissions
-- Remove User Access from Entity
+- {ref}`View User Details <user-details-universal-page>`
+- {ref}`Edit Permissions <edit-user-details-universal>`
+- {ref}`Remove User Access <delete-user-universal>`
 
 
 ##  Adding a New User to the CIT Corporation
 
 
-1. Follow the instructions in the {ref}`Adding a New User <adding-new-user-section-universal>` section.
+1. Follow the instructions in the {ref}`Adding a New User <add-new-user-section-universal>` section.
 
 
 ```{admonition} Permissions Options
@@ -65,11 +66,3 @@ The **Actions** column for the **Users** tab has the following actions available
   - Edit/Add User
   - View Users
 ```
-
-
-
-
-
-
-
-

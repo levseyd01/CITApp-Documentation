@@ -3,13 +3,14 @@
 
 The {tab}`Users` tab provides a comprehensive list of all users associated with the {page}`Sponsorship Organization`.
 
-```{lazyfigure} ../../../../../_static/solo_app/Universal/view-sponsorship-organization/users-tab/sponsor-organization-users-tab-location-of-tab.webp
+```{lazyfigure} ../../../../../_static/solo_app/CIT_Corporation/cit-organization-users-tab-location.jpg
 :width: 100%
 :align: center
-:name: sponsor-organization-users-tab-location-of-tab
+:name: cit-organization-users-tab-location-of-tab
 
 Sponsorship Organization, Users Tab
 ```
+
 
 ## Users Tab Actions
 

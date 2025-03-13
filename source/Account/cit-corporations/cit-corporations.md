@@ -51,11 +51,10 @@ You can access additional information through:
 - {ref}`Legal Information Tab <cit-corporation-legal-information-tab-section>`
 - {ref}`Users Tab <account-cit-corporation-users-tab-section>`
 
+
 ```{toctree}
 :maxdepth: 2
 :hidden:
 
 sections/view-cit-corporations
-sections/tabs/legal-information-tab
-sections/tabs/users-tab
 ```

@@ -70,9 +70,9 @@ CIT Corporation, Save Changes Location
 ```
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :hidden:
 
 tabs/legal-information-tab
-tabs/users-tab
+tabs/user-tabs.md
 ```

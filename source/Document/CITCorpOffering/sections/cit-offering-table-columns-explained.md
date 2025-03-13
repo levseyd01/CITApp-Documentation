@@ -14,6 +14,7 @@ CIT Offering Documents Table Columns
 
 There are 8 columns in the {table}`Offering Documents Table`:
 
+ 
 - {column}`ID` - The {item}`ID` associated with the process itself.
 
 :::{admonition} Note

@@ -797,10 +797,11 @@ def category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
 # Create a My Accounts category reference with account_balance icon
 def my_accounts_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """Create a My Accounts category reference with account_balance icon."""
-    # Create icon node
     icon_node = nodes.inline('', '')
     icon_node['classes'] = ['mat-icon', 'material-icons']
-    icon_node += nodes.Text('account_balance')
+    icon_node['aria-hidden'] = 'true'
+    
+
     
     # Create visually hidden span for screen readers
     screen_reader_node = nodes.inline('', 'My Accounts Category: ')

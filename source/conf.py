@@ -194,8 +194,8 @@ tippy_custom_tips = {
         "<img src='/_static/solo_app/User/User-Detail/navigating-to-user-detail-for-Users.webp' "
         "alt='Navigating to User Detail screenshot' style='width:100%;'>"
     ),
-     "#reset-password": (
-        "<img src='/_static/solo_app/User/User-Detail/reset-password.webp' "
+    "#reset-password": (
+        "<img src='/_static/solo_app/Universal/buttons/reset-password.webp' "
         "alt='Reset Password' style='width:200px;'>"
     ),
     "#manage-icon": (
@@ -398,6 +398,34 @@ hoverxref_api_version = 'cit-superadmin'
 hoverxref_auto_ref = True
 hoverxref_ignore_refs = ['genindex', 'modindex', 'search']
 '''
+
+class SearchDirective(SphinxDirective):
+    """A custom directive that creates a search admonition with a search icon."""
+    
+    has_content = True
+    required_arguments = 0
+    optional_arguments = 0
+    final_argument_whitespace = True
+    option_spec = {
+        'class': directives.class_option,
+        'name': directives.unchanged,
+    }
+
+    def run(self):
+        admonition_node = nodes.admonition()
+        admonition_node['classes'] = ['search']
+        
+        title_text = "Search"
+        textnodes, messages = self.state.inline_text(title_text, self.lineno)
+        
+        title = nodes.title(title_text, '', *textnodes)
+        admonition_node += title
+        
+        content = nodes.paragraph()
+        self.state.nested_parse(self.content, self.content_offset, content)
+        admonition_node += content
+        
+        return [admonition_node]
 
 def parse_tilde1(inline, match, state):
     """Handle ~some text~"""
@@ -996,6 +1024,9 @@ def setup(app):
     app.add_css_file('css/custom.css')
       # Add Google Fonts for Material Icons
     app.add_css_file("https://fonts.googleapis.com/icon?family=Material+Icons")
+
+    # Register directives
+    app.add_directive('search', SearchDirective)  # Register the search directive
 
     # Register roles
     app.add_role('tilde1', parse_tilde1)

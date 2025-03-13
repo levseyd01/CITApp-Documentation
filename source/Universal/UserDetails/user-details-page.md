@@ -1,7 +1,7 @@
 (user-details-universal-page)=
 # User Details Page
 
-The {page}`User Details Page` opens up to the {tab}`User Information Tab` 
+The {page}`User Details` page opens up to the {tab}`User Information` tab. 
 
 
 ## User Information Tab
@@ -14,7 +14,7 @@ The {page}`User Details Page` opens up to the {tab}`User Information Tab`
 View User Details Homepage, User Information Tab
 ```
 
-The {page}`User Details Page` has various actions available:
+The {page}`User Details` page has various actions available:
 
 - [Save Changes](#save-changes)
 - [Deactivate User](#deactivate-button)
@@ -30,16 +30,46 @@ You can find the actions at the bottom-right of the page:
 User Actions Location, Bottom Right
 ```
 
-## Other Sections
+(edit-user-details-universal)=
+# Edit User Details
 
-- See {ref}`Edit User Details <edit-user-details-universal>` to learn more about editing user details.
-- See {ref}`User Details: Accounts Tab Page <view-user-details-universal-accounts-tab>` to learn more about the {tab}`Accounts Tab` 
+The {tab}`User Information Tab` allows you to edit the following fields:
+
+- ``First Name``
+- ``Last Name``
+- ``Username (Email)``
+- ``Phone Number``
+
+**To Edit a User's Details:**
+
+1. Place your cursor in the field you want to edit.
+
+:::{admonition} Note
+:class: note
+This section does not require you to click the **Edit** button.
+:::
+
+2. Type the changes you want to make.
+
+3. Click the [Save Changes](#save-changes) button at the bottom-right of the page. 
+
+```{lazyfigure} ../../_static/solo_app/User/Users/user-user-save-changes.webp
+:width: 100%
+:align: center
+:name: user-user-save-changes
+
+User, User Homepage, Save Changes
+```
+
+:::{admonition} Looking for the Accounts Tab?
+
+See {ref}`Accounts Tab <view-user-details-universal-accounts-tab>`
+:::
 
 
 ```{toctree}
 :hidden:
 :maxdepth: 1
 
-edit-user-details
 Tabs/view-user-details-accounts-tab
 ```

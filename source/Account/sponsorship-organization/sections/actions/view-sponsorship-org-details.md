@@ -33,6 +33,7 @@ Sponsorship Organization, View Account Icon
 User, User Homepage, Accounts Tab, View Account Icon
 ```
 
+(modify-fields-sponsorship-organization-information)=
 ## Editing Sponsorship Organization Information
 
 1. Place cursor in the field you want to edit.

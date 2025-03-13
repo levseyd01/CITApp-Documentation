@@ -2,12 +2,15 @@
 (view-cit-account-section)=
 # View CIT Corporation Details
 
+This {section}`View Account Detail` section for a {item}`CIT Corporation` allows you to view and edit the following information:
 
-When you need to view more details about a specific CIT Corporation, you can use the {action}`View Account` button to access all information.
+- {ref}`CIT Corporation Information Tab <view-cit-account-section-corporate-information-tab>`
+- {ref}`Legal Information Tab <cit-corporation-legal-information-tab-section>`
+- {ref}`Users Tab <account-cit-corporation-users-tab-section>`
 
 ## How to Access Corporation Details
 
-1. Select the {action}`View Account` button for the corporation you want to view.
+1. Select the [View Account Details](#view-more-icon) button for the corporation you want to view.
 
 ```{lazyfigure} ../../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-view-more-location.webp
 :width: 100%
@@ -17,17 +20,10 @@ When you need to view more details about a specific CIT Corporation, you can use
 CIT Corporation, Homepage, View More Icon Location
 ```
 
-> Selecting the {action}`View Account` button will take you to the {page}`CIT Corporation Information` screen.
+> This action will take you to the {tab}`CIT Corporation Information Tab`.
 
 (view-cit-account-section-corporate-information-tab)=
 ## Corporation Information Tab
-
-The {tab}`CIT Corporation Information` tab allows you to view and edit the following information:
-
-- CIT's Corporation's General Information
-- CIT Corporation's Primary Address
-- CIT Corporation's Mailing Address
-- CIT Corporation's Logo
 
 ```{lazyfigure} ../../../_static/solo_app/CIT_Corporation/cit-corporations-view-corp-section.webp
 :width: 100%
@@ -37,6 +33,21 @@ The {tab}`CIT Corporation Information` tab allows you to view and edit the follo
 CIT Corporation, View Corporation Icon Location
 ```
 
+The {tab}`CIT Corporation Information Tab` allows you to modify the following:
+
+- {item}`Name`
+- {item}`Website`
+- {item}`Billing Email`
+- {item}`Company Email`
+- {item}`Phone Number`
+
+In addition, this tab allows you to modify information related to the Corporation's:
+
+- {item}`Primary Address`
+- {item}`Mailing Address`
+- {item}`Logo`
+
+(how-to-edit-cit-corporation-information-section)=
 ### Editing Corporation Information
 
 1. Place cursor in the field you want to edit.
@@ -47,13 +58,16 @@ CIT Corporation, View Corporation Icon Location
 There is no {action}`Edit` button in this section. The fields are editable as is.
 ```
 
-1. Input the desired information.
-1. Click {action}`Save Changes` at the bottom of the page.
+2. Input the desired information.
+3. Click {action}`Save Changes` at the bottom of the page.
 
-```{admonition} Seealso
-:class: seealso
+```{lazyfigure} ../../../_static/solo_app/Universal/view-sponsorship-organization/save-changes-location.jpg
+:width: 100%
+:align: center
+:name: save-changes-location
 
-- See [Editing Company Information](editing-company-information-section) to learn more about editing your company's profile information.
+CIT Corporation, Save Changes Location
+```
 
 ```{toctree}
 :maxdepth: 2

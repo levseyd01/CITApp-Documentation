@@ -27,7 +27,9 @@ Users, User list Table
 (users-user-list-table-page)=
 ## User List Table
 
-The {table}`User List Table` summarizes key details for each staff member, including:
+The {table}`User List` table summarizes key details for each {item}`User` that exists within the {item}`CIT Corporation`.
+
+**It provides, the User's:** 
 
 - {item}`Contact Information`
 - {item}`Status`

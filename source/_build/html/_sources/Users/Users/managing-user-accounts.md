@@ -34,3 +34,6 @@ subsections/user-table
 subsections/filter-table
 subsections/remaining-user-list-sections
 ```
+
+```{include} subsections/filter-table.md
+```

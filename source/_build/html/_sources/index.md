@@ -1,9 +1,7 @@
 
 # CIT App (CIT Services)
 
-Welcome to the documentation for the {item}`CIT Services` version of the CIT App. See below to get started. 
-
-
+Welcome to the documentation for the {item}`CIT Services` version of the **CIT App**. See below to get started. 
 
 # My Accounts
 
@@ -26,10 +24,6 @@ You can navigate to the rest of the app through the {item}`Primary Sidebar`.
 
 For more on navigation and the primary sidebar, see {ref}`General Sidebar Navigation <general-sidebar-navigation>` page.
 
-
-
-[^sn1]: And here's my sidenote content.
-
 ```{toctree}
 :maxdepth: 2
 :hidden:
@@ -44,8 +38,6 @@ Account/account.md
 Document/document.md
 Offering/Index.md
 ```
-
-
 
 ```{toctree}
 :maxdepth:2

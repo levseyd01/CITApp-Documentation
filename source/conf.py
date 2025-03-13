@@ -776,6 +776,198 @@ def category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     
     return [container], []
 
+# Create a My Accounts category reference with account_balance icon
+def my_accounts_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a My Accounts category reference with account_balance icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('account_balance')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'My Accounts Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['my-accounts-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a Dashboard category reference with home icon
+def dashboard_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a Dashboard category reference with home icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('home')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Dashboard Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['dashboard-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a Profile category reference with folder_shared icon
+def profile_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a Profile category reference with folder_shared icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('folder_shared')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Profile Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['profile-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a User category reference with people icon
+def user_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a User category reference with people icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('people')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'User Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['user-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an Account category reference with account_balance icon
+def account_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an Account category reference with account_balance icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('account_balance')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Account Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['account-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a Document category reference with file_copy icon
+def document_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a Document category reference with file_copy icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('file_copy')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Document Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['document-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create an Offering category reference with local_offer icon
+def offering_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an Offering category reference with local_offer icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('local_offer')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Offering Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['offering-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a Setting category reference with settings_suggest icon
+def setting_category_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create a Setting category reference with settings_suggest icon."""
+    # Create icon node
+    icon_node = nodes.inline('', '')
+    icon_node['classes'] = ['mat-icon', 'material-icons']
+    icon_node += nodes.Text('settings_suggest')
+    
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Setting Category: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['setting-category', 'category-reference']
+    container += icon_node
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
 def setup(app):
     """Add our functionality to Sphinx."""
     
@@ -806,6 +998,14 @@ def setup(app):
     app.add_role('smallicon', smallicon_role)  # Add the new smallicon role
     app.add_role('red', red_role)  # Add the new red text role
     app.add_role('category', category_role)  # Add the new category role
+    app.add_role('my-accounts-category', my_accounts_category_role)
+    app.add_role('dashboard-category', dashboard_category_role)
+    app.add_role('profile-category', profile_category_role)
+    app.add_role('user-category', user_category_role)
+    app.add_role('account-category', account_category_role)
+    app.add_role('document-category', document_category_role)
+    app.add_role('offering-category', offering_category_role)
+    app.add_role('setting-category', setting_category_role)
     
     # Tells Sphinx to load your custom CSS
     app.add_css_file("my_custom.css")

@@ -1,4 +1,4 @@
-selector_to_html = {"a[href=\"#user\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">User<a class=\"headerlink\" href=\"#user\" title=\"Link to this heading\">#</a></h1><p>The <span class=\"section-reference\"><span class=\"visually-hidden\">Section: </span><span>User Section</span></span> allows you to manage:</p>"}
+selector_to_html = {"a[href=\"#completed-tab-available-actions\"]": "<h1 class=\"tippy-header\" style=\"margin-top: 0;\">Completed Tab: Available Actions<a class=\"headerlink\" href=\"#completed-tab-available-actions\" title=\"Link to this heading\">#</a></h1><p>The  cards contain every action besides the <a class=\"reference internal\" href=\"#upload-logo-button\"><span class=\"xref myst\">Approve Uploaded Document</span></a> action:</p>", "a[href=\"#upload-logo-button\"]": "<img src='/_static/solo_app/Profile/upload-logo-section/upload-logo-button.webp' alt='Upload Logo Button' style='width:200px;'>"}
 skip_classes = ["headerlink", "sd-stretched-link"]
 
 window.onload = function () {

@@ -74,10 +74,10 @@ div.margin {
 }
 
 .section-reference {
-  color: #0D47A1 !important;
+  color: #212121 !important;            /* A dark, legible grey for text */
   font-weight: 600 !important;
-  background-color: #E3F2FD !important;
-  border: 2px solid #2196F3 !important;
+  background-color: #F5F5F5 !important;   /* A very light grey for a soft background */
+  border: 2px solid #BDBDBD !important;   /* A medium grey for clear boundaries */
   border-radius: 3px !important;
   padding: 2px 6px 2px 26px !important;
   position: relative !important;
@@ -91,7 +91,7 @@ div.margin {
   transform: translateY(-50%);
   width: 16px;
   height: 16px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232196F3"><path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23757575"><path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"/></svg>');
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -106,6 +106,8 @@ div.margin {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+
 
 .subsection-reference {
   color: #C2185B !important;
@@ -342,7 +344,7 @@ div.margin {
 }
 
 .item-blue-reference {
-  color: #673AB7 !important; /* Purple text to match the colors in the screenshot */
+  color: #1E88E5 !important;/* Purple text to match the colors in the screenshot */
   font-weight: normal !important;
   background-color: #F5F5F5 !important; /* Light gray background */
   border-radius: 3px !important;

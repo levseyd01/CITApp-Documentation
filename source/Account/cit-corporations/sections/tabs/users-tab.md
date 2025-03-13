@@ -1,7 +1,7 @@
 
 
 (account-cit-corporation-users-tab-section)=
-# Users Tab
+# CIT Corporation Account: Users Tab
 
 The {tab}`Users` tab is a list of all users associated with the {page}`CIT Corporation`.
 

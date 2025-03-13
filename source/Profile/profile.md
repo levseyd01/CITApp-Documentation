@@ -1,4 +1,3 @@
-
 (profile-section-homepage)=
 # Profile
 
@@ -20,11 +19,26 @@ The {page}`Profile Page` allows you edit the following information about your co
 Profile Screen, Information Section
 ```
 
-```{toctree}
-:hidden:
-:maxdepth: 1
+(profile-section-name-contact-information)=
+# Name and Contact Information
 
-sections/name-and-contact-information.md
-sections/primary-address.md
-sections/upload-logo.md
+```{include} sections/name-and-contact-information.md
 ```
+
+(primary-address-profile-section-company-information)=
+# Primary Address
+
+```{include} sections/primary-address.md
+```
+
+(mailing-address-profile-section-company-information)=
+# Mailing Address
+
+```{include} sections/mailing-address.md
+```
+
+:::{admonition} Looking to Upload a Logo?
+:class: seealso
+
+See {ref}`Upload Logo <general-upload-logo-section>`
+:::

@@ -128,6 +128,12 @@ Renders as: {item-deepblue}`Deep Blue Item`
 
 Renders as: {item-teal}`Teal Item`
 
+```markdown
+{item-red}`Required Field`
+```
+
+Renders as: {item-red}`Required Field`
+
 ## Special Formatting Roles
 
 ### Small Icon Role
@@ -170,49 +176,49 @@ These roles match the navigation structure in the application and include the co
 {my-accounts-category}`My Accounts`
 ```
 
-Renders as: {my-accounts-category}`My Accounts` (with account_balance icon)
+Renders as: {my-accounts-category}`My Accounts`
 
 ```markdown
 {dashboard-category}`Dashboard`
 ```
 
-Renders as: {dashboard-category}`Dashboard` (with home icon)
+Renders as: {dashboard-category}`Dashboard`
 
 ```markdown
 {profile-category}`Profile`
 ```
 
-Renders as: {profile-category}`Profile` (with folder_shared icon)
+Renders as: {profile-category}`Profile`
 
 ```markdown
 {user-category}`User`
 ```
 
-Renders as: {user-category}`User` (with people icon)
+Renders as: {user-category}`User`
 
 ```markdown
 {account-category}`Account`
 ```
 
-Renders as: {account-category}`Account` (with account_balance icon)
+Renders as: {account-category}`Account`
 
 ```markdown
 {document-category}`Document`
 ```
 
-Renders as: {document-category}`Document` (with file_copy icon)
+Renders as: {document-category}`Document`
 
 ```markdown
 {offering-category}`Offering`
 ```
 
-Renders as: {offering-category}`Offering` (with local_offer icon)
+Renders as: {offering-category}`Offering`
 
 ```markdown
 {setting-category}`Setting`
 ```
 
-Renders as: {setting-category}`Setting` (with settings_suggest icon)
+Renders as: {setting-category}`Setting`
 
 ## Usage in Documentation
 

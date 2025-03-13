@@ -716,7 +716,25 @@ def item_teal_role(name, rawtext, text, lineno, inliner, options={}, content=[])
     
     return [container], []
 
-# Create a small icon reference
+# Create an item-red reference with screen reader text.
+def item_red_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """Create an item-red reference with grey background and red text."""
+    # Create visually hidden span for screen readers
+    screen_reader_node = nodes.inline('', 'Red Option: ')
+    screen_reader_node['classes'] = ['visually-hidden']
+    
+    # Create the visible text node
+    text_node = nodes.inline('', text)
+    
+    # Create the container node with both children
+    container = nodes.inline('', '')
+    container['classes'] = ['item-red-reference']
+    container += screen_reader_node
+    container += text_node
+    
+    return [container], []
+
+# Create a small icon reference that renders icons in a smaller size.
 def smallicon_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     """Create a small icon reference that renders icons in a smaller size."""
     # Get the icon key by adding # prefix
@@ -788,15 +806,15 @@ def my_accounts_category_role(name, rawtext, text, lineno, inliner, options={}, 
     screen_reader_node = nodes.inline('', 'My Accounts Category: ')
     screen_reader_node['classes'] = ['visually-hidden']
     
-    # Create the visible text node
-    text_node = nodes.inline('', text)
+    # Create the visible text node - ensure space between icon and text
+    text_node = nodes.inline('', ' ' + text)
     
     # Create the container node with both children
     container = nodes.inline('', '')
     container['classes'] = ['my-accounts-category', 'category-reference']
-    container += icon_node
-    container += screen_reader_node
-    container += text_node
+    container += screen_reader_node  # Add screen reader node first (hidden visually)
+    container += icon_node           # Add icon next
+    container += text_node           # Add text last
     
     return [container], []
 
@@ -994,6 +1012,7 @@ def setup(app):
     app.add_role('item-orange', item_orange_role)
     app.add_role('item-deepblue', item_deepblue_role)
     app.add_role('item-teal', item_teal_role)
+    app.add_role('item-red', item_red_role)  # Add the new item-red role
     app.add_role('tippy-ref', tippy_ref_role)  # Add the new tippy-ref role
     app.add_role('smallicon', smallicon_role)  # Add the new smallicon role
     app.add_role('red', red_role)  # Add the new red text role

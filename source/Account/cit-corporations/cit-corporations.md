@@ -17,12 +17,12 @@ The {page}`CIT Corporations` section is located under the {section}`Account` sec
 Account, CIT Corporations, Homepage
 ```
 
-## CIT Corporations List: Table and Features
-
 The {table}`CIT Corporations List` table allows you to filter the table by:
 
-- {item-dark-blue}`Status`, Or
-- {item-dark-blue}`Sponsorship Organization`
+- {item-blue}`Status`, Or
+- {item-blue}`Sponsorship Organization`
+
+You can find these options at the top of the page:
 
 ```{lazyfigure} ../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-filter-section.webp
 :width: 100%
@@ -32,9 +32,24 @@ The {table}`CIT Corporations List` table allows you to filter the table by:
 Account, CIT Corporations, Homepage, Filter Locations
 ```
 
+## Columns in the CIT Corporations Table
+
+The {table}`CIT Corporations Table` has several columns that provide key information at a glance:
+
+- {column}`ID` - Unique identifier for each CIT Corporation
+- {column}`Sponsorship Organization Name` - The name of the sponsoring organization
+- {column}`Number of CIT Corporations` - Total count of corporations under this sponsor
+- {column}`Website` - Corporation's website URL
+- {column}`Email` - Primary contact email
+- {column}`Phone` - Contact phone number
+- {column}`Status` - Current status of the corporation
+- {column}`Action` - Available actions for this corporation
+
 ### Filter by Status Location
 
-You can find the {item-dark-blue}`Status` dropdown in the {table}`CIT Corporations List` table by looking for it at the top of the page:
+**To Filter by Status:**
+
+1. Find the {item-blue}`Status` dropdown at the top-left of the page. 
 
 ```{lazyfigure} ../../_static/solo_app/Account/CITCorporations/cit-corporate-information-status-filter-location.jpg
 :width: 75%
@@ -44,19 +59,22 @@ You can find the {item-dark-blue}`Status` dropdown in the {table}`CIT Corporatio
 Account, CIT Corporations, Homepage, Status Dropdown Location
 ```
 
-(filter-by-status-account-cit-corporations-options)=
-### Status Options
 
+2. Select a {ref}`Status <filter-by-status-account-cit-corporations-options>` from the dropdown.
 
 ```{lazyfigure} ../../_static/solo_app/Account/CITCorporations/account-cit-corporations-status-dropdown-options.jpg
-:width: 75%
+:width: 50%
 :align: center
 :name: account-cit-corporations-status-dropdown-options
 
 Account, CIT Corporations, Homepage, Status Dropdown Options
 ```
 
-The {item-dark-blue}`Status` dropdown includes five different options:
+
+(filter-by-status-account-cit-corporations-options)=
+### Status Options
+
+The {item-blue}`Status` dropdown includes five different options:
 
 (status-options-full-list-cit-corporations-table)=
 
@@ -73,18 +91,7 @@ The {item-dark-blue}`Status` dropdown includes five different options:
 For more on filtering statuses see {ref}`Search and Filter Options <how-to-filter-users-user-table>` section of the {ref}`Universal User <users-user-manage-user-accounts>` page.
 :::
 
-## Columns in the CIT Corporations Table
 
-The {table}`CIT Corporations Table` has several columns that provide key information at a glance:
-
-- {column}`ID` - Unique identifier for each CIT Corporation
-- {column}`Sponsorship Organization Name` - The name of the sponsoring organization
-- {column}`Number of CIT Corporations` - Total count of corporations under this sponsor
-- {column}`Website` - Corporation's website URL
-- {column}`Email` - Primary contact email
-- {column}`Phone` - Contact phone number
-- {column}`Status` - Current status of the corporation
-- {column}`Action` - Available actions for this corporation
 
 ## Additional Information
 

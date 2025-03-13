@@ -276,14 +276,17 @@ tippy_custom_tips = {
 # Optionally, tweak tippy settings:
 #tippy_inline = True  # enable inline tips
 #tippy_enable_mathjax = True
+# More narrowly target just images + figures:
+# For example, handle images, figures, and *any link pointing to a hash*
+tippy_tip_selector = "figure, img, a[href^='#'], p, aside, div.admonition, div.literal-block-wrapper, table"
 
-tippy_tip_selector = "figure, table, img, p, aside, div.admonition, div.literal-block-wrapper"
+# tippy_tip_selector = "figure, table, img, "
 
 tippy_skip_anchor_classes = (
     "headerlink",
     "sd-stretched-link",
 )
-#tippy_anchor_parent_selector =".tippy-section"
+#tippy_anchor_parent_selector =".tippy-sectionas"
 
 tippy_anchor_parent_selector = "article.bd-article"
 

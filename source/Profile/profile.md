@@ -20,7 +20,7 @@ Profile Screen, Information Section
 :class: note
 
 - {item-red}`Red` items are *required* and cannot be left blank.
-- {item-blue}`Blue` items are *optional*.
+- {item-dark-blue}`Blue` items are *optional*.
 :::
 
 (profile-section-name-contact-information)=
@@ -39,10 +39,10 @@ Profile Screen, Name and Contact Information
 The following fields can be edited:
 
 - {item-red}`Name`
-- {item-blue}`Website`
-- {item-blue}`Billing Email`
-- {item-blue}`Company Email`
-- {item-blue}`Phone Number`
+- {item-dark-blue}`Website`
+- {item-dark-blue}`Billing Email`
+- {item-dark-blue}`Company Email`
+- {item-dark-blue}`Phone Number`
 
 (primary-address-profile-section-company-information)=
 ## Primary Address
@@ -66,7 +66,7 @@ Profile Screen, Primary Address
 You can edit the following information for the {section}`Primary Address` section:
 
 - {item-red}`Street Name`
-- {item-blue}`Suite/Apt Number`
+- {item-dark-blue}`Suite/Apt Number`
 - {item-red}`City`
 - {item-red}`State`
 - {item-red}`Zip Code`
@@ -79,7 +79,7 @@ The {section}`Mailing Address` section allows you to update your company's maili
 :::{admonition} Note
 :class: note
 
-- Leave {item-blue}`Street Name` empty if {item}`Mailing Address` is the same as {item}`Primary Address`.
+- Leave {item-dark-blue}`Street Name` empty if {item}`Mailing Address` is the same as {item}`Primary Address`.
 :::
 
 ```{lazyfigure}  ../../_static/solo_app/Profile/information-section/mailing-address-zoomed-in.webp
@@ -92,11 +92,11 @@ Profile Screen, Mailing Address
 
 You can edit the following information for the {section}`Mailing Address` section:
 
-- {item-blue}`Street Name`
-- {item-blue}`Suite/Apt Number`
-- {item-blue}`City`
-- {item-blue}`State`
-- {item-blue}`Zip Code`
+- {item-dark-blue}`Street Name`
+- {item-dark-blue}`Suite/Apt Number`
+- {item-dark-blue}`City`
+- {item-dark-blue}`State`
+- {item-dark-blue}`Zip Code`
 
 (general-upload-logo-section)=
 ## Upload Logo

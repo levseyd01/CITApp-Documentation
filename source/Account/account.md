@@ -2,12 +2,12 @@
 (account-section)=
 # Account 
 
-The {section}`Account Section` section allows you to edit the following:
+The following {section}`Sections` are included in the {account-category}`Account` category:
 
 
-- [Sponsorship Organization](sponsorship-organization-section)
-- [CIT Corporations](cit-corporations-section)
-- [Investors](investors-section)
+- {ref}`Sponsorship Organization <sponsorship-organization-section>`
+- {ref}`CIT Corporations <cit-corporations-list-section>`
+- {ref}`Investors <investors-section>`
 
 
 ```{toctree}

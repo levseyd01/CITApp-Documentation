@@ -1,55 +1,41 @@
-(cit-corporations-page)=
+(cit-corporations-list-section)=
 # CIT Corporations List
 
-The {page}`CIT Corporations` page allows you to:
+The {section}`cit corporations` section allows you to:
 
 - {ref}`View Corporation Details <view-cit-account-section>`
 - {ref}`Manage a CIT Corporations Legal Information <cit-corporation-legal-information-tab-section>`
-- {ref}`Add new users to a CIT Corporation <account-cit-corporation-users-tab-section>`
+- {ref}`Manage CIT Corporations Users <account-cit-corporation-users-tab-section>`
 
-The {page}`CIT Corporations` section is located under the {section}`Account` section, and opens up to the following table:
+The {section}`cit corporations` section is located under the {section}`Account` section, and opens up to the following table:
 
 ```{lazyfigure} ../../_static/solo_app/CIT_Corporation/cit-corporations-homepage.webp
 :width: 100%
 :align: center
-:name: account-cit-corporations-homepage
+:name: cit-corporations-homepage
 
 Account, CIT Corporations, Homepage
 ```
 
-The {table}`CIT Corporations List` table allows you to filter the table by:
+## Search and Filter
 
-- {item-blue}`Status`, Or
-- {item-blue}`Sponsorship Organization`
+You can easily find specific CIT Corporations using:
 
-You can find these options at the top of the page:
+1. **Search** by Corporation Name
+2. **Filter** by Status
 
-```{lazyfigure} ../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-filter-section.webp
-:width: 100%
-:align: center
-:name: account-cit-corporations-list-table-status-and-sponsorship-organization-filter-location
+### Search by Corporation Name
 
-Account, CIT Corporations, Homepage, Filter Locations
-```
+To search for a specific corporation:
 
-## Columns in the CIT Corporations Table
+1. Enter the corporation name in the search field
+2. Results will update automatically
 
-The {table}`CIT Corporations Table` has several columns that provide key information at a glance:
-
-- {column}`ID` - Unique identifier for each CIT Corporation
-- {column}`Sponsorship Organization Name` - The name of the sponsoring organization
-- {column}`Number of CIT Corporations` - Total count of corporations under this sponsor
-- {column}`Website` - Corporation's website URL
-- {column}`Email` - Primary contact email
-- {column}`Phone` - Contact phone number
-- {column}`Status` - Current status of the corporation
-- {column}`Action` - Available actions for this corporation
-
-### Filter by Status Location
+### Filter by Status
 
 **To Filter by Status:**
 
-1. Find the {item-blue}`Status` dropdown at the top-left of the page. 
+1. Find the {item-blue}`Status` dropdown at the top-left of the page.
 
 ```{lazyfigure} ../../_static/solo_app/Account/CITCorporations/cit-corporate-information-status-filter-location.jpg
 :width: 75%
@@ -58,7 +44,6 @@ The {table}`CIT Corporations Table` has several columns that provide key informa
 
 Account, CIT Corporations, Homepage, Status Dropdown Location
 ```
-
 
 2. Select a {ref}`Status <filter-by-status-account-cit-corporations-options>` from the dropdown.
 
@@ -70,8 +55,21 @@ Account, CIT Corporations, Homepage, Status Dropdown Location
 Account, CIT Corporations, Homepage, Status Dropdown Options
 ```
 
+## Columns in the CIT Corporations Table
+
+The {table}`CIT Corporations` table has several columns that provide key information at a glance:
+
+- {column}`ID` column - Unique identifier for each CIT Corporation
+- {column}`Sponsorship Organization Name` column - The name of the sponsoring organization
+- {column}`CIT Corporation Name` column - The name of the corporation
+- {column}`Website` column - Corporation's website URL
+- {column}`Email` column - Primary contact email
+- {column}`Phone` column - Contact phone number
+- {column}`Status` column - Current status of the corporation
+- {column}`Action` column - Available actions for this corporation
 
 (filter-by-status-account-cit-corporations-options)=
+
 ### Status Options
 
 The {item-blue}`Status` dropdown includes five different options:
@@ -91,20 +89,15 @@ The {item-blue}`Status` dropdown includes five different options:
 For more on filtering statuses see {ref}`Search and Filter Options <how-to-filter-users-user-table>` section of the {ref}`Universal User <users-user-manage-user-accounts>` page.
 :::
 
-
-
 ## Additional Information
 
 You can access additional information through:
 
-
 - {ref}`Legal Information Tab <cit-corporation-legal-information-tab-section>`
 - {ref}`Users Tab <account-cit-corporation-users-tab-section>`
-
 
 ```{toctree}
 :maxdepth: 2
 :hidden:
 
 sections/view-cit-corporations
-```

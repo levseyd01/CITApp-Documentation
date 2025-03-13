@@ -9,10 +9,10 @@
 (users-user-manage-staff-accounts)=
 # Staff
 
-The {page}`Staff` page has the following features:
+The section {section}`Staff` section has the following features:
 
-- {ref}`Table Overview <users-staff-list-table>`,
-- {ref}`View User Details, etc. <remaining-sections-users-staff-page>`
+- {ref}`table overview <users-staff-list-table>`,
+- {ref}`view user details, etc. <remaining-sections-users-staff-page>`
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage.webp
 :width: 100%
@@ -23,14 +23,14 @@ The {page}`Staff` page has the following features:
 (users-staff-list-table)=
 # Staff List Columns
 
-The {table}`Staff List Table` includes a table of accounts with the following {column}`Columns`:
+The table {table}`Staff List` table includes a table of accounts with the following columns {column}`Columns`:
 
-- {column}`Contact Name`
-- {column}`Contact Email` 
-- {column}`Number of Visits`
-- {column}`Last Logged In`
-- {column}`Status`
-- {column}`Action`
+- column {column}`Contact Name`
+- column {column}`Contact Email`
+- column {column}`Number of Visits`
+- column {column}`Last Logged In`
+- column {column}`Status`
+- column {column}`Action`
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns.webp
 :width: 100%
@@ -43,11 +43,11 @@ Users, Staff Homepage, Columns
 (staff-status-column-options)=
 ## Filter by Status
 
-The {column}`Status` column indicates the current status of the account. 
+The {column}`Status` columnindicates the current status of the account.
 
-Possible statuses include:
+Possible {item-blue}`Status` options include:
 
-- {item-blue}`All`
+- {item}`All`
 - {item-green}`Active`
 - {item-cyan}`Pending Activation`
 - {item}`Inactive`
@@ -62,7 +62,7 @@ Possible statuses include:
 (remaining-sections-users-staff-page)=
 ## View Staff Details and Other Remaining Sections
 
-The remaining sections are universally shared throughout the app. 
+The remaining sections are universally shared throughout the app.
 
 **These sections include:**
 

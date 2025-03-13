@@ -1,7 +1,8 @@
 (users-index-page)=
 # User
 
-The {categroy}`User` cateogry includes the following {section}
+The following sections are included in the {user-category}`User` category:
+
 
 - {ref}`User Accounts <users-user-manage-user-accounts>`
 - {ref}`Staff Accounts <users-user-manage-staff-accounts>`

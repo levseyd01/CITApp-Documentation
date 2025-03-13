@@ -8,7 +8,7 @@ This section is meant to house all of the information needed to navigate through
 ```
 
 (navigation-section-how-to)=
-# Navigation Section
+## Navigation Section
 
 - {ref}`General Sidebar Navigation <general-sidebar-navigation>`
 

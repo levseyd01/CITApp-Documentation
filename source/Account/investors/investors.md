@@ -1,7 +1,8 @@
-(investors-page)=
+
+(investors-section)=
 # Investors
 
-The {page}`Investors List` section provides a comprehensive view of all investors in the system.
+The {section}`Investors List` section provides a comprehensive view of all investors in the system.
 
 ```{lazyfigure} ../../_static/solo_app/Universal/InvestorList/investor-list-homepage.webp
 :width: 100%
@@ -13,7 +14,7 @@ Investors List Homepage
 
 ## Overview
 
-The {page}`Investors List` displays all registered investors and provides tools to search, view, and manage investor records.
+The {section}`Investors List` displays all registered investors and provides tools to search, view, and manage investor records.
 
 ## Search Functionality
 

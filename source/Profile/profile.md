@@ -111,7 +111,7 @@ Profile Screen, Upload Logo Section
 
 **To Upload:**
 
-1. Find the [Upload Logo](#upload-logo-section) Section.
+1. Find the [Upload Logo](#upload-logo-section) section.
 
 ```{lazyfigure} ../../_static/solo_app/Profile/upload-logo-section/upload-section-location.jpg
 :width: 400px
@@ -121,7 +121,7 @@ Profile Screen, Upload Logo Section
 Upload Logo Section Location
 ```
 
-2. Click the [Upload Logo](#upload-logo-button) Button. 
+2. Click the [Upload Logo](#upload-logo-button) button. 
 
 ```{lazyfigure} ../../_static/solo_app/Profile/upload-logo-section/upload-logo-location.jpg
 :width: 400px

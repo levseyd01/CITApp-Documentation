@@ -1,9 +1,8 @@
-
 # CIT App (CIT Services)
 
 Welcome to the documentation for the {item}`CIT Services` version of the **CIT App**. See below to get started. 
 
-# My Accounts
+## My Accounts
 
 The **CIT App** will always open up to the {page}`My Accounts Page`  
 
@@ -46,4 +45,5 @@ Offering/Index.md
 
 
 Universal/universal.md
+role-definitions.md
 ```

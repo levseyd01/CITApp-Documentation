@@ -9,7 +9,7 @@
 (users-user-manage-staff-accounts)=
 # Staff
 
-The {page}`Staff Page` has the following features:
+The {page}`Staff` page has the following features:
 
 - {ref}`Table Overview <users-staff-list-table>`,
 - {ref}`View User Details, etc. <remaining-sections-users-user-page>`
@@ -20,11 +20,11 @@ The {page}`Staff Page` has the following features:
 :name: staff-homepage
 ```
 
-```{toctree}
-:hidden:
-:maxdepth: 1
+```{include} subsections/staff-table.md
+```
 
-subsections/staff-table
-subsections/staff-list-columns
-subsections/remaining-staff-list-sections
+```{include} subsections/staff-list-columns.md
+```
+
+```{include} subsections/remaining-staff-list-sections.md
 ```

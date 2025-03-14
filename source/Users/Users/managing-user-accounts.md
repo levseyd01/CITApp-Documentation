@@ -9,12 +9,12 @@
 (users-user-manage-user-accounts)=
 # Users
 
-The {section}`Users` section has the following features:
+The {section}`Users` section covers everything listed in the **Table of Contents** below:
 
-- {ref}`Table Overview <users-user-list-table-page>`,
-- {ref}`Search by User Name or Email <how-to-search-users-user-table>`,
-- {ref}`Filter by Status <filter-by-status-users-user-options>`, and
-- {ref}`View User Details and Other Features <remaining-sections-users-user-page>`
+```{contents} Table of Contents 
+:local:
+:depth: 3
+```
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-homepage.webp
 :width: 100%

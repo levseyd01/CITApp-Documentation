@@ -1,33 +1,39 @@
-```{eval-rst}
-.. only:: latex
 
-   .. raw:: latex
 
-      \clearpage
-```
+
+
 
 (users-user-manage-staff-accounts)=
 # Staff
 
+
+The {section}`Staff` section covers everything listed in the **Table of Contents** below:
+
 ```{contents}
 :local:
 :depth: 3
-
 ```
 
-The section {section}`Staff` section has the following features:
+:::{admonition} Hover for Page Preview
+:class: hint, dropdown
 
-- {ref}`table overview <users-staff-list-table>`,
-- {ref}`view user details, etc. <remaining-sections-users-staff-page>`
+Hover over the links for a page preview.
 
+![Your Animation](../../_static/solo_app/Universal/gif/Animation.gif)_
+
+
+:::
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage.webp
 :width: 100%
 :align: center
 :name: staff-homepage
+
+Staff Homepage
 ```
 
+
 (users-staff-list-table)=
-# Staff List Columns
+## Staff List Columns
 
 The table {table}`Staff List` table includes a table of accounts with the following columns {column}`Columns`:
 

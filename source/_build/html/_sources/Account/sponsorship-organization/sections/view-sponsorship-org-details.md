@@ -46,11 +46,3 @@ User, User Homepage, Accounts Tab, View Account Icon
 - See [Editing Company Information](profile-section-homepage) to learn more about editing your company's profile information.
 :::
 
-```{toctree}
-:hidden:
-:maxdepth: 1
-
-view-sponsorship-org-details
-Tabs/entity-list-tab
-Tabs/users-tab
-```

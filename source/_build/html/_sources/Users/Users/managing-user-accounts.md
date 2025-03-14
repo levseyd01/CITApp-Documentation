@@ -13,7 +13,7 @@ The {section}`Users` section has the following features:
 
 - {ref}`Table Overview <users-user-list-table-page>`,
 - {ref}`Search by User Name or Email <how-to-search-users-user-table>`,
-- {ref}`Filter by Status <filter-by-status-users-user-options>`, And
+- {ref}`Filter by Status <filter-by-status-users-user-options>`, and
 - {ref}`View User Details and Other Features <remaining-sections-users-user-page>`
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-homepage.webp
@@ -31,12 +31,12 @@ The {table}`User List` table summarizes key details for each {item}`User` that e
 
 **It provides the User's:** 
 
-- {item}`Contact Information`, And
+- {item}`Contact Information`, and
 - {item}`Status`.
 
 Additionally, you can perform these actions directly from the table:
 
-- {item}`Three Actions` (**i.e.,** [View User Details](#user-details-universal-page), [Edit User Details](#edit-permissions-universal), And [Delete User](#delete-user-universal)) 
+- {item}`Three Actions` (**i.e.,** [View User Details](#user-details-universal-page), [Edit User Details](#edit-permissions-universal), and [Delete User](#delete-user-universal)) 
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-column-options.webp
 :width: 100%
@@ -92,9 +92,6 @@ User, User Homepage, Status Filter Dropdown
 ```
 
 3. The table updates automatically to display matching users.
-
-
-
 
 (remaining-sections-users-user-page)=
 ## View User Details and Other Remaining Sections

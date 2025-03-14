@@ -37,4 +37,6 @@ The {column}`Action` column provides the following operations:
 :maxdepth: 1
 
 view-sponsorship-org-details
+Tabs/entity-list-tab
+Tabs/users-tab
 ```

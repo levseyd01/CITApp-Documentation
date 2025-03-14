@@ -26,10 +26,10 @@ The {tab}`Legal Information` tab allows you to view and the following informatio
 
 In addition, this tab allows you to view and edit a {item}`CIT Corporation's`:
 
-- {item}`Address`
-- {item}`Company Contact`
-- {item}`Accounting Contact`
-- {item}`Legal Contact`
+- {item}`Address`,
+- {item}`Company Contact`,
+- {item}`Accounting Contact`, Or
+- {item}`Legal Contact`.
 
 (modify-fields-sponsorship-organization-information)=
 ## Editing Legal Information for CIT Corporations

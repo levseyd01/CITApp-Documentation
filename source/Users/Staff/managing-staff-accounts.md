@@ -9,6 +9,12 @@
 (users-user-manage-staff-accounts)=
 # Staff
 
+```{contents}
+:local:
+:depth: 3
+
+```
+
 The section {section}`Staff` section has the following features:
 
 - {ref}`table overview <users-staff-list-table>`,
@@ -25,12 +31,12 @@ The section {section}`Staff` section has the following features:
 
 The table {table}`Staff List` table includes a table of accounts with the following columns {column}`Columns`:
 
-- column {column}`Contact Name`
-- column {column}`Contact Email`
-- column {column}`Number of Visits`
-- column {column}`Last Logged In`
-- column {column}`Status`
-- column {column}`Action`
+- {column}`Contact Name`
+- {column}`Contact Email`
+- {column}`Number of Visits`
+- {column}`Last Logged In`
+- {column}`Status`
+- {column}`Action`
 
 ```{lazyfigure} ../../_static/solo_app/User/Staff/staff-homepage-columns.webp
 :width: 100%

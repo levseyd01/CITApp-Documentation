@@ -1,9 +1,0 @@
-/* Update styling for item-dark-blue to be an inline element with darker blue text */
-.item-dark-blue {
-    background-color: #F5F5F5;
-    padding: 0 4px;
-    border-radius: 4px;
-    color: #001f3f;
-    font-weight: 600;
-    display: inline;
-}

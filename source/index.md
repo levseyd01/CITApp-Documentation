@@ -2,7 +2,7 @@
 
 Welcome to the documentation for the {item}`CIT Services` version of the **CIT App**. See below to get started. 
 
-## My Accounts
+## My Accounts Category
 
 The **CIT App** will always open up to the {page}`My Accounts Page`  
 
@@ -28,7 +28,7 @@ For more on navigation and the primary sidebar, see {ref}`General Sidebar Naviga
 :hidden:
 :caption: Contents
 
-My_Accounts/my-accounts.md
+My_Accounts/managing-accounts.md
 Dashboard/dashboard.md
 Profile/profile.md
 <!-- Beneficiaries/beneficiaries.md -->

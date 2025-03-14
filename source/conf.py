@@ -316,6 +316,7 @@ html_theme_options = {
     "use_edit_page_button": False,
     "path_to_docs": "source",
     "show_nav_level": 2,
+    "previous_next_buttons_location": "both", 
     "repository_branch": "stable",
     "use_repository_button": False,
     #'language_selector': True,

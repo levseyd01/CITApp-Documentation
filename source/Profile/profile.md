@@ -1,15 +1,19 @@
 (profile-section-homepage)=
 # Profile
 
-The {page}`Profile` allows you edit the following information about your company:
+The {page}`Profile` section covers everything listed in the **Table of Contents** below:
 
-- {ref}`Name and Contact Information <profile-section-name-contact-information>`
-- {ref}`Primary Address <primary-address-profile-section-company-information>`
-- {ref}`Mailing Address <mailing-address-profile-section-company-information>`
-- {ref}`Upload Logo <general-upload-logo-section>`
+```{contents} Table of Contents
+:local:
+:depth: 3
+``` 
+
+## Profile Information
+
+The {section}`Profile Information` section allows you to modify your company details.
 
 ```{lazyfigure}  ../../_static/solo_app/Profile/information-section/main-screen.webp
-:width: 50%
+:width: 80%
 :align: center
 :name: profile-screen-information-section
 

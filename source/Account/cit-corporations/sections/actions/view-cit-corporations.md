@@ -12,7 +12,7 @@ This {section}`View Account Detail` section for a {item}`CIT Corporation` allows
 
 1. Select the [View Account Details](#view-more-icon) button for the corporation you want to view.
 
-```{lazyfigure} ../../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-view-more-location.webp
+```{lazyfigure} ../../../../_static/solo_app/CIT_Corporation/cit-corporations-homepage-view-more-location.webp
 :width: 100%
 :align: center
 :name: cit-corporations-homepage-view-more-location
@@ -27,7 +27,7 @@ CIT Corporation, Homepage, View More Icon Location
 
 The {tab}`CIT Corporation Information` tab provides a comprehensive overview of the {item}`CIT Corporation`.
 
-```{lazyfigure} ../../../_static/solo_app/Account/CITCorporations/cit-corporate-information-tab-location.jpg
+```{lazyfigure} ../../../../_static/solo_app/Account/CITCorporations/cit-corporate-information-tab-location.jpg
 :width: 100%
 :align: center
 :name: cit-corporations-view-corp-section-location
@@ -63,7 +63,7 @@ There is no {action}`Edit` button in this section. The fields are editable as is
 2. Input the desired information.
 3. Click {action}`Save Changes` at the bottom of the page.
 
-```{lazyfigure} ../../../_static/solo_app/Universal/view-sponsorship-organization/save-changes-location.jpg
+```{lazyfigure} ../../../../_static/solo_app/Universal/view-sponsorship-organization/save-changes-location.jpg
 :width: 100%
 :align: center
 :name: save-changes-location

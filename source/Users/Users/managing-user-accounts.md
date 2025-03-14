@@ -15,6 +15,17 @@ The {section}`Users` section covers everything listed in the **Table of Contents
 :local:
 :depth: 3
 ```
+:::{admonition} Hover for Page Preview
+:class: hint, dropdown
+
+Hover over the links for a page preview.
+
+![Your Animation](../../_static/solo_app/Universal/gif/Animation.gif)_
+:::
+
+## User List Homepage
+
+The {section}`Users` section opens up to the {table}`User List` table:
 
 ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-homepage.webp
 :width: 100%
@@ -24,27 +35,33 @@ The {section}`Users` section covers everything listed in the **Table of Contents
 Users, User list Table
 ```
 
+
+:::{admonition} Need help finding the Staff Homepage?
+:class: seealso
+
+See {ref}`Staff Homepage Location <user-staff-primary-sidenav-homepage-location>` for more information.
+:::
+
 (users-user-list-table-page)=
-## User List Table
+## Columns: User List Table
 
 The {table}`User List` table summarizes key details for each {item}`User` that exists within the {item}`CIT Corporation`.
 
-**It provides the User's:** 
+**These details include:**
 
 - {item}`Contact Information`, and
 - {item}`Status`.
 
-Additionally, you can perform these actions directly from the table:
+   ```{lazyfigure} ../../_static/solo_app/User/Users/user-user-column-options.webp
+   :width: 100%
+   :align: center
+   :name: user-homepage
 
-- {item}`Three Actions` (**i.e.,** [View User Details](#user-details-universal-page), [Edit User Details](#edit-permissions-universal), and [Delete User](#delete-user-universal)) 
+   User, User, Column Options
+   ```
 
-```{lazyfigure} ../../_static/solo_app/User/Users/user-user-column-options.webp
-:width: 100%
-:align: center
-:name: user-homepage
-
-User, User, Column Options
-```
+(columns-included-user-list-table)=
+### Columns: User List Table
 
 The {table}`User List` table has the following {column}`Columns`:
 
@@ -103,3 +120,12 @@ The remaining sections are universally shared throughout the app.
 - {ref}`View User Details: User Information Tab <user-details-universal-page>`
 - {ref}`View User Details: Accounts Tab <view-user-details-universal-accounts-tab>`
 - {ref}`Overview of the Information pane <information-pane-main-page>`
+
+
+
+```{toctree}
+:hidden:
+:maxdepth:2
+
+users-homepage-location
+```

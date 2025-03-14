@@ -1,3 +1,5 @@
+
+
 (profile-section-homepage)=
 # Profile
 
@@ -7,6 +9,25 @@ The {page}`Profile` section covers everything listed in the **Table of Contents*
 :local:
 :depth: 3
 ``` 
+
+
+## Profile Location
+
+The {page}`Profile` page is the third item listed in the {item}`Primary Sidenavigation` menu.
+
+:::{admonition} Don't see the Primary Sidenavigation menu?
+:class: seealso
+
+See {ref}`How to Toggle the Primary Sidenavigation menu <how-to-toggle-primary-sidebar>` for more information.
+:::
+
+```{lazyfigure}  ../../_static/solo_app/Universal/locations/primary-sidebar/profile-location-primary-sidenav.jpg
+:width: 60%
+:align: center
+:name: profile-screen-information-section
+
+Profile Screen, Information Section
+```
 
 ## Profile Information
 

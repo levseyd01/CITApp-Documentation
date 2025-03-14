@@ -5,7 +5,7 @@
 
 The {section}`Staff` section covers everything listed in the **Table of Contents** below:
 
-```{contents}
+```{contents} Table of Contents
 :local:
 :depth: 3
 ```
@@ -15,7 +15,7 @@ The {section}`Staff` section covers everything listed in the **Table of Contents
 
 Hover over the links for a page preview.
 
-![Your Animation](../../_static/solo_app/Universal/gif/Animation.gif)_
+![Page Preview animation](../../_static/solo_app/Universal/gif/Animation.gif)_
 :::
 
 ## Staff List Homepage
@@ -36,7 +36,6 @@ Staff Homepage
 See {ref}`Staff Homepage Location <user-staff-primary-sidenav-homepage-location>` for more information.
 :::
 
-
 (users-staff-list-table)=
 ## Table Overview: Staff List Table
 
@@ -44,9 +43,9 @@ See {ref}`Staff Homepage Location <user-staff-primary-sidenav-homepage-location>
 The table {table}`Staff List` table includes important information about each {item}`Staff` that exists within the {item}`CIT Corporation` (see: {ref}`How to Identify the Current Account <how-to-identify-current-account>` section).
 The column names can be found at the top of the table:
 
-**These details include:**
+**These details include details related to or including:**
 
-- {item}`Contact Information`, and
+- {item}`Contact Information`, or
 - {item}`Status`.
 
 Additionally, you can perform these actions directly from the table:
@@ -63,7 +62,7 @@ Users, Staff Homepage, Columns
 
 ### Columns: Staff List Table
 
-The {table}`Staff List` table includes the following columns:
+The {table}`Staff List` table includes the following {columm}`Columns`.
 
 - {column}`Contact Name`
 - {column}`Contact Email`
@@ -72,11 +71,10 @@ The {table}`Staff List` table includes the following columns:
 - {column}`Status`
 - {column}`Action`
 
-
 (staff-status-column-options)=
 ## Filter by Status
 
-The {column}`Status` columnindicates the current status of the account.
+The {column}`Status` column indicates the current status of the account.
 
 Possible {item-blue}`Status` options include:
 
